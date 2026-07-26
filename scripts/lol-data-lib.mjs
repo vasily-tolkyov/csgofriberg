@@ -343,9 +343,8 @@ export function summarizeTournamentResults(html) {
     if (/Mid-Season Invitational/i.test(title) || /Mid-Season_Invitational/i.test(href)) {
       eventType = "msi";
     } else if (
-      /World Championship/i.test(title) ||
-      /World_Championship/i.test(href) ||
-      /\bWorlds\b/i.test(title)
+      /^Worlds(?:\s|$)/i.test(title) ||
+      /^\/wiki\/(?:\d{4}_Season_|Season_\d+_)World_Championship(?:$|[/?#])/i.test(href)
     ) {
       eventType = "worlds";
     }

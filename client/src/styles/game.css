@@ -1,4 +1,4 @@
-/* ===== 猜测表格 ===== */
+/* ===== Guess Table ===== */
 .game-table-wrap {
   width: 100%;
   min-width: 0;
@@ -104,7 +104,7 @@
   50% { transform: scale(1.05); }
 }
 
-/* ===== 游戏页空态 / 首猜引导 ===== */
+/* ===== Game Empty State ===== */
 .game-empty {
   display: grid;
   justify-items: center;
@@ -150,7 +150,7 @@
   color: var(--text-sec);
   font-weight: 700;
 }
-/* ===== 状态栏进度点 ===== */
+/* ===== Guess Progress ===== */
 .guess-progress-dock { display: none; }
 @media (max-width: 640px) {
   .guess-progress-dock {
@@ -170,44 +170,7 @@
 }
 .guess-progress i.used { border-color: var(--primary); background: var(--primary); }
 
-.room-player-row {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  min-width: 0;
-  padding: 8px 0;
-}
-.room-waiting-card {
-  width: min(920px, 100%);
-  margin-inline: auto;
-  text-align: center;
-}
-.room-waiting-card .room-player-row {
-  justify-content: center;
-}
-.room-waiting-card .room-player-row > b {
-  flex: 0 1 auto;
-  max-width: min(320px, 52vw);
-}
-.room-waiting-card .room-ready-actions {
-  justify-content: center;
-}
-.room-waiting-card .room-ready-actions .btn {
-  min-width: min(160px, 100%);
-}
-.room-player-row > b {
-  min-width: 0;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.room-ready-actions {
-  display: flex;
-  gap: 10px;
-  margin-top: 12px;
-}
-
-/* ===== 底部输入栏 + 自动补全 ===== */
+/* ===== Input Dock + Autocomplete ===== */
 .input-dock {
   position: relative;
   flex-shrink: 0;
@@ -258,7 +221,7 @@
 .autocomplete-aliases { display: block; margin-top: 2px; font-size: 0.76rem; color: var(--text-light); }
 .autocomplete-list li:hover, .autocomplete-list li.active { background: var(--primary-soft); color: var(--primary-hover); }
 
-/* ===== 遮罩弹窗 ===== */
+/* ===== Overlays ===== */
 .overlay {
   position: fixed;
   inset: 0;
@@ -308,7 +271,7 @@
 .overlay-card-win h2 { color: var(--correct); }
 .overlay-card-lose { border-top: 4px solid var(--border-strong); }
 
-/* ===== 通用确认模态框 ===== */
+/* ===== Confirm Dialog ===== */
 .confirm-backdrop {
   position: fixed;
   inset: 0;
@@ -361,31 +324,7 @@
 .confirm-actions { display: flex; justify-content: flex-end; gap: 10px; flex-wrap: wrap; }
 .confirm-actions .btn { display: inline-flex; align-items: center; gap: 7px; }
 
-.admin-resource-card { display: grid; justify-items: center; gap: 14px; }
-.admin-tabs { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 8px; }
-.admin-resource-heading {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 16px;
-  width: 100%;
-  text-align: center;
-}
-.admin-resource-heading h3,
-.admin-resource-heading p { margin: 0; }
-.admin-resource-heading p { margin-top: 4px; }
-.resource-version-value {
-  max-width: 100%;
-  overflow-wrap: anywhere;
-  padding: 7px 10px;
-  border: 1px solid var(--border);
-  border-radius: 6px;
-  background: var(--bg);
-  color: var(--text-sec);
-}
-
-/* ===== 选手信息表 ===== */
+/* ===== Player Info ===== */
 .player-info-table { width: 100%; border-collapse: collapse; font-size: 1rem; }
 .player-info-table td { padding: 10px 12px; border-bottom: 1px solid var(--border); }
 .player-info-table td.label {

@@ -52,11 +52,13 @@ test("parseLeaguepediaOverview extracts core infobox fields", () => {
   });
 });
 
-test("summarizeTournamentResults deduplicates identical event rows", () => {
+test("summarizeTournamentResults deduplicates rows and excludes non-Riot world championships", () => {
   const html = [
     '<tr><td class="achievements-date">2026-07-08</td><td class="achievements-place placement placement-5">1</td><td class=""><a href="/wiki/2026_Mid-Season_Invitational">MSI 2026</a></td></tr>',
     '<tr><td class="achievements-date">2026-07-08</td><td class="achievements-place placement placement-5">1</td><td class=""><a href="/wiki/2026_Mid-Season_Invitational">MSI 2026</a></td></tr>',
-    '<tr><td class="achievements-date">2025-11-09</td><td class="achievements-place placement placement-5">2</td><td class=""><a href="/wiki/2025_Season_World_Championship">World Championship 2025</a></td></tr>'
+    '<tr><td class="achievements-date">2025-11-09</td><td class="achievements-place placement placement-5">2</td><td class=""><a href="/wiki/2025_Season_World_Championship">World Championship 2025</a></td></tr>',
+    '<tr><td class="achievements-date">2016-03-05</td><td class="achievements-place placement placement-1">1</td><td class=""><a href="/wiki/IEM_Season_X_-_World_Championship">IEM Season 10 World Championship</a></td></tr>',
+    '<tr><td class="achievements-date">2018-11-10</td><td class="achievements-place placement placement-1">1</td><td class=""><a href="/wiki/IeSF_10th_Esports_World_Championship">IeSF 10th Esports World Championship</a></td></tr>'
   ].join("");
   const summary = summarizeTournamentResults(html);
   assert.equal(summary.msi.appearances, 1);
@@ -79,8 +81,8 @@ test("validateCanonicalPlayers catches alias conflicts and easy subset mistakes"
       currentTeam: "T1",
       msiTitles: 2,
       msiAppearances: 9,
-      worldsTitles: 7,
-      worldsAppearances: 11,
+      worldsTitles: 6,
+      worldsAppearances: 10,
       difficulties: ["easy"],
       sources: [{ url: "https://example.com/faker", label: "source" }],
       verifiedAt: "2026-07-01"
@@ -97,8 +99,8 @@ test("validateCanonicalPlayers catches alias conflicts and easy subset mistakes"
       currentTeam: "T1",
       msiTitles: 2,
       msiAppearances: 9,
-      worldsTitles: 7,
-      worldsAppearances: 11,
+      worldsTitles: 6,
+      worldsAppearances: 10,
       difficulties: ["normal"],
       sources: [{ url: "https://example.com/hob", label: "source" }],
       verifiedAt: "2026-07-01"
