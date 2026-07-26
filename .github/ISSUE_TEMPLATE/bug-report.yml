@@ -9,9 +9,8 @@ body:
       label: 问题范围
       options:
         - 单人模式
-        - 多人对战 / 房间
-        - 排行榜 / 统计 / 回放
-        - 登录 / 账号
+        - 查选手
+        - 数据 / 选手资料
         - 界面 / 样式 / 主题
         - 其他
     validations:
@@ -28,8 +27,8 @@ body:
     attributes:
       label: 复现步骤
       placeholder: |
-        1. 进入多人大厅
-        2. 创建 BO3 房间
+        1. 进入单人模式
+        2. 选择难度并开始游戏
         3. ...
     validations:
       required: true
@@ -45,4 +44,4 @@ body:
     id: extra
     attributes:
       label: 补充信息
-      description: 截图、控制台报错、房间号、大致发生时间等（有助于排查）
+      description: 截图、控制台报错、大致发生时间等（有助于排查）

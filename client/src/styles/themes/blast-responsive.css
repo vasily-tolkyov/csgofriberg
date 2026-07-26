@@ -24,11 +24,11 @@
 @media (max-width: 640px) {
   .header-bar::after { right: 14px; width: 44px; }
   .header-bar .title::before { margin-right: 2px; }
-  .home-page .page-scroll { padding-top: 14px; }
-  .home-hero { min-height: 275px; clip-path: polygon(0 0, calc(100% - 22px) 0, 100% 22px, 100% 100%, 22px 100%, 0 calc(100% - 22px)); }
+  .home-page .page-scroll { padding-top: 32px; }
+  .home-hero { min-height: 340px; clip-path: polygon(0 0, calc(100% - 22px) 0, 100% 22px, 100% 100%, 22px 100%, 0 calc(100% - 22px)); }
   .home-hero h1 { font-size: clamp(3.2rem, 18vw, 4.6rem); text-shadow: 3px 3px 0 rgba(217, 255, 63, 0.2); }
   .hero-kicker { margin-bottom: 11px; font-size: 0.65rem; letter-spacing: 0.11em; }
-  .home-hero .hero-subtitle { font-size: 0.94rem; }
+  .home-hero .hero-subtitle { font-size: 1.05rem; }
   .menu-grid { gap: 10px; }
   .menu-card { min-height: 158px; padding: 18px 13px; clip-path: polygon(0 0, calc(100% - 14px) 0, 100% 14px, 100% 100%, 14px 100%, 0 calc(100% - 14px)); }
   .menu-card .menu-icon { width: 43px; height: 43px; }
@@ -42,10 +42,10 @@
 
 @media (max-width: 520px) {
   .home-hero {
-    min-height: 250px;
+    min-height: 320px;
     padding-inline: 16px;
   }
-  .home-hero h1 { font-size: clamp(2.8rem, 17vw, 4rem); }
+  .home-hero h1 { font-size: clamp(3.2rem, 19vw, 4.6rem); }
   .menu-card {
     min-height: 112px;
     padding: 16px 18px;
@@ -60,8 +60,8 @@
 @media (max-width: 400px) {
   .hero-kicker { font-size: 0.58rem; }
   .menu-description { display: block; }
-  .menu-card { min-height: 102px; padding: 14px; }
-  .menu-card .menu-icon { width: 40px; height: 40px; }
+  .menu-card { min-height: 128px; padding: 16px; }
+  .menu-card .menu-icon { width: 48px; height: 48px; }
   .menu-copy { padding-right: 18px; }
   .menu-arrow { right: 10px; bottom: 10px; }
 }

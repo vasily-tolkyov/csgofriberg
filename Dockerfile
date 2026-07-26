@@ -2,11 +2,8 @@
 
 FROM node:22-bookworm-slim AS build
 
-ARG RESOURCE_VERSION=""
-
 ENV PNPM_HOME=/pnpm
 ENV PATH=$PNPM_HOME:$PATH
-ENV RESOURCE_VERSION=$RESOURCE_VERSION
 WORKDIR /workspace
 
 RUN corepack enable
@@ -15,18 +12,14 @@ COPY package.json pnpm-lock.yaml pnpm-workspace.yaml ./
 COPY client/package.json client/package.json
 COPY server/package.json server/package.json
 
-# Build-only dependencies stay in this disposable stage. Optional platform
-# packages are required here by tools such as esbuild.
 RUN --mount=type=cache,id=pnpm-store,target=/pnpm/store \
     pnpm install --frozen-lockfile
 
 COPY scripts scripts
-COPY pow-wasm pow-wasm
+COPY data data
 COPY client client
 COPY server server
 
-# The deployed server tree contains production dependencies only and omits the
-# optional SQLite driver. Only that tree is copied into the runtime image.
 RUN pnpm build \
  && pnpm --filter server deploy --prod --no-optional --legacy /runtime/server
 
@@ -36,14 +29,13 @@ ARG OCI_SOURCE=""
 ARG OCI_REVISION=""
 ARG OCI_VERSION=""
 
-LABEL org.opencontainers.image.title="csgofriberg" \
-      org.opencontainers.image.description="PostgreSQL-only csgofriberg game server and web client" \
+LABEL org.opencontainers.image.title="friberg-lol-guess" \
+      org.opencontainers.image.description="LoL player guessing game MVP" \
       org.opencontainers.image.source=$OCI_SOURCE \
       org.opencontainers.image.revision=$OCI_REVISION \
       org.opencontainers.image.version=$OCI_VERSION
 
 ENV NODE_ENV=production \
-    DB_CLIENT=pg \
     PORT=3000
 
 WORKDIR /app

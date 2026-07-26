@@ -19,11 +19,11 @@ describe('SingleLobby', () => {
     expect(easy).toHaveClass('active');
     expect(easy.querySelector('.single-difficulty-badge')).toHaveTextContent('推荐');
     expect(normal.querySelector('.single-difficulty-badge')).toBeNull();
-    expect(easy).toHaveTextContent('知名选手池 · 快速上手');
-    expect(normal).toHaveTextContent('完整数据库 · 终极挑战');
+    expect(easy).toHaveTextContent('知名选手 · 当前 12 人样板池');
+    expect(normal).toHaveTextContent('完整选手 · 当前 20 人样板池');
     expect(easy.style.getPropertyValue('--diff-color')).toBe('var(--success)');
     expect(normal.style.getPropertyValue('--diff-color')).toBe('var(--accent)');
-    expect(screen.getByText('选择一个难度开始游戏。你的选择会保存在本地浏览器中。')).toBeInTheDocument();
+    expect(screen.getByText('当前样板包含 12 名知名选手和 20 名完整选手；正式题库目标为 80 / 220。你的选择会保存在本地浏览器中。')).toBeInTheDocument();
   });
 
   it('starts the selected difficulty and remembers the choice', async () => {
@@ -34,7 +34,7 @@ describe('SingleLobby', () => {
         route: '/single',
         path: '/single',
         extraRoutes: (
-          <Route path="/single/:mode" element={<div data-testid="game-route" />} />
+          <Route path="/single/:difficulty" element={<div data-testid="game-route" />} />
         ),
       }
     );

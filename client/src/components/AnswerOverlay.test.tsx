@@ -5,12 +5,16 @@ import AnswerOverlay from './AnswerOverlay';
 import { renderWithProviders } from '../test/render';
 
 const answer = {
-  nickname: 'friberg',
-  team: 'NIP',
-  nationality: '瑞典',
-  role: 'Rifler',
-  majorChampionships: 1,
-  majorAppearances: 12,
+  nickname: 'Faker',
+  teamIdentity: 'T1',
+  nationalityRegion: '韩国',
+  age: 29,
+  role: '中单',
+  msiTitles: 2,
+  msiAppearances: 7,
+  worldsTitles: 4,
+  worldsAppearances: 9,
+  aliases: ['Hide on bush'],
 };
 
 describe('AnswerOverlay', () => {
@@ -20,7 +24,8 @@ describe('AnswerOverlay', () => {
     );
     const dialog = screen.getByRole('dialog');
     expect(dialog).toHaveAttribute('aria-modal', 'true');
-    expect(screen.getByText('friberg')).toBeInTheDocument();
+    expect(screen.getByText('Faker')).toBeInTheDocument();
+    expect(screen.getByText('Hide on bush')).toBeInTheDocument();
   });
 
   it('supports desktop Escape and mobile backdrop dismiss when onClose is provided', async () => {

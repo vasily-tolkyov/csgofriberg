@@ -1,0 +1,134 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://friberg.local/data/schema/player-dataset.v1.schema.json",
+  "title": "LoL Player Dataset v1",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "id",
+      "nickname",
+      "aliases",
+      "birthDate",
+      "role",
+      "nationality",
+      "geoRegion",
+      "status",
+      "currentTeam",
+      "msiTitles",
+      "msiAppearances",
+      "worldsTitles",
+      "worldsAppearances",
+      "difficulties",
+      "sources",
+      "verifiedAt"
+    ],
+    "properties": {
+      "id": {
+        "type": "string",
+        "pattern": "^[a-z0-9_]+$"
+      },
+      "nickname": {
+        "type": "string",
+        "minLength": 1
+      },
+      "aliases": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "birthDate": {
+        "type": "string",
+        "format": "date"
+      },
+      "role": {
+        "type": "string",
+        "enum": [
+          "top",
+          "jungle",
+          "mid",
+          "bot",
+          "support",
+          "coach"
+        ]
+      },
+      "nationality": {
+        "type": "string",
+        "minLength": 1
+      },
+      "geoRegion": {
+        "type": "string",
+        "minLength": 1
+      },
+      "status": {
+        "type": "string",
+        "enum": [
+          "active",
+          "retired",
+          "coach",
+          "free_agent",
+          "demoted"
+        ]
+      },
+      "currentTeam": {
+        "type": "string"
+      },
+      "msiTitles": {
+        "type": "integer",
+        "minimum": 0
+      },
+      "msiAppearances": {
+        "type": "integer",
+        "minimum": 0
+      },
+      "worldsTitles": {
+        "type": "integer",
+        "minimum": 0
+      },
+      "worldsAppearances": {
+        "type": "integer",
+        "minimum": 0
+      },
+      "difficulties": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "enum": [
+            "easy",
+            "normal"
+          ]
+        },
+        "minItems": 1,
+        "uniqueItems": true
+      },
+      "sources": {
+        "type": "array",
+        "minItems": 1,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "url",
+            "label"
+          ],
+          "properties": {
+            "url": {
+              "type": "string",
+              "format": "uri"
+            },
+            "label": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        }
+      },
+      "verifiedAt": {
+        "type": "string",
+        "format": "date"
+      }
+    }
+  }

@@ -345,10 +345,10 @@ html:not([data-theme='blast']) .admin-player-flags {
 }
 
 /* ===== 首页 hero:纸面舞台 ===== */
-html:not([data-theme='blast']) .home-page .page-scroll { padding-top: clamp(22px, 4vw, 44px); }
+html:not([data-theme='blast']) .home-page .page-scroll { padding-top: clamp(40px, 5.5vw, 70px); }
 
 html:not([data-theme='blast']) .home-hero {
-  min-height: clamp(300px, 44vh, 440px);
+  min-height: clamp(380px, 55vh, 500px);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -421,7 +421,7 @@ html:not([data-theme='blast']) .home-hero h1 {
   background: none;
   color: var(--text);
   font-family: Impact, Bahnschrift, 'Arial Narrow', 'Microsoft YaHei', sans-serif;
-  font-size: clamp(3.4rem, 7.5vw, 5.8rem);
+  font-size: clamp(3.8rem, 8.8vw, 6.8rem);
   font-style: italic;
   font-weight: 900;
   line-height: 0.92;
@@ -663,9 +663,9 @@ html:not([data-theme='blast']) .resource-version-value {
 @media (max-width: 640px) {
   html:not([data-theme='blast']) .header-bar::after { right: 14px; width: 44px; }
   html:not([data-theme='blast']) .header-bar .title::before { margin-right: 2px; }
-  html:not([data-theme='blast']) .home-page .page-scroll { padding-top: 14px; }
+  html:not([data-theme='blast']) .home-page .page-scroll { padding-top: 32px; }
   html:not([data-theme='blast']) .home-hero {
-    min-height: 260px;
+    min-height: 340px;
     clip-path: polygon(0 0, calc(100% - 22px) 0, 100% 22px, 100% 100%, 22px 100%, 0 calc(100% - 22px));
   }
   html:not([data-theme='blast']) .home-hero h1 {
@@ -673,7 +673,7 @@ html:not([data-theme='blast']) .resource-version-value {
     text-shadow: 3px 3px 0 var(--primary);
   }
   html:not([data-theme='blast']) .hero-kicker { margin-bottom: 11px; font-size: 0.65rem; letter-spacing: 0.11em; }
-  html:not([data-theme='blast']) .home-hero .hero-subtitle { font-size: 0.94rem; }
+  html:not([data-theme='blast']) .home-hero .hero-subtitle { font-size: 1.05rem; }
   html:not([data-theme='blast']) .menu-grid { gap: 10px; }
   html:not([data-theme='blast']) .menu-card {
     min-height: 158px;
@@ -688,8 +688,8 @@ html:not([data-theme='blast']) .resource-version-value {
 }
 
 @media (max-width: 520px) {
-  html:not([data-theme='blast']) .home-hero { min-height: 240px; padding-inline: 16px; }
-  html:not([data-theme='blast']) .home-hero h1 { font-size: clamp(2.5rem, 15vw, 3.6rem); }
+  html:not([data-theme='blast']) .home-hero { min-height: 320px; padding-inline: 16px; }
+  html:not([data-theme='blast']) .home-hero h1 { font-size: clamp(3.2rem, 19vw, 4.6rem); }
   html:not([data-theme='blast']) .menu-card { min-height: 112px; padding: 16px 18px; gap: 14px; }
   html:not([data-theme='blast']) .menu-card .menu-icon { flex: 0 0 auto; }
   html:not([data-theme='blast']) .menu-copy { padding-right: 24px; }
@@ -698,8 +698,8 @@ html:not([data-theme='blast']) .resource-version-value {
 
 @media (max-width: 400px) {
   html:not([data-theme='blast']) .hero-kicker { font-size: 0.58rem; }
-  html:not([data-theme='blast']) .menu-card { min-height: 102px; padding: 14px; }
-  html:not([data-theme='blast']) .menu-card .menu-icon { width: 40px; height: 40px; }
+  html:not([data-theme='blast']) .menu-card { min-height: 128px; padding: 16px; }
+  html:not([data-theme='blast']) .menu-card .menu-icon { width: 48px; height: 48px; }
   html:not([data-theme='blast']) .menu-copy { padding-right: 18px; }
   html:not([data-theme='blast']) .menu-arrow { right: 10px; bottom: 10px; }
 }

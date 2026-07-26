@@ -1,0 +1,6 @@
+{
+  "oracleFile": "staging/fixtures/oracles-elixir/player-event-summary.csv",
+  "checkedPlayers": 20,
+  "mismatches": [],
+  "ok": true
+}

@@ -1,7 +1,11 @@
-import '@testing-library/jest-dom/vitest';
+/// <reference types="@testing-library/jest-dom" />
+
+import * as matchers from '@testing-library/jest-dom/matchers';
 import { cleanup } from '@testing-library/react';
-import { afterEach, beforeAll, beforeEach, vi } from 'vitest';
+import { afterEach, beforeAll, beforeEach, expect, vi } from 'vitest';
 import i18n from '../i18n';
+
+expect.extend(matchers);
 
 function installViewportMocks(mobile = false) {
   Object.defineProperty(window, 'matchMedia', {

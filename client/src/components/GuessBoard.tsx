@@ -1,101 +1,150 @@
-import { ArrowUp, ArrowDown } from 'lucide-react';
-import {
-  AttributeFeedback,
-  HiddenAttributeFeedback,
-  MultiplayerGuessFeedback,
-} from '../types';
-import { playerRoleLabel } from '../utils/playerRoles';
+import { GuessAttribute, GuessColumnKey, GuessRow } from '../api/lol';
 import { useTranslation } from 'react-i18next';
 
-function Cell({
-  attr,
-  label,
-  bool,
-  format,
-}: {
-  attr: AttributeFeedback | HiddenAttributeFeedback;
-  label: string;
-  bool?: boolean;
-  format?: (value: string) => string;
-}) {
+const COLUMN_KEYS: GuessColumnKey[] = [
+  'teamIdentity',
+  'nationalityRegion',
+  'age',
+  'role',
+  'msiTitles',
+  'msiAppearances',
+  'worldsTitles',
+  'worldsAppearances',
+];
+
+type Translate = (key: string) => string;
+
+function feedbackText(level: GuessAttribute['level'], t: Translate) {
+  if (level === 'correct') return t('guess.feedback.correct');
+  if (level === 'close') return t('guess.feedback.close');
+  return t('guess.feedback.wrong');
+}
+
+function cellValue(attr: GuessAttribute): string {
+  if (typeof attr.value === 'boolean') return attr.value ? '是' : '否';
+  if (attr.value === undefined || attr.value === null || attr.value === '') return '—';
+  return String(attr.value);
+}
+
+function hintText(attr: GuessAttribute, t: Translate) {
+  if (attr.hint === 'higher') return t('guess.hint.higher');
+  if (attr.hint === 'lower') return t('guess.hint.lower');
+  return '';
+}
+
+function GuessCell({ attr, label }: { attr: GuessAttribute; label: string }) {
   const { t } = useTranslation();
-  if (!('value' in attr)) {
-    return (
-      <td className={`${attr.level} masked-cell`} data-label={label}>
-        {attr.hint && attr.level !== 'correct' && (
-          <span className="dir">
-            {attr.hint === 'higher' ? <ArrowUp size={13} /> : <ArrowDown size={13} />}
-          </span>
-        )}
-      </td>
-    );
-  }
-  const text =
-    typeof attr.value === 'boolean' || bool
-      ? attr.value
-        ? t('common.active')
-        : t('common.retired')
-      : format
-        ? format(String(attr.value))
-        : String(attr.value);
+  const toneText = feedbackText(attr.level, t);
+  const hint = hintText(attr, t);
+  const value = cellValue(attr);
+
   return (
-    <td className={attr.level} data-label={label}>
-      {text}
-      {attr.hint && attr.level !== 'correct' && (
-        <span className="dir">
-          {attr.hint === 'higher' ? <ArrowUp size={13} /> : <ArrowDown size={13} />}
-        </span>
-      )}
+    <td
+      className={attr.level}
+      data-label={label}
+      aria-label={hint ? `${label}：${value}，${toneText}，${hint}` : `${label}：${value}，${toneText}`}
+    >
+      <span className="guess-cell-value">{value}</span>
+      <span className="guess-cell-meta">
+        <span className={`guess-tone guess-tone-${attr.level}`}>{toneText}</span>
+        {attr.hint ? (
+          <span className="guess-hint" aria-hidden="true">
+            {attr.hint === 'higher' ? '↑' : '↓'}
+          </span>
+        ) : null}
+      </span>
     </td>
   );
 }
 
-/** 猜测反馈表:原版 game-table 布局,每行一次猜测的逐属性对比 */
-export default function GuessBoard({ guesses }: { guesses: MultiplayerGuessFeedback[] }) {
+export default function GuessBoard({ guesses }: { guesses: GuessRow[] }) {
   const { t } = useTranslation();
   const columns = [
     t('guess.columns.nickname'),
-    t('guess.columns.team'),
-    t('guess.columns.nationality'),
+    t('guess.columns.teamIdentity'),
+    t('guess.columns.nationalityRegion'),
     t('guess.columns.age'),
     t('guess.columns.role'),
-    t('guess.columns.majorChampionships'),
-    t('guess.columns.majorAppearances'),
-    t('guess.columns.status'),
+    t('guess.columns.msiTitles'),
+    t('guess.columns.msiAppearances'),
+    t('guess.columns.worldsTitles'),
+    t('guess.columns.worldsAppearances'),
   ];
+
   return (
-    <div className="game-table-wrap">
-      <table className="game-table">
-        <thead>
-          <tr>
-            {columns.map((c) => (
-              <th key={c}>{c}</th>
-            ))}
-          </tr>
-        </thead>
-        <tbody>
-          {guesses.map((g, i) => (
-            <tr
-              key={'hidden' in g ? `hidden-${i}` : `${g.playerId}-${i}`}
-              className={`${i === guesses.length - 1 ? 'row-latest' : ''} ${g.correct ? 'row-correct' : ''}`}
-            >
-              <td
-                className={`name ${g.correct ? 'correct' : ''} ${'hidden' in g ? 'masked-cell' : ''}`}
-                data-label={columns[0]}
-              >
-                {'hidden' in g ? null : g.nickname}
-              </td>
-              <Cell attr={g.attributes.team} label={columns[1]} />
-              <Cell attr={g.attributes.nationality} label={columns[2]} />
-              <Cell attr={g.attributes.age} label={columns[3]} />
-              <Cell attr={g.attributes.role} label={columns[4]} format={playerRoleLabel} />
-              <Cell attr={g.attributes.majorChampionships} label={columns[5]} />
-              <Cell attr={g.attributes.majorAppearances} label={columns[6]} />
-              <Cell attr={g.attributes.isActive} label={columns[7]} bool />
+    <>
+      <div className="game-table-wrap guess-board-desktop">
+        <table className="game-table">
+          <thead>
+            <tr>
+              {columns.map((column) => (
+                <th key={column} scope="col">
+                  {column}
+                </th>
+              ))}
             </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
+          </thead>
+          <tbody>
+            {guesses.map((guess, index) => (
+              <tr
+                key={`${guess.playerId}-${index}`}
+                className={`${index === guesses.length - 1 ? 'row-latest' : ''} ${guess.correct ? 'row-correct' : ''}`}
+              >
+                <td
+                  className={`name ${guess.correct ? 'correct' : ''}`}
+                  data-label={columns[0]}
+                  aria-label={`${columns[0]}：${guess.nickname}${guess.correct ? `，${t('guess.feedback.correct')}` : ''}`}
+                >
+                  <span className="guess-cell-value">{guess.nickname}</span>
+                  <span className="guess-cell-meta">
+                    <span className={`guess-tone ${guess.correct ? 'guess-tone-correct' : 'guess-tone-wrong'}`}>
+                      {guess.correct ? t('guess.feedback.correct') : t('guess.feedback.wrong')}
+                    </span>
+                  </span>
+                </td>
+                {COLUMN_KEYS.map((key, columnIndex) => (
+                  <GuessCell key={`${key}-${columnIndex}`} attr={guess.attributes[key]} label={columns[columnIndex + 1]} />
+                ))}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <div className="guess-board-mobile" aria-label={t('guess.mobileBoard')}>
+        {guesses.map((guess, index) => (
+          <article
+            key={`mobile-${guess.playerId}-${index}`}
+            className={`guess-mobile-card${guess.correct ? ' guess-mobile-card-correct' : ''}`}
+            aria-label={`${guess.nickname} ${guess.correct ? t('guess.feedback.correct') : t('guess.mobileGuess')}`}
+          >
+            <header className="guess-mobile-header">
+              <strong>{guess.nickname}</strong>
+              <span className={`guess-tone ${guess.correct ? 'guess-tone-correct' : 'guess-tone-wrong'}`}>
+                {guess.correct ? t('guess.feedback.correct') : t('guess.mobileGuess')}
+              </span>
+            </header>
+            <dl className="guess-mobile-grid">
+              {COLUMN_KEYS.map((key, columnIndex) => {
+                const attr = guess.attributes[key];
+                const hint = hintText(attr, t);
+                return (
+                  <div key={`mobile-${key}-${columnIndex}`} className={`guess-mobile-field ${attr.level}`}>
+                    <dt>{columns[columnIndex + 1]}</dt>
+                    <dd>
+                      <span>{cellValue(attr)}</span>
+                      <span className="guess-mobile-meta">
+                        {feedbackText(attr.level, t)}
+                        {hint ? ` · ${hint}` : ''}
+                      </span>
+                    </dd>
+                  </div>
+                );
+              })}
+            </dl>
+          </article>
+        ))}
+      </div>
+    </>
   );
 }

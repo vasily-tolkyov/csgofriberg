@@ -19,8 +19,8 @@ vi.mock('../api/client', async () => {
 });
 
 vi.mock('../api/playerList', () => ({
-  getPlayerList: vi.fn(async () => [{ id: 1, nickname: 's1mple' }]),
-  searchPlayerList: (list: Array<{ id: number; nickname: string }>, query: string) =>
+  getPlayerList: vi.fn(async () => [{ id: 'faker', nickname: 'Faker', aliases: ['Hide on bush'] }]),
+  searchPlayerList: (list: Array<{ id: string; nickname: string; aliases?: string[] }>, query: string) =>
     list.filter((item) => item.nickname.toLowerCase().includes(query.trim().toLowerCase())),
 }));
 
@@ -41,7 +41,7 @@ function renderGame(mode = 'easy') {
     <SingleGame />,
     {
       route: `/single/${mode}`,
-      path: '/single/:mode',
+      path: '/single/:difficulty',
       extraRoutes: (
         <>
           <Route path="/single" element={<div data-testid="lobby" />} />
@@ -53,7 +53,7 @@ function renderGame(mode = 'easy') {
 }
 
 async function waitForReadyInput() {
-  const input = await screen.findByPlaceholderText('输入选手昵称...');
+  const input = await screen.findByPlaceholderText('输入选手昵称或别名...');
   await waitFor(() => expect(input).not.toBeDisabled());
   return input;
 }
@@ -73,19 +73,19 @@ describe('SingleGame UX', () => {
   });
 
   it('shows starting feedback and keeps dock input disabled while start is pending', async () => {
-    const start = deferred<{ data: { gameId: string; guesses: []; maxGuesses: number } }>();
+    const start = deferred<{ data: { restored: boolean; game: { id: string; difficulty: string; status: 'active'; guesses: []; maxGuesses: number } } }>();
     post.mockReturnValueOnce(start.promise as never);
 
     renderGame('easy');
 
     expect(await screen.findByText('正在开始新对局…', { selector: 'p' })).toBeInTheDocument();
     expect(document.querySelector('.spinner')).toBeTruthy();
-    expect(screen.getByPlaceholderText('输入选手昵称...')).toBeDisabled();
+    expect(screen.getByPlaceholderText('输入选手昵称或别名...')).toBeDisabled();
     expect(document.querySelector('.guess-input-feedback')).toBeNull();
 
-    start.resolve({ data: { gameId: 'g1', guesses: [], maxGuesses: 8 } });
+    start.resolve({ data: { restored: false, game: { id: 'g1', difficulty: 'easy', status: 'active', guesses: [], maxGuesses: 8 } } });
     await waitForReadyInput();
-    expect(screen.getByText('在下方输入选手昵称开始猜测')).toBeInTheDocument();
+    expect(screen.getByText('在下方输入选手昵称或别名开始猜测')).toBeInTheDocument();
     expect(localStorage.getItem('csgofriberg.single-difficulty')).toBe('easy');
   });
 
@@ -100,7 +100,7 @@ describe('SingleGame UX', () => {
   });
 
   it('disables dock and shows starting copy while restart is in flight', async () => {
-    post.mockResolvedValueOnce({ data: { gameId: 'g1', guesses: [], maxGuesses: 8 } } as never);
+    post.mockResolvedValueOnce({ data: { restored: false, game: { id: 'g1', difficulty: 'easy', status: 'active', guesses: [], maxGuesses: 8 } } } as never);
     renderGame('easy');
     await waitForReadyInput();
 
@@ -115,13 +115,13 @@ describe('SingleGame UX', () => {
     await user.click(within(dialog).getByRole('button', { name: '重新开始' }));
 
     expect(await screen.findByText('正在开始新对局…', { selector: 'p' })).toBeInTheDocument();
-    expect(screen.getByPlaceholderText('输入选手昵称...')).toBeDisabled();
+    expect(screen.getByPlaceholderText('输入选手昵称或别名...')).toBeDisabled();
     expect(screen.getByRole('button', { name: '重新开始' })).toBeDisabled();
   });
 
   it('marks page keyboard-active on focus for mobile chrome collapse CSS', async () => {
     installViewportMocks(true);
-    post.mockResolvedValueOnce({ data: { gameId: 'g1', guesses: [], maxGuesses: 8 } } as never);
+    post.mockResolvedValueOnce({ data: { restored: false, game: { id: 'g1', difficulty: 'easy', status: 'active', guesses: [], maxGuesses: 8 } } } as never);
     renderGame('easy');
 
     const input = await waitForReadyInput();
@@ -131,11 +131,11 @@ describe('SingleGame UX', () => {
   });
 
   it('shows reveal busy state on the action button and top status bar', async () => {
-    post.mockResolvedValueOnce({ data: { gameId: 'g1', guesses: [], maxGuesses: 8 } } as never);
+    post.mockResolvedValueOnce({ data: { restored: false, game: { id: 'g1', difficulty: 'easy', status: 'active', guesses: [], maxGuesses: 8 } } } as never);
     renderGame('easy');
     await waitForReadyInput();
 
-    const giveup = deferred<{ data: { answer: { nickname: string; team: string; nationality: string } } }>();
+    const giveup = deferred<{ data: { status: 'gave_up'; answer: { id: string; nickname: string; teamIdentity: string; nationalityRegion: string; role: string; msiTitles: number; msiAppearances: number; worldsTitles: number; worldsAppearances: number; aliases: string[] } } }>();
     post.mockReturnValueOnce(giveup.promise as never);
 
     const user = userEvent.setup();
@@ -146,21 +146,33 @@ describe('SingleGame UX', () => {
 
     await waitFor(() => {
       expect(revealButton).toBeDisabled();
-      expect(revealButton).toHaveTextContent('处理中');
+      expect(revealButton).toHaveTextContent('正在结算答案');
     });
-    expect(document.querySelector('.status-bar')).toHaveTextContent('处理中');
-    expect(screen.getByPlaceholderText('输入选手昵称...')).toBeDisabled();
+    expect(document.querySelector('.status-bar')).toHaveTextContent('正在结算答案');
+    expect(screen.getByPlaceholderText('输入选手昵称或别名...')).toBeDisabled();
 
     giveup.resolve({
       data: {
-        answer: { nickname: 'friberg', team: 'NIP', nationality: '瑞典' },
+        status: 'gave_up',
+        answer: {
+          id: 'faker',
+          nickname: 'Faker',
+          teamIdentity: 'T1',
+          nationalityRegion: '韩国',
+          role: '中单',
+          msiTitles: 2,
+          msiAppearances: 7,
+          worldsTitles: 4,
+          worldsAppearances: 9,
+          aliases: ['Hide on bush'],
+        },
       },
     });
-    expect(await screen.findByRole('dialog')).toHaveTextContent('friberg');
+    expect(await screen.findByRole('dialog')).toHaveTextContent('Faker');
   });
 
   it('shows leaving busy state before navigating home', async () => {
-    post.mockResolvedValueOnce({ data: { gameId: 'g1', guesses: [], maxGuesses: 8 } } as never);
+    post.mockResolvedValueOnce({ data: { restored: false, game: { id: 'g1', difficulty: 'easy', status: 'active', guesses: [], maxGuesses: 8 } } } as never);
     renderGame('easy');
     await waitForReadyInput();
 
@@ -181,5 +193,20 @@ describe('SingleGame UX', () => {
 
     exit.resolve({});
     expect(await screen.findByTestId('home')).toBeInTheDocument();
+  });
+
+  it('shows an inline duplicate-guess message when backend rejects the pick', async () => {
+    post
+      .mockResolvedValueOnce({ data: { restored: false, game: { id: 'g1', difficulty: 'easy', status: 'active', guesses: [], maxGuesses: 8 } } } as never)
+      .mockRejectedValueOnce({ response: { data: { code: 'ALREADY_GUESSED' } } } as never);
+
+    renderGame('easy');
+    const user = userEvent.setup();
+    const input = await waitForReadyInput();
+    await user.type(input, 'Fak');
+    await screen.findByText('Faker');
+    await user.click(screen.getByRole('button', { name: '提交猜测' }));
+
+    expect(await screen.findByRole('status')).toHaveTextContent('这名选手已经猜过了，请换一个。');
   });
 });

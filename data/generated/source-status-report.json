@@ -1,0 +1,114 @@
+{
+  "fetchedAt": "2026-07-26T16:10:59.818Z",
+  "gcdFetchedAt": "2026-07-26T16:10:59.818Z",
+  "leaguepediaFetchedAt": "2026-07-26T16:10:59.818Z",
+  "gcd": {
+    "KR": {
+      "sourceUrl": "https://docs.google.com/spreadsheets/d/1Y7k5kQ2AegbuyiGwEPsa62e883FYVtHqr6UVut9RC4o/pub?output=csv&gid=905624073",
+      "upstreamUpdatedRaw": "THIS SHEET WAS LAST UPDATED ON:, Jul 13, 2026 18:44:24 PT",
+      "upstreamUpdatedDate": "2026-07-13"
+    },
+    "EMEA": {
+      "sourceUrl": "https://docs.google.com/spreadsheets/d/1Y7k5kQ2AegbuyiGwEPsa62e883FYVtHqr6UVut9RC4o/pub?output=csv&gid=148326031",
+      "upstreamUpdatedRaw": "7/15/2026 8:13:19",
+      "upstreamUpdatedDate": "2026-07-15"
+    },
+    "CN": {
+      "sourceUrl": "https://docs.google.com/spreadsheets/d/1Y7k5kQ2AegbuyiGwEPsa62e883FYVtHqr6UVut9RC4o/pub?output=csv&gid=594163931",
+      "upstreamUpdatedRaw": "2026/6/18 16:45",
+      "upstreamUpdatedDate": "2026-06-18"
+    },
+    "LCP": {
+      "sourceUrl": "https://docs.google.com/spreadsheets/d/1Y7k5kQ2AegbuyiGwEPsa62e883FYVtHqr6UVut9RC4o/pub?output=csv&gid=1177719586",
+      "upstreamUpdatedRaw": "7/22/2026",
+      "upstreamUpdatedDate": "2026-07-22"
+    },
+    "AME": {
+      "sourceUrl": "https://docs.google.com/spreadsheets/d/1Y7k5kQ2AegbuyiGwEPsa62e883FYVtHqr6UVut9RC4o/pub?output=csv&gid=0",
+      "upstreamUpdatedRaw": "LAST UPDATE:, Jul 24, 2026 13:54:53 PT",
+      "upstreamUpdatedDate": "2026-07-24"
+    }
+  },
+  "leaguepedia": {
+    "faker": {
+      "overviewUrl": "https://lol.fandom.com/wiki/Faker",
+      "tournamentResultsUrl": "https://lol.fandom.com/wiki/Faker/Tournament_Results"
+    },
+    "oner": {
+      "overviewUrl": "https://lol.fandom.com/wiki/Oner",
+      "tournamentResultsUrl": "https://lol.fandom.com/wiki/Oner/Tournament_Results"
+    },
+    "keria": {
+      "overviewUrl": "https://lol.fandom.com/wiki/Keria",
+      "tournamentResultsUrl": "https://lol.fandom.com/wiki/Keria/Tournament_Results"
+    },
+    "chovy": {
+      "overviewUrl": "https://lol.fandom.com/wiki/Chovy",
+      "tournamentResultsUrl": "https://lol.fandom.com/wiki/Chovy/Tournament_Results"
+    },
+    "canyon": {
+      "overviewUrl": "https://lol.fandom.com/wiki/Canyon",
+      "tournamentResultsUrl": "https://lol.fandom.com/wiki/Canyon/Tournament_Results"
+    },
+    "showmaker": {
+      "overviewUrl": "https://lol.fandom.com/wiki/ShowMaker",
+      "tournamentResultsUrl": "https://lol.fandom.com/wiki/ShowMaker/Tournament_Results"
+    },
+    "zeus": {
+      "overviewUrl": "https://lol.fandom.com/wiki/Zeus",
+      "tournamentResultsUrl": "https://lol.fandom.com/wiki/Zeus/Tournament_Results"
+    },
+    "zeka": {
+      "overviewUrl": "https://lol.fandom.com/wiki/Zeka_(Kim_Geon-woo)",
+      "tournamentResultsUrl": "https://lol.fandom.com/wiki/Zeka_(Kim_Geon-woo)/Tournament_Results"
+    },
+    "kanavi": {
+      "overviewUrl": "https://lol.fandom.com/wiki/Kanavi",
+      "tournamentResultsUrl": "https://lol.fandom.com/wiki/Kanavi/Tournament_Results"
+    },
+    "gumayusi": {
+      "overviewUrl": "https://lol.fandom.com/wiki/Gumayusi",
+      "tournamentResultsUrl": "https://lol.fandom.com/wiki/Gumayusi/Tournament_Results"
+    },
+    "caps": {
+      "overviewUrl": "https://lol.fandom.com/wiki/Caps",
+      "tournamentResultsUrl": "https://lol.fandom.com/wiki/Caps/Tournament_Results"
+    },
+    "brokenblade": {
+      "overviewUrl": "https://lol.fandom.com/wiki/BrokenBlade",
+      "tournamentResultsUrl": "https://lol.fandom.com/wiki/BrokenBlade/Tournament_Results"
+    },
+    "mikyx": {
+      "overviewUrl": "https://lol.fandom.com/wiki/Mikyx",
+      "tournamentResultsUrl": "https://lol.fandom.com/wiki/Mikyx/Tournament_Results"
+    },
+    "hans_sama": {
+      "overviewUrl": "https://lol.fandom.com/wiki/Hans_Sama",
+      "tournamentResultsUrl": "https://lol.fandom.com/wiki/Hans_Sama/Tournament_Results"
+    },
+    "jackeylove": {
+      "overviewUrl": "https://lol.fandom.com/wiki/JackeyLove",
+      "tournamentResultsUrl": "https://lol.fandom.com/wiki/JackeyLove/Tournament_Results"
+    },
+    "meiko": {
+      "overviewUrl": "https://lol.fandom.com/wiki/Meiko",
+      "tournamentResultsUrl": "https://lol.fandom.com/wiki/Meiko/Tournament_Results"
+    },
+    "knight": {
+      "overviewUrl": "https://lol.fandom.com/wiki/Knight_(Zhuo_Ding)",
+      "tournamentResultsUrl": "https://lol.fandom.com/wiki/Knight_(Zhuo_Ding)/Tournament_Results"
+    },
+    "bin": {
+      "overviewUrl": "https://lol.fandom.com/wiki/Bin_(Chen_Ze-Bin)",
+      "tournamentResultsUrl": "https://lol.fandom.com/wiki/Bin_(Chen_Ze-Bin)/Tournament_Results"
+    },
+    "blaber": {
+      "overviewUrl": "https://lol.fandom.com/wiki/Blaber",
+      "tournamentResultsUrl": "https://lol.fandom.com/wiki/Blaber/Tournament_Results"
+    },
+    "vulcan": {
+      "overviewUrl": "https://lol.fandom.com/wiki/Vulcan_(Philippe_Laflamme)",
+      "tournamentResultsUrl": "https://lol.fandom.com/wiki/Vulcan_(Philippe_Laflamme)/Tournament_Results"
+    }
+  }
+}

@@ -54,7 +54,6 @@ wait_for_healthy() {
 
     if [[ -n "${container_id}" ]]; then
       status="$(docker inspect --format '{{if .State.Health}}{{.State.Health.Status}}{{else}}{{.State.Status}}{{end}}' "${container_id}" 2>/dev/null || true)"
-
       case "${status}" in
         healthy)
           log "${service} is healthy."
@@ -72,23 +71,6 @@ wait_for_healthy() {
 
   show_failure "${service}"
   return 1
-}
-
-update_instance() {
-  local service="$1"
-
-  log "Replacing ${service}..."
-  if ! compose up -d --no-deps --force-recreate "${service}"; then
-    show_failure "${service}"
-    compose stop "${service}" || true
-    fail "Docker Compose could not replace ${service}. The healthy peer remains running."
-  fi
-
-  if ! wait_for_healthy "${service}"; then
-    log "${service} did not become healthy; stopping it so Nginx can use the other instance."
-    compose stop "${service}" || true
-    fail "Rolling update stopped at ${service}. The healthy peer remains running."
-  fi
 }
 
 command -v docker >/dev/null 2>&1 || fail "docker is not installed or not in PATH."
@@ -115,21 +97,19 @@ cd "${DEPLOY_DIR}"
 log "Validating the Compose configuration..."
 compose config --quiet
 
-log "Checking the currently running application instances..."
-wait_for_healthy app-1 || fail "app-1 is not healthy; update aborted before making changes."
-wait_for_healthy app-2 || fail "app-2 is not healthy; update aborted before making changes."
-
 log "Pulling application images..."
-compose pull migrate app-1 app-2
+compose pull app redis
 
-log "Running database migrations..."
-compose run --rm migrate
+log "Ensuring Redis is running..."
+compose up -d redis
+wait_for_healthy redis || fail "redis is not healthy; update aborted."
 
-update_instance app-1
-update_instance app-2
+log "Recreating application container..."
+compose up -d --no-deps --force-recreate app
+wait_for_healthy app || fail "app did not become healthy after recreate."
 
-log "Rolling update completed successfully."
-compose ps app-1 app-2
+log "Update completed successfully."
+compose ps app redis
 
 if [[ "${PRUNE_OLD_IMAGES:-0}" == "1" ]]; then
   log "Pruning unused images..."

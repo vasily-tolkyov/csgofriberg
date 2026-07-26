@@ -5,8 +5,9 @@ import { toast } from './Toast';
 import { useTranslation } from 'react-i18next';
 
 interface Suggestion {
-  id: number;
+  id: string;
   nickname: string;
+  aliases?: string[];
 }
 
 interface Props {
@@ -145,7 +146,12 @@ export default function GuessInputBar({
                 void pick(item);
               }}
             >
-              {item.nickname}
+              <span className="autocomplete-name">{item.nickname}</span>
+              {item.aliases?.length ? (
+                <span className="autocomplete-aliases">
+                  {item.aliases.join(' / ')}
+                </span>
+              ) : null}
             </li>
           ))}
         </ul>
@@ -188,6 +194,9 @@ export default function GuessInputBar({
                 e.preventDefault();
                 setOpen(false);
               }
+            } else if (e.key === 'Enter') {
+              e.preventDefault();
+              void pick(items[active]);
             } else if (e.key === 'Tab' && !e.shiftKey && open) {
               const completed = items[active].nickname;
               if (completed !== text) {
@@ -207,11 +216,11 @@ export default function GuessInputBar({
           {submitting ? t('guess.submitting') : visibleButtonText}
         </button>
       </form>
-      {statusText !== undefined && (
+      {statusText ? (
         <div className="guess-input-feedback" role="status" aria-live="polite">
           {statusText}
         </div>
-      )}
+      ) : null}
     </>
   );
 }

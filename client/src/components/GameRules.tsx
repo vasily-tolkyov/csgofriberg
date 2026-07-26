@@ -1,19 +1,7 @@
 import { useCallback, useEffect, useId, useRef, useState } from 'react';
-import {
-  ArrowDown,
-  ArrowUp,
-  BookOpen,
-  Eye,
-  Flag,
-  MapPinned,
-  Target,
-  Users,
-  X,
-} from 'lucide-react';
+import { ArrowDown, ArrowUp, BookOpen, Target, Trophy, Users, X } from 'lucide-react';
 import ModalPortal from './ModalPortal';
 import { useTranslation } from 'react-i18next';
-
-const regions = ['europe', 'cis', 'asia', 'oceania', 'northAmerica', 'southAmerica', 'africaIsrael'] as const;
 
 export default function GameRules() {
   const { t } = useTranslation();
@@ -47,18 +35,12 @@ export default function GameRules() {
 
   return (
     <>
-      <button
-        ref={triggerRef}
-        className="game-rules-trigger"
-        type="button"
-        onClick={() => setOpen(true)}
-        data-umami-event="home-rules-open"
-      >
+      <button ref={triggerRef} className="game-rules-trigger" type="button" onClick={() => setOpen(true)}>
         <BookOpen size={14} aria-hidden="true" />
         {t('rules.trigger')}
       </button>
 
-      {open && (
+      {open ? (
         <ModalPortal>
           <div
             className="game-rules-backdrop"
@@ -66,12 +48,7 @@ export default function GameRules() {
               if (event.target === event.currentTarget) closeRules();
             }}
           >
-            <div
-              className="game-rules-dialog"
-              role="dialog"
-              aria-modal="true"
-              aria-labelledby={titleId}
-            >
+            <div className="game-rules-dialog" role="dialog" aria-modal="true" aria-labelledby={titleId}>
               <header className="game-rules-dialog-heading">
                 <span className="game-rules-heading-icon" aria-hidden="true">
                   <BookOpen size={24} />
@@ -81,14 +58,15 @@ export default function GameRules() {
                   <h2 id={titleId}>{t('rules.title')}</h2>
                   <p>{t('rules.description')}</p>
                 </div>
-                <strong className="guess-limit"><span>{t('rules.max')}</span> {t('rules.guesses')}</strong>
+                <strong className="guess-limit">
+                  <span>{t('rules.max')}</span> {t('rules.guesses')}
+                </strong>
                 <button
                   ref={closeRef}
                   className="confirm-close"
                   type="button"
                   aria-label={t('rules.close')}
                   onClick={closeRules}
-                  data-umami-event="home-rules-close"
                 >
                   <X size={18} />
                 </button>
@@ -123,8 +101,8 @@ export default function GameRules() {
                     <p>{t('rules.guessIntro')}</p>
                     <div className="rule-field-grid">
                       <div>
-                        <strong>{t('rules.exactTitle')}</strong>
-                        <span>{t('rules.exactText')}</span>
+                        <strong>{t('rules.teamIdentityTitle')}</strong>
+                        <span>{t('rules.teamIdentityText')}</span>
                       </div>
                       <div>
                         <strong>{t('rules.regionTitle')}</strong>
@@ -135,49 +113,29 @@ export default function GameRules() {
                         <span>{t('rules.ageText')}</span>
                       </div>
                       <div>
-                        <strong>{t('rules.majorTitle')}</strong>
-                        <span>{t('rules.majorText')}</span>
+                        <strong>{t('rules.eventTitle')}</strong>
+                        <span>{t('rules.eventText')}</span>
                       </div>
-                    </div>
-                    <div className="rule-result-notes">
-                      <p><span className="rule-result-icon rule-result-win"><Flag size={15} /></span><strong>{t('rules.winLabel')}</strong>{t('rules.winText')}</p>
-                      <p><span className="rule-result-icon rule-result-loss">8</span><strong>{t('rules.lossLabel')}</strong>{t('rules.lossText')}</p>
                     </div>
                   </article>
 
                   <article className="rule-panel rule-panel-multi">
                     <div className="rule-panel-title">
-                      <span aria-hidden="true"><Users size={20} /></span>
-                      <div><small>02</small><h3>{t('rules.multiTitle')}</h3></div>
+                      <span aria-hidden="true"><Trophy size={20} /></span>
+                      <div><small>02</small><h3>{t('rules.goalTitle')}</h3></div>
                     </div>
                     <ul className="rule-list">
-                      <li><Eye size={17} aria-hidden="true" /><span>{t('rules.multiInfo')}</span></li>
-                      <li><span className="rule-list-number">6s</span><span>{t('rules.multiReveal')}</span></li>
-                      <li><Flag size={17} aria-hidden="true" /><span>{t('rules.multiSurrender')}</span></li>
+                      <li><Users size={17} aria-hidden="true" /><span>{t('rules.goalLine1')}</span></li>
+                      <li><span className="rule-list-number">8</span><span>{t('rules.goalLine2')}</span></li>
+                      <li><span className="rule-list-number">/</span><span>{t('rules.goalLine3')}</span></li>
                     </ul>
-                  </article>
-
-                  <article className="rule-panel rule-panel-regions">
-                    <div className="rule-panel-title">
-                      <span aria-hidden="true"><MapPinned size={20} /></span>
-                      <div><small>03</small><h3>{t('rules.regionsTitle')}</h3></div>
-                    </div>
-                    <p>{t('rules.regionsIntro')}</p>
-                    <div className="region-list">
-                      {regions.map((region) => (
-                        <div className="region-item" key={region}>
-                          <strong>{t(`rules.regions.${region}.name`)}</strong>
-                          <span>{t(`rules.regions.${region}.countries`)}</span>
-                        </div>
-                      ))}
-                    </div>
                   </article>
                 </div>
               </div>
             </div>
           </div>
         </ModalPortal>
-      )}
+      ) : null}
     </>
   );
 }

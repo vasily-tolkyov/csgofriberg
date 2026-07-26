@@ -1,6 +1,7 @@
 node_modules/
+.broken-node_modules-*/
+*.tsbuildinfo
 dist/
-pow-wasm/target/
 *.sqlite3
 *.db
 .env
@@ -12,5 +13,8 @@ data/imports/players-origin.json
 data/pgdata/
 .docker-runtime-test/
 .pnpm-store/
+.pnpm-install.*.log
+source-evidence/
+design-qa-artifacts/
 rule.txt
 AGENTS.md

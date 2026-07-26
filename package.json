@@ -1,20 +1,23 @@
 {
-  "name": "csgofriberg",
-  "version": "1.0.0",
+  "name": "friberg-lol-community",
+  "version": "0.1.0",
   "packageManager": "pnpm@11.13.1",
   "private": true,
-  "description": "弗一把 - CS:GO/CS2 Major 选手猜测游戏",
+  "license": "AGPL-3.0-only",
+  "description": "弗一把 · 英雄联盟版——社区衍生的职业选手猜测小游戏",
   "scripts": {
     "dev": "concurrently -n server,client -c blue,green \"pnpm --filter server dev\" \"pnpm --filter client dev\"",
-    "build": "pnpm build:pow && pnpm --filter client build && pnpm --filter server build",
+    "build": "pnpm data:validate && pnpm data:sync-runtime && pnpm --filter client build && pnpm --filter server build",
     "start": "pnpm --filter server start",
-    "test": "pnpm --filter server test && pnpm --filter client test",
+    "test": "pnpm test:data && pnpm data:validate && pnpm --filter server test && pnpm --filter client test",
     "test:client": "pnpm --filter client test",
-    "migrate": "pnpm --filter server migrate",
-    "seed": "pnpm --filter server seed",
-    "create-admin": "pnpm --filter server create-admin",
-    "build:pow": "node scripts/build-pow.mjs",
-    "loadtest": "pnpm --filter server loadtest"
+    "test:server": "pnpm --filter server test",
+    "test:data": "node --test scripts/tests/*.test.mjs",
+    "data:fetch": "node scripts/fetch-lol-data-fixtures.mjs",
+    "data:build": "node scripts/build-lol-data.mjs",
+    "data:validate": "node scripts/validate-lol-data.mjs",
+    "data:sync-runtime": "node scripts/sync-runtime-player-data.mjs",
+    "data:oracle-diff": "node scripts/validate-oracles-diff.mjs"
   },
   "devDependencies": {
     "concurrently": "^9.1.2"

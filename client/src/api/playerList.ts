@@ -1,9 +1,4 @@
-import { api } from './client';
-
-export interface PlayerSuggestion {
-  id: number;
-  nickname: string;
-}
+import { fetchPlayerSuggestions, PlayerSuggestion } from './lol';
 
 interface CachedPlayerList {
   version: string;
@@ -28,18 +23,10 @@ function readStored(): CachedPlayerList | null {
 }
 
 async function refresh(cached: CachedPlayerList | null): Promise<PlayerSuggestion[]> {
-  const response = await api.get('/players/list', {
-    headers: cached ? { 'If-None-Match': `\"players-${cached.version}\"` } : undefined,
-    validateStatus: (status) => (status >= 200 && status < 300) || status === 304,
-  });
-  if (response.status === 304 && cached) {
-    memory = cached;
-    validatedAt = performance.now();
-    return cached.players;
-  }
+  const players = await fetchPlayerSuggestions();
   const next: CachedPlayerList = {
-    version: String(response.data.version),
-    players: response.data.players,
+    version: String(Date.now()),
+    players,
   };
   memory = next;
   validatedAt = performance.now();
@@ -74,11 +61,21 @@ export function searchPlayerList(players: PlayerSuggestion[], query: string): Pl
   const normalized = query.trim().toLocaleLowerCase();
   if (!normalized) return [];
   return players
-    .filter((player) => player.nickname.toLocaleLowerCase().includes(normalized))
+    .filter((player) => {
+      const aliases = Array.isArray(player.aliases) ? player.aliases : [];
+      return (
+      player.nickname.toLocaleLowerCase().includes(normalized) ||
+      aliases.some((alias) => alias.toLocaleLowerCase().includes(normalized))
+      );
+    })
     .sort((a, b) => {
       const aName = a.nickname.toLocaleLowerCase();
       const bName = b.nickname.toLocaleLowerCase();
-      return Number(bName.startsWith(normalized)) - Number(aName.startsWith(normalized)) ||
+      const aAliases = Array.isArray(a.aliases) ? a.aliases : [];
+      const bAliases = Array.isArray(b.aliases) ? b.aliases : [];
+      const aAlias = aAliases.some((alias) => alias.toLocaleLowerCase().startsWith(normalized));
+      const bAlias = bAliases.some((alias) => alias.toLocaleLowerCase().startsWith(normalized));
+      return Number(bName.startsWith(normalized) || bAlias) - Number(aName.startsWith(normalized) || aAlias) ||
         a.nickname.localeCompare(b.nickname);
     })
     .slice(0, 10);

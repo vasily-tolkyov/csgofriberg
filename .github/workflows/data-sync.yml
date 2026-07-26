@@ -1,0 +1,74 @@
+name: LoL data sync proposal
+
+on:
+  schedule:
+    - cron: "17 3 * * *"
+  workflow_dispatch:
+    inputs:
+      refresh_leaguepedia:
+        description: Refresh weekly Leaguepedia fixtures as well as Riot GCD
+        required: false
+        default: false
+        type: boolean
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: lol-data-sync
+  cancel-in-progress: false
+
+jobs:
+  propose:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Choose daily or weekly refresh
+        id: cadence
+        shell: bash
+        run: |
+          if [ "${{ inputs.refresh_leaguepedia }}" = "true" ] || [ "$(date -u +%u)" = "7" ]; then
+            echo "mode=full" >> "$GITHUB_OUTPUT"
+          else
+            echo "mode=gcd-only" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Fetch source snapshots
+        shell: bash
+        run: |
+          if [ "${{ steps.cadence.outputs.mode }}" = "full" ]; then
+            node scripts/fetch-lol-data-fixtures.mjs
+          else
+            node scripts/fetch-lol-data-fixtures.mjs --gcd-only
+          fi
+
+      - name: Generate review proposal
+        run: |
+          node --test scripts/tests/lol-data.test.mjs
+          node scripts/build-lol-data.mjs
+          node scripts/validate-lol-data.mjs
+          node scripts/validate-oracles-diff.mjs
+          node scripts/sync-runtime-player-data.mjs
+
+      - name: Open a human-review pull request
+        uses: peter-evans/create-pull-request@v7
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: automation/lol-data-sync
+          delete-branch: true
+          commit-message: "data: propose refreshed LoL player snapshot"
+          title: "data: review refreshed LoL player snapshot"
+          body: |
+            Automated `${{ steps.cadence.outputs.mode }}` source refresh.
+
+            This pull request is a proposal only. Review `data/generated/proposed-player-changes.md`,
+            source status, quarantine output, status overrides, and international-event counts
+            before merging. The workflow never publishes data directly.
+          labels: |
+            data
+            needs-review

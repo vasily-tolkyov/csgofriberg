@@ -22,7 +22,7 @@ describe('difficulty helpers', () => {
   it('resolves localized labels and descriptions', () => {
     const t = i18n.t.bind(i18n);
     expect(difficultyLabel(t, 'easy')).toBe('简单版');
-    expect(difficultyDescription(t, 'easy')).toBe('知名选手池 · 快速上手');
+    expect(difficultyDescription(t, 'easy', 12)).toBe('知名选手 · 当前 12 人样板池');
     expect(difficultyDescription(t, 'missing')).toBe('');
   });
 });

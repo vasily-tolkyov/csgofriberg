@@ -17,6 +17,7 @@
 @media (max-width: 760px) {
   .menu-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .menu-grid .menu-card:last-child { grid-column: 1 / -1; width: calc(50% - 6px); justify-self: center; }
+  .menu-grid-dual .menu-card:last-child { grid-column: auto; width: 100%; }
   .presence-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .stats-overview-grid { grid-template-columns: 1fr; }
   .admin-players-header { align-items: stretch; flex-direction: column; }
@@ -38,12 +39,7 @@
   .header-bar .btns { gap: 6px; }
   .header-bar .btns .btn { min-width: 36px; padding-inline: 9px; }
   .header-bar .btns .theme-toggle { width: 36px; padding-inline: 0; flex: 0 0 36px; }
-  .header-bar .btns .language-select { flex-basis: 36px; width: 36px; }
-  .header-bar .btns .language-select-button { padding-inline: 0; }
-  .header-bar .btns .language-current,
-  .header-bar .btns .language-chevron { display: none; }
   .header-bar .btns .btn-text { display: none; }
-  .home-page .header-bar .muted { display: none; }
   .status-bar { padding-block: 9px; font-size: 0.87rem; line-height: 1.45; }
   .game-page.keyboard-active .header-bar,
   .game-page.keyboard-active .status-bar { display: none; }
@@ -131,6 +127,7 @@
   .menu-card { min-height: 136px; gap: 10px; padding: 20px 10px; border-radius: 15px; }
   .menu-card .menu-icon { width: 48px; height: 48px; border-radius: 14px; }
   .menu-card .menu-label { font-size: 0.98rem; }
+  .home-meta-grid { grid-template-columns: 1fr; gap: 12px; padding-bottom: 18px; }
   .bottom-bar { gap: 8px; }
   .bottom-bar .btn { min-width: 0; padding-inline: 12px; font-size: 0.88rem; }
   .game-rules-backdrop { padding: 10px; }
@@ -160,36 +157,56 @@
   .rule-field-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .rule-result-notes { grid-template-columns: 1fr; }
 
-  .game-table-wrap { overflow-x: hidden; border-radius: 10px; }
-  .game-table {
-    min-width: 0;
-    table-layout: fixed;
-    border-spacing: 2px;
-    font-size: 0.64rem;
+  .guess-board-desktop { display: none; }
+  .guess-board-mobile {
+    display: grid;
+    gap: 12px;
   }
-  .game-table thead { display: table-header-group; }
-  .game-table tbody { display: table-row-group; }
-  .game-table tr { display: table-row; }
-  .game-table th {
-    padding: 5px 1px;
-    font-size: 0.56rem;
-    line-height: 1.12;
-    position: static;
+  .guess-mobile-card {
+    display: grid;
+    gap: 12px;
+    padding: 14px;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    background: var(--card);
+    box-shadow: var(--shadow);
   }
-  .game-table td {
-    display: table-cell;
-    min-width: 0;
-    padding: 6px 2px;
-    border-radius: 4px;
-    white-space: normal;
-    overflow-wrap: anywhere;
-    word-break: break-word;
-    line-height: 1.15;
-    vertical-align: middle;
+  .guess-mobile-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
   }
-  .game-table td::before { content: none; }
-  .game-table td .dir { margin-left: 1px; }
-  .game-table td .dir svg { width: 9px; height: 9px; }
+  .guess-mobile-grid {
+    display: grid;
+    gap: 8px;
+    margin: 0;
+  }
+  .guess-mobile-field {
+    display: grid;
+    gap: 4px;
+    padding: 10px 12px;
+    border-radius: 12px;
+    background: var(--card-soft);
+  }
+  .guess-mobile-field.correct { background: color-mix(in srgb, var(--correct) 20%, var(--card)); }
+  .guess-mobile-field.close { background: color-mix(in srgb, var(--close) 22%, var(--card)); }
+  .guess-mobile-field.wrong { background: color-mix(in srgb, var(--wrong) 14%, var(--card)); }
+  .guess-mobile-field dt {
+    margin: 0;
+    color: var(--text-light);
+    font-size: 0.76rem;
+    font-weight: 700;
+  }
+  .guess-mobile-field dd {
+    display: grid;
+    gap: 3px;
+    margin: 0;
+  }
+  .guess-mobile-meta {
+    color: var(--text-sec);
+    font-size: 0.76rem;
+  }
   .boards .card { padding: 8px; }
   .input-dock { padding-block: 10px; }
   .input-bar { gap: 8px; }
@@ -312,6 +329,7 @@
     align-items: center;
     padding: 18px;
   }
+  .menu-grid-dual { grid-template-columns: 1fr; }
   .menu-copy { min-width: 0; text-align: left; }
   .menu-description { display: block; }
   .rule-quick-guide { grid-template-columns: 1fr; }
@@ -334,10 +352,7 @@
   .input-bar .btn { padding-inline: 10px; }
   .join-room-form .btn { padding-inline: 8px; }
   .score-bar .player-name svg { display: none; }
-  .game-table { border-spacing: 1px; font-size: 0.58rem; }
-  .game-table th { padding: 4px 0; font-size: 0.5rem; }
-  .game-table td { padding: 5px 1px; }
-  .game-table td .dir svg { width: 8px; height: 8px; }
+  .guess-mobile-card { padding: 12px; }
   .overlay-card .btns,
   .confirm-actions { grid-template-columns: 1fr; }
   .room-ready-actions { flex-direction: column; }

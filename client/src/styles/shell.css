@@ -53,6 +53,11 @@
   text-overflow: ellipsis;
   min-width: 0;
 }
+.header-bar .title,
+.header-bar .btns {
+  position: relative;
+  z-index: 1;
+}
 .header-bar .btns { display: flex; gap: 8px; align-items: center; min-width: 0; flex-shrink: 0; }
 .theme-toggle { min-width: 38px; }
 .auth-pending {

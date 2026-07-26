@@ -17,8 +17,6 @@ export default function ThemeToggle() {
       aria-pressed={isLight}
       title={actionHint}
       onClick={() => setTheme(nextTheme)}
-      data-umami-event="home-theme-change"
-      data-umami-event-theme={nextTheme}
     >
       {isLight ? <Sun size={15} /> : <Moon size={15} />}
       <span className="btn-text">{isLight ? t('common.lightTheme') : t('common.darkTheme')}</span>

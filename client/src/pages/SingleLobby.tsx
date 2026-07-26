@@ -12,12 +12,14 @@ import {
 import { getStoredSingleDifficulty, setStoredSingleDifficulty } from '../store/singleDifficulty';
 import { useTranslation } from 'react-i18next';
 import { toast } from '../components/Toast';
+import { fetchMeta } from '../api/lol';
 
 export default function SingleLobby() {
   const { t } = useTranslation();
   const navigate = useNavigate();
   const difficulties = AVAILABLE_DIFFICULTIES;
   const [selected, setSelected] = useState<string | null>(getStoredSingleDifficulty);
+  const [poolSizes, setPoolSizes] = useState({ easy: 12, normal: 20 });
 
   const selectedDifficulty = useMemo(
     () => difficulties.find((item) => item.key === selected)
@@ -34,6 +36,12 @@ export default function SingleLobby() {
     }
   }, [selected, selectedDifficulty]);
 
+  useEffect(() => {
+    void fetchMeta()
+      .then((meta) => setPoolSizes({ easy: meta.poolSizes.easy, normal: meta.poolSizes.normal }))
+      .catch(() => undefined);
+  }, []);
+
   const choose = (key: string) => {
     setSelected(key);
     setStoredSingleDifficulty(key);
@@ -49,7 +57,9 @@ export default function SingleLobby() {
 
   return (
     <Page title={t('singleLobby.title')} icon={<Gamepad2 size={17} />}>
-      <p className="muted single-lobby-subtitle">{t('singleLobby.subtitle')}</p>
+      <p className="muted single-lobby-subtitle">
+        {t('singleLobby.subtitle', { easy: poolSizes.easy, normal: poolSizes.normal })}
+      </p>
       {difficulties.length ? (
         <>
           <div className="single-difficulty-grid">
@@ -68,7 +78,11 @@ export default function SingleLobby() {
                   <span className="single-difficulty-copy">
                     <strong>{difficultyLabel(t, difficulty.key)}</strong>
                     <small>
-                      {difficultyDescription(t, difficulty.key) || t('singleLobby.available')}
+                      {difficultyDescription(
+                        t,
+                        difficulty.key,
+                        poolSizes[difficulty.key as keyof typeof poolSizes]
+                      ) || t('singleLobby.available')}
                     </small>
                   </span>
                   <span className="single-difficulty-check" aria-hidden="true">{active && <Check size={17} />}</span>

@@ -1,8 +1,7 @@
 @import './tokens.css';
 @import './shell.css';
 @import './controls.css';
-@import './data-admin.css';
 @import './game.css';
-@import './home-multiplayer.css';
+@import './home.css';
 @import './responsive.css';
 @import './themes/light.css';

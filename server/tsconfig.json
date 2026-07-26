@@ -11,6 +11,13 @@
     "resolveJsonModule": true,
     "forceConsistentCasingInFileNames": true
   },
-  "include": ["src"],
+  "include": [
+    "src/index.ts",
+    "src/app.ts",
+    "src/config.ts",
+    "src/redis.ts",
+    "src/services/keyLock.ts",
+    "src/mvp/**/*.ts"
+  ],
   "exclude": ["src/**/*.test.ts"]
 }

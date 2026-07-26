@@ -10,9 +10,8 @@ dist
 **/dist
 .pnpm-store
 .docker-runtime-test
-pow-wasm/target
 origin
-data/imports
+data/staging
 deploy
 *.sqlite3
 *.db
@@ -23,3 +22,8 @@ coverage
 **/*.test.ts
 **/*.tsbuildinfo
 README.md
+ATTRIBUTION.md
+LEGAL_AND_LAUNCH_GATES.md
+source-evidence
+design-qa-artifacts
+design-qa.md

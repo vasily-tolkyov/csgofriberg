@@ -7,7 +7,7 @@ const readCss = (relativePath: string) =>
 
 describe('desktop/mobile layout contracts', () => {
   it('caps single difficulty cards on wide screens and stacks actions on mobile', () => {
-    const home = readCss('./home-multiplayer.css');
+    const home = readCss('./home.css');
     expect(home).toMatch(
       /\.single-difficulty-grid\s*\{[^}]*grid-template-columns:\s*repeat\(auto-fit,\s*minmax\(230px,\s*360px\)\)/s
     );
@@ -29,19 +29,17 @@ describe('desktop/mobile layout contracts', () => {
     );
   });
 
-  it('hides chrome when mobile keyboard is open and keeps multiplayer boards stacked', () => {
+  it('hides chrome for the mobile keyboard and swaps the table for labeled cards', () => {
     const responsive = readCss('./responsive.css');
     expect(responsive).toMatch(
       /\.game-page\.keyboard-active\s+\.header-bar,\s*\n?\s*\.game-page\.keyboard-active\s+\.status-bar\s*\{\s*display:\s*none/
     );
+    expect(responsive).toMatch(/\.guess-board-desktop\s*\{\s*display:\s*none/);
     expect(responsive).toMatch(
-      /@media\s*\(max-width:\s*960px\)\s*\{[\s\S]*\.boards\s*\{[^}]*grid-template-columns:\s*1fr/
+      /\.guess-board-mobile\s*\{[^}]*display:\s*grid[^}]*gap:\s*12px/s
     );
     expect(responsive).toMatch(
-      /\.leaderboard-card\s+table\s+th:nth-child\(1\)\s*\{\s*width:\s*7%/
-    );
-    expect(responsive).toMatch(
-      /\.leaderboard-card-multi\s+table\s+th:nth-child\(1\)\s*\{\s*width:\s*8%/
+      /\.guess-mobile-field\s+dt\s*\{[^}]*font-size:\s*0\.76rem[^}]*font-weight:\s*700/s
     );
   });
 });

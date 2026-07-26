@@ -6,8 +6,8 @@ export function difficultyLabel(t: TFunction, key: string): string {
   return t(`difficulty.${key}`, { defaultValue: key });
 }
 
-export function difficultyDescription(t: TFunction, key: string): string {
-  return t(`difficulty.${key}Description`, { defaultValue: '' });
+export function difficultyDescription(t: TFunction, key: string, count?: number): string {
+  return t(`difficulty.${key}Description`, { count, defaultValue: '' });
 }
 
 const DIFFICULTY_ICONS: Record<string, LucideIcon> = {
