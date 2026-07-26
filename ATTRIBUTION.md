@@ -17,6 +17,7 @@
 
 本仓库的数据管线会读取 Leaguepedia 页面与战绩页作为来源之一，示例来源链接可在以下文件中查看：
 
+- `data/staging/fixtures/leaguepedia/*.json`（用于可复现构建的来源快照）
 - `data/generated/source-status-report.json`
 - `data/generated/players.json` 的 `sources` 字段
 
@@ -24,7 +25,8 @@
 
 - Leaguepedia 页面显示其内容“除非另有说明，按 CC BY-SA 3.0 提供”
 - 如果你在公开产品、文档或营销材料中复制或改编了 Leaguepedia 的文字、表格、截图或其他可版权内容，需要补足署名与同许可义务
-- 当前仓库主要保存结构化事实与来源 URL；是否构成需要额外分享同许可材料的改编，发布方应自行复核
+- `data/staging/fixtures/leaguepedia/*.json` 中的来源页面快照按 Leaguepedia 页面标示的 CC BY-SA 3.0 条款处理；页面作者贡献记录可由对应来源 URL 查看
+- 运行时题库只发布经过清洗的结构化事实与来源 URL；发布方仍应复核其具体使用方式是否产生额外署名或同许可义务
 
 建议至少保留：
 
@@ -40,6 +42,7 @@
 - 不使用 Riot Logo、英雄头像、战队 Logo、官方宣传图
 - 不把 Riot 商标写进公开主品牌、域名、商店名或营销文案
 - 对外页面应明确这是粉丝项目，不是 Riot 官方产品
+- 公开上线前在 Riot Developer Portal 登记面向玩家的第三方产品
 
 推荐在公开站点保留一段醒目的非背书说明：
 
