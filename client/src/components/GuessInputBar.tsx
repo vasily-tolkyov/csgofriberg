@@ -140,6 +140,7 @@ export default function GuessInputBar({
               id={`${listId}-opt-${i}`}
               role="option"
               aria-selected={i === active}
+              aria-label={item.aliases?.length ? `${item.nickname}，别名 ${item.aliases.join('、')}` : item.nickname}
               className={i === active ? 'active' : ''}
               onMouseDown={(event) => {
                 event.preventDefault();

@@ -1,5 +1,7 @@
 {
-  "fetchedAt": "2026-07-26T16:10:59.818Z",
+  "fetchedAt": "2026-07-26T21:23:17.512Z",
+  "gcdFetchedAt": "2026-07-26T21:23:17.512Z",
+  "leaguepediaFetchedAt": "2026-07-26T21:23:17.512Z",
   "gcd": {
     "KR": {
       "url": "https://docs.google.com/spreadsheets/d/1Y7k5kQ2AegbuyiGwEPsa62e883FYVtHqr6UVut9RC4o/pub?output=csv&gid=905624073"
@@ -18,6 +20,10 @@
     }
   },
   "leaguepedia": {
+    "369": {
+      "overviewUrl": "https://lol.fandom.com/wiki/369",
+      "tournamentResultsUrl": "https://lol.fandom.com/wiki/369/Tournament_Results"
+    },
     "faker": {
       "overviewUrl": "https://lol.fandom.com/wiki/Faker",
       "tournamentResultsUrl": "https://lol.fandom.com/wiki/Faker/Tournament_Results"
@@ -97,6 +103,242 @@
     "vulcan": {
       "overviewUrl": "https://lol.fandom.com/wiki/Vulcan_(Philippe_Laflamme)",
       "tournamentResultsUrl": "https://lol.fandom.com/wiki/Vulcan_(Philippe_Laflamme)/Tournament_Results"
+    },
+    "doran": {
+      "overviewUrl": "https://lol.fandom.com/wiki/Doran_(Choi_Hyeon-joon)",
+      "tournamentResultsUrl": "https://lol.fandom.com/wiki/Doran_(Choi_Hyeon-joon)/Tournament_Results"
+    },
+    "peyz": {
+      "overviewUrl": "https://lol.fandom.com/wiki/Peyz",
+      "tournamentResultsUrl": "https://lol.fandom.com/wiki/Peyz/Tournament_Results"
+    },
+    "kiin": {
+      "overviewUrl": "https://lol.fandom.com/wiki/Kiin",
+      "tournamentResultsUrl": "https://lol.fandom.com/wiki/Kiin/Tournament_Results"
+    },
+    "ruler": {
+      "overviewUrl": "https://lol.fandom.com/wiki/Ruler",
+      "tournamentResultsUrl": "https://lol.fandom.com/wiki/Ruler/Tournament_Results"
+    },
+    "duro": {
+      "overviewUrl": "https://lol.fandom.com/wiki/Duro",
+      "tournamentResultsUrl": "https://lol.fandom.com/wiki/Duro/Tournament_Results"
+    },
+    "delight": {
+      "overviewUrl": "https://lol.fandom.com/wiki/Delight",
+      "tournamentResultsUrl": "https://lol.fandom.com/wiki/Delight/Tournament_Results"
+    },
+    "lucid": {
+      "overviewUrl": "https://lol.fandom.com/wiki/Lucid_(Choi_Yong-hyeok)",
+      "tournamentResultsUrl": "https://lol.fandom.com/wiki/Lucid_(Choi_Yong-hyeok)/Tournament_Results"
+    },
+    "siwoo": {
+      "overviewUrl": "https://lol.fandom.com/wiki/Siwoo",
+      "tournamentResultsUrl": "https://lol.fandom.com/wiki/Siwoo/Tournament_Results"
+    },
+    "smash": {
+      "overviewUrl": "https://lol.fandom.com/wiki/Smash_(Shin_Geum-jae)",
+      "tournamentResultsUrl": "https://lol.fandom.com/wiki/Smash_(Shin_Geum-jae)/Tournament_Results"
+    },
+    "xun": {
+      "overviewUrl": "https://lol.fandom.com/wiki/Xun",
+      "tournamentResultsUrl": "https://lol.fandom.com/wiki/Xun/Tournament_Results"
+    },
+    "on": {
+      "overviewUrl": "https://lol.fandom.com/wiki/ON",
+      "tournamentResultsUrl": "https://lol.fandom.com/wiki/ON/Tournament_Results"
+    },
+    "viper": {
+      "overviewUrl": "https://lol.fandom.com/wiki/Viper_(Park_Do-hyeon)",
+      "tournamentResultsUrl": "https://lol.fandom.com/wiki/Viper_(Park_Do-hyeon)/Tournament_Results"
+    },
+    "tian": {
+      "overviewUrl": "https://lol.fandom.com/wiki/Tian",
+      "tournamentResultsUrl": "https://lol.fandom.com/wiki/Tian/Tournament_Results"
+    },
+    "creme": {
+      "overviewUrl": "https://lol.fandom.com/wiki/Creme",
+      "tournamentResultsUrl": "https://lol.fandom.com/wiki/Creme/Tournament_Results"
+    },
+    "rookie": {
+      "overviewUrl": "https://lol.fandom.com/wiki/Rookie",
+      "tournamentResultsUrl": "https://lol.fandom.com/wiki/Rookie/Tournament_Results"
+    },
+    "wei": {
+      "overviewUrl": "https://lol.fandom.com/wiki/Wei_(Yan_Yang-Wei)",
+      "tournamentResultsUrl": "https://lol.fandom.com/wiki/Wei_(Yan_Yang-Wei)/Tournament_Results"
+    },
+    "photic": {
+      "overviewUrl": "https://lol.fandom.com/wiki/Photic",
+      "tournamentResultsUrl": "https://lol.fandom.com/wiki/Photic/Tournament_Results"
+    },
+    "tarzan": {
+      "overviewUrl": "https://lol.fandom.com/wiki/Tarzan_(Lee_Seung-yong)",
+      "tournamentResultsUrl": "https://lol.fandom.com/wiki/Tarzan_(Lee_Seung-yong)/Tournament_Results"
+    },
+    "flandre": {
+      "overviewUrl": "https://lol.fandom.com/wiki/Flandre",
+      "tournamentResultsUrl": "https://lol.fandom.com/wiki/Flandre/Tournament_Results"
+    },
+    "shanks": {
+      "overviewUrl": "https://lol.fandom.com/wiki/Shanks",
+      "tournamentResultsUrl": "https://lol.fandom.com/wiki/Shanks/Tournament_Results"
+    },
+    "hope": {
+      "overviewUrl": "https://lol.fandom.com/wiki/Hope_(Wang_Jie)",
+      "tournamentResultsUrl": "https://lol.fandom.com/wiki/Hope_(Wang_Jie)/Tournament_Results"
+    },
+    "kael": {
+      "overviewUrl": "https://lol.fandom.com/wiki/Kael_(Kim_Jin-hong)",
+      "tournamentResultsUrl": "https://lol.fandom.com/wiki/Kael_(Kim_Jin-hong)/Tournament_Results"
+    },
+    "xiaohu": {
+      "overviewUrl": "https://lol.fandom.com/wiki/Xiaohu",
+      "tournamentResultsUrl": "https://lol.fandom.com/wiki/Xiaohu/Tournament_Results"
+    },
+    "elk": {
+      "overviewUrl": "https://lol.fandom.com/wiki/Elk",
+      "tournamentResultsUrl": "https://lol.fandom.com/wiki/Elk/Tournament_Results"
+    },
+    "jiejie": {
+      "overviewUrl": "https://lol.fandom.com/wiki/Jiejie",
+      "tournamentResultsUrl": "https://lol.fandom.com/wiki/Jiejie/Tournament_Results"
+    },
+    "scout": {
+      "overviewUrl": "https://lol.fandom.com/wiki/Scout",
+      "tournamentResultsUrl": "https://lol.fandom.com/wiki/Scout/Tournament_Results"
+    },
+    "missing": {
+      "overviewUrl": "https://lol.fandom.com/wiki/MISSING",
+      "tournamentResultsUrl": "https://lol.fandom.com/wiki/MISSING/Tournament_Results"
+    },
+    "razork": {
+      "overviewUrl": "https://lol.fandom.com/wiki/Razork",
+      "tournamentResultsUrl": "https://lol.fandom.com/wiki/Razork/Tournament_Results"
+    },
+    "upset": {
+      "overviewUrl": "https://lol.fandom.com/wiki/Upset",
+      "tournamentResultsUrl": "https://lol.fandom.com/wiki/Upset/Tournament_Results"
+    },
+    "vladi": {
+      "overviewUrl": "https://lol.fandom.com/wiki/Vladi",
+      "tournamentResultsUrl": "https://lol.fandom.com/wiki/Vladi/Tournament_Results"
+    },
+    "skewmond": {
+      "overviewUrl": "https://lol.fandom.com/wiki/SkewMond",
+      "tournamentResultsUrl": "https://lol.fandom.com/wiki/SkewMond/Tournament_Results"
+    },
+    "labrov": {
+      "overviewUrl": "https://lol.fandom.com/wiki/Labrov",
+      "tournamentResultsUrl": "https://lol.fandom.com/wiki/Labrov/Tournament_Results"
+    },
+    "canna": {
+      "overviewUrl": "https://lol.fandom.com/wiki/Canna",
+      "tournamentResultsUrl": "https://lol.fandom.com/wiki/Canna/Tournament_Results"
+    },
+    "yike": {
+      "overviewUrl": "https://lol.fandom.com/wiki/Yike",
+      "tournamentResultsUrl": "https://lol.fandom.com/wiki/Yike/Tournament_Results"
+    },
+    "caliste": {
+      "overviewUrl": "https://lol.fandom.com/wiki/Caliste",
+      "tournamentResultsUrl": "https://lol.fandom.com/wiki/Caliste/Tournament_Results"
+    },
+    "busio": {
+      "overviewUrl": "https://lol.fandom.com/wiki/Busio",
+      "tournamentResultsUrl": "https://lol.fandom.com/wiki/Busio/Tournament_Results"
+    },
+    "elyoya": {
+      "overviewUrl": "https://lol.fandom.com/wiki/Elyoya",
+      "tournamentResultsUrl": "https://lol.fandom.com/wiki/Elyoya/Tournament_Results"
+    },
+    "jojopyun": {
+      "overviewUrl": "https://lol.fandom.com/wiki/Jojopyun",
+      "tournamentResultsUrl": "https://lol.fandom.com/wiki/Jojopyun/Tournament_Results"
+    },
+    "supa": {
+      "overviewUrl": "https://lol.fandom.com/wiki/Supa",
+      "tournamentResultsUrl": "https://lol.fandom.com/wiki/Supa/Tournament_Results"
+    },
+    "alvaro": {
+      "overviewUrl": "https://lol.fandom.com/wiki/Alvaro_(%C3%81lvaro_Fern%C3%A1ndez)",
+      "tournamentResultsUrl": "https://lol.fandom.com/wiki/Alvaro_(%C3%81lvaro_Fern%C3%A1ndez)/Tournament_Results"
+    },
+    "perkz": {
+      "overviewUrl": "https://lol.fandom.com/wiki/Perkz",
+      "tournamentResultsUrl": "https://lol.fandom.com/wiki/Perkz/Tournament_Results"
+    },
+    "reapered": {
+      "overviewUrl": "https://lol.fandom.com/wiki/Reapered",
+      "tournamentResultsUrl": "https://lol.fandom.com/wiki/Reapered/Tournament_Results"
+    },
+    "thanatos": {
+      "overviewUrl": "https://lol.fandom.com/wiki/Thanatos_(Park_Seung-gyu)",
+      "tournamentResultsUrl": "https://lol.fandom.com/wiki/Thanatos_(Park_Seung-gyu)/Tournament_Results"
+    },
+    "apa": {
+      "overviewUrl": "https://lol.fandom.com/wiki/APA_(Eain_Stearns)",
+      "tournamentResultsUrl": "https://lol.fandom.com/wiki/APA_(Eain_Stearns)/Tournament_Results"
+    },
+    "quad": {
+      "overviewUrl": "https://lol.fandom.com/wiki/Quad",
+      "tournamentResultsUrl": "https://lol.fandom.com/wiki/Quad/Tournament_Results"
+    },
+    "massu": {
+      "overviewUrl": "https://lol.fandom.com/wiki/Massu",
+      "tournamentResultsUrl": "https://lol.fandom.com/wiki/Massu/Tournament_Results"
+    },
+    "corejj": {
+      "overviewUrl": "https://lol.fandom.com/wiki/CoreJJ",
+      "tournamentResultsUrl": "https://lol.fandom.com/wiki/CoreJJ/Tournament_Results"
+    },
+    "yeon": {
+      "overviewUrl": "https://lol.fandom.com/wiki/Yeon_(Sean_Sung)",
+      "tournamentResultsUrl": "https://lol.fandom.com/wiki/Yeon_(Sean_Sung)/Tournament_Results"
+    },
+    "impact": {
+      "overviewUrl": "https://lol.fandom.com/wiki/Impact",
+      "tournamentResultsUrl": "https://lol.fandom.com/wiki/Impact/Tournament_Results"
+    },
+    "doublelift": {
+      "overviewUrl": "https://lol.fandom.com/wiki/Doublelift",
+      "tournamentResultsUrl": "https://lol.fandom.com/wiki/Doublelift/Tournament_Results"
+    },
+    "bjergsen": {
+      "overviewUrl": "https://lol.fandom.com/wiki/Bjergsen",
+      "tournamentResultsUrl": "https://lol.fandom.com/wiki/Bjergsen/Tournament_Results"
+    },
+    "uzi": {
+      "overviewUrl": "https://lol.fandom.com/wiki/Uzi_(Jian_Zi-Hao)",
+      "tournamentResultsUrl": "https://lol.fandom.com/wiki/Uzi_(Jian_Zi-Hao)/Tournament_Results"
+    },
+    "clearlove": {
+      "overviewUrl": "https://lol.fandom.com/wiki/Clearlove",
+      "tournamentResultsUrl": "https://lol.fandom.com/wiki/Clearlove/Tournament_Results"
+    },
+    "zz1tai": {
+      "overviewUrl": "https://lol.fandom.com/wiki/Zz1tai",
+      "tournamentResultsUrl": "https://lol.fandom.com/wiki/Zz1tai/Tournament_Results"
+    },
+    "kkoma": {
+      "overviewUrl": "https://lol.fandom.com/wiki/KkOma",
+      "tournamentResultsUrl": "https://lol.fandom.com/wiki/KkOma/Tournament_Results"
+    },
+    "mata": {
+      "overviewUrl": "https://lol.fandom.com/wiki/Mata",
+      "tournamentResultsUrl": "https://lol.fandom.com/wiki/Mata/Tournament_Results"
+    },
+    "homme": {
+      "overviewUrl": "https://lol.fandom.com/wiki/Homme",
+      "tournamentResultsUrl": "https://lol.fandom.com/wiki/Homme/Tournament_Results"
+    },
+    "bengi": {
+      "overviewUrl": "https://lol.fandom.com/wiki/Bengi",
+      "tournamentResultsUrl": "https://lol.fandom.com/wiki/Bengi/Tournament_Results"
+    },
+    "madlife": {
+      "overviewUrl": "https://lol.fandom.com/wiki/MadLife",
+      "tournamentResultsUrl": "https://lol.fandom.com/wiki/MadLife/Tournament_Results"
     }
   }
 }

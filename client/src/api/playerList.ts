@@ -57,26 +57,68 @@ export function clearPlayerListCache(): void {
   localStorage.removeItem(STORAGE_KEY);
 }
 
+function normalizeLookupValue(value: string): string {
+  return value
+    .toLocaleLowerCase()
+    .normalize('NFKD')
+    .replace(/\p{Diacritic}/gu, '')
+    .replace(/[\s\p{P}\p{S}]+/gu, '');
+}
+
+function matchesSubsequence(haystack: string, needle: string): boolean {
+  if (!needle) return false;
+  let index = 0;
+  for (const char of haystack) {
+    if (char === needle[index]) index += 1;
+    if (index === needle.length) return true;
+  }
+  return false;
+}
+
+function scoreText(rawValue: string, normalizedQuery: string, compactQuery: string): number | null {
+  const raw = rawValue.trim().toLocaleLowerCase();
+  const compact = normalizeLookupValue(rawValue);
+  const hasCompactQuery = compactQuery.length > 0;
+
+  if (raw === normalizedQuery || (hasCompactQuery && compact === compactQuery)) return 0;
+  if (raw.startsWith(normalizedQuery) || (hasCompactQuery && compact.startsWith(compactQuery))) return 1;
+  if (raw.split(/[^\p{L}\p{N}]+/gu).some((token) => token.startsWith(normalizedQuery))) return 2;
+  if (raw.includes(normalizedQuery) || (hasCompactQuery && compact.includes(compactQuery))) return 3;
+  if (hasCompactQuery && matchesSubsequence(compact, compactQuery)) return 4;
+  return null;
+}
+
 export function searchPlayerList(players: PlayerSuggestion[], query: string): PlayerSuggestion[] {
   const normalized = query.trim().toLocaleLowerCase();
+  const compactQuery = normalizeLookupValue(query);
   if (!normalized) return [];
+
   return players
-    .filter((player) => {
+    .map((player) => {
       const aliases = Array.isArray(player.aliases) ? player.aliases : [];
-      return (
-      player.nickname.toLocaleLowerCase().includes(normalized) ||
-      aliases.some((alias) => alias.toLocaleLowerCase().includes(normalized))
-      );
+      const nicknameScore = scoreText(player.nickname, normalized, compactQuery);
+      const aliasScore = aliases
+        .map((alias) => scoreText(alias, normalized, compactQuery))
+        .filter((score): score is number => score !== null)
+        .sort((left, right) => left - right)[0] ?? null;
+      const score = [nicknameScore, aliasScore]
+        .filter((value): value is number => value !== null)
+        .sort((left, right) => left - right)[0] ?? null;
+
+      return {
+        player,
+        score,
+        aliasScore,
+      };
     })
-    .sort((a, b) => {
-      const aName = a.nickname.toLocaleLowerCase();
-      const bName = b.nickname.toLocaleLowerCase();
-      const aAliases = Array.isArray(a.aliases) ? a.aliases : [];
-      const bAliases = Array.isArray(b.aliases) ? b.aliases : [];
-      const aAlias = aAliases.some((alias) => alias.toLocaleLowerCase().startsWith(normalized));
-      const bAlias = bAliases.some((alias) => alias.toLocaleLowerCase().startsWith(normalized));
-      return Number(bName.startsWith(normalized) || bAlias) - Number(aName.startsWith(normalized) || aAlias) ||
-        a.nickname.localeCompare(b.nickname);
+    .filter((entry) => entry.score !== null)
+    .sort((left, right) => {
+      if (left.score !== right.score) return (left.score ?? Number.MAX_SAFE_INTEGER) - (right.score ?? Number.MAX_SAFE_INTEGER);
+      if ((left.aliasScore ?? Number.MAX_SAFE_INTEGER) !== (right.aliasScore ?? Number.MAX_SAFE_INTEGER)) {
+        return (left.aliasScore ?? Number.MAX_SAFE_INTEGER) - (right.aliasScore ?? Number.MAX_SAFE_INTEGER);
+      }
+      return left.player.nickname.localeCompare(right.player.nickname, 'en-US');
     })
+    .map((entry) => entry.player)
     .slice(0, 10);
 }

@@ -3,6 +3,7 @@ import {
   DATA_ROOT,
   daysBetween,
   readJson,
+  summarizeTargetSize,
   validateCanonicalPlayers,
   writeJson
 } from "./lol-data-lib.mjs";
@@ -10,23 +11,28 @@ import {
 const TODAY = process.argv.find((arg) => arg.startsWith("--today="))?.slice("--today=".length)
   || new Date().toISOString().slice(0, 10);
 const MAX_AGE_DAYS = 14;
+const MINIMUM_REQUIRED = 80;
+const EASY_MINIMUM_REQUIRED = 40;
 const players = readJson(path.join(DATA_ROOT, "generated", "players.json"));
 const sourceStatus = readJson(path.join(DATA_ROOT, "generated", "source-status-report.json"));
 const validation = validateCanonicalPlayers(players, TODAY, MAX_AGE_DAYS);
 
-const targetSize = {
-  minimumRequired: 20,
-  actual: players.length,
-  easyCount: players.filter((player) => player.difficulties.includes("easy")).length,
-  normalCount: players.filter((player) => player.difficulties.includes("normal")).length,
-  meetsMinimum: players.length >= 20
-};
+const targetSize = summarizeTargetSize(players, MINIMUM_REQUIRED, EASY_MINIMUM_REQUIRED);
 
 if (!targetSize.meetsMinimum) {
   validation.issues.push({
     code: "TARGET_SIZE_TOO_SMALL",
     actual: players.length,
     minimumRequired: targetSize.minimumRequired
+  });
+  validation.ok = false;
+}
+
+if (!targetSize.meetsEasyMinimum) {
+  validation.issues.push({
+    code: "EASY_TARGET_SIZE_TOO_SMALL",
+    actual: targetSize.easyCount,
+    easyMinimumRequired: targetSize.easyMinimumRequired
   });
   validation.ok = false;
 }

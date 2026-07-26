@@ -31,7 +31,7 @@ const guessBodySchema = z.object({
 });
 
 const searchQuerySchema = z.object({
-  q: z.string().trim().default(''),
+  q: z.string().trim().max(64).default(''),
 });
 
 interface AppDependencies {

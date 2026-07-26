@@ -45,14 +45,11 @@ function GuessCell({ attr, label }: { attr: GuessAttribute; label: string }) {
       aria-label={hint ? `${label}：${value}，${toneText}，${hint}` : `${label}：${value}，${toneText}`}
     >
       <span className="guess-cell-value">{value}</span>
-      <span className="guess-cell-meta">
-        <span className={`guess-tone guess-tone-${attr.level}`}>{toneText}</span>
-        {attr.hint ? (
-          <span className="guess-hint" aria-hidden="true">
-            {attr.hint === 'higher' ? '↑' : '↓'}
-          </span>
-        ) : null}
-      </span>
+      {attr.hint ? (
+        <span className="guess-cell-meta" aria-hidden="true">
+          <span className="guess-hint">{attr.hint === 'higher' ? '↑' : '↓'}</span>
+        </span>
+      ) : null}
     </td>
   );
 }
@@ -93,14 +90,9 @@ export default function GuessBoard({ guesses }: { guesses: GuessRow[] }) {
                 <td
                   className={`name ${guess.correct ? 'correct' : ''}`}
                   data-label={columns[0]}
-                  aria-label={`${columns[0]}：${guess.nickname}${guess.correct ? `，${t('guess.feedback.correct')}` : ''}`}
+                  aria-label={`${columns[0]}：${guess.nickname}，${guess.correct ? t('guess.feedback.correct') : t('guess.feedback.wrong')}`}
                 >
                   <span className="guess-cell-value">{guess.nickname}</span>
-                  <span className="guess-cell-meta">
-                    <span className={`guess-tone ${guess.correct ? 'guess-tone-correct' : 'guess-tone-wrong'}`}>
-                      {guess.correct ? t('guess.feedback.correct') : t('guess.feedback.wrong')}
-                    </span>
-                  </span>
                 </td>
                 {COLUMN_KEYS.map((key, columnIndex) => (
                   <GuessCell key={`${key}-${columnIndex}`} attr={guess.attributes[key]} label={columns[columnIndex + 1]} />
@@ -120,23 +112,27 @@ export default function GuessBoard({ guesses }: { guesses: GuessRow[] }) {
           >
             <header className="guess-mobile-header">
               <strong>{guess.nickname}</strong>
-              <span className={`guess-tone ${guess.correct ? 'guess-tone-correct' : 'guess-tone-wrong'}`}>
-                {guess.correct ? t('guess.feedback.correct') : t('guess.mobileGuess')}
-              </span>
+              {guess.correct ? <span className="guess-mobile-correct-dot" aria-hidden="true" /> : null}
             </header>
             <dl className="guess-mobile-grid">
               {COLUMN_KEYS.map((key, columnIndex) => {
                 const attr = guess.attributes[key];
                 const hint = hintText(attr, t);
+                const value = cellValue(attr);
                 return (
-                  <div key={`mobile-${key}-${columnIndex}`} className={`guess-mobile-field ${attr.level}`}>
+                  <div
+                    key={`mobile-${key}-${columnIndex}`}
+                    className={`guess-mobile-field ${attr.level}`}
+                    aria-label={hint ? `${columns[columnIndex + 1]}：${value}，${feedbackText(attr.level, t)}，${hint}` : `${columns[columnIndex + 1]}：${value}，${feedbackText(attr.level, t)}`}
+                  >
                     <dt>{columns[columnIndex + 1]}</dt>
                     <dd>
-                      <span>{cellValue(attr)}</span>
-                      <span className="guess-mobile-meta">
-                        {feedbackText(attr.level, t)}
-                        {hint ? ` · ${hint}` : ''}
-                      </span>
+                      <span>{value}</span>
+                      {attr.hint ? (
+                        <span className="guess-mobile-meta" aria-hidden="true">
+                          <span className="guess-hint">{attr.hint === 'higher' ? '↑' : '↓'}</span>
+                        </span>
+                      ) : null}
                     </dd>
                   </div>
                 );

@@ -316,6 +316,23 @@ afterEach(async () => {
 });
 
 describe('MVP API', () => {
+  it('returns ranked typo-tolerant candidates for nicknames and aliases', async () => {
+    const nicknameSearch = await context.client.request('GET', '/api/players/search?q=fakr');
+    expect(nicknameSearch.status).toBe(200);
+    expect(nicknameSearch.body.players[0].id).toBe('faker');
+
+    const aliasSearch = await context.client.request('GET', '/api/players/search?q=baby-fakr');
+    expect(aliasSearch.status).toBe(200);
+    expect(aliasSearch.body.players[0].id).toBe('caps');
+    expect(aliasSearch.body.players[0].aliases).toContain('Baby Faker');
+
+    const oversizedSearch = await context.client.request(
+      'GET',
+      `/api/players/search?q=${'a'.repeat(65)}`
+    );
+    expect(oversizedSearch.status).toBe(400);
+  });
+
   it('restores an in-progress game for the same anonymous owner and blocks other owners', async () => {
     const started = await context.client.request('POST', '/api/game/start', { difficulty: 'easy' });
     expect(started.status).toBe(200);

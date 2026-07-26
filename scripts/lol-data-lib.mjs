@@ -66,20 +66,26 @@ const COUNTRY_REGION_MAP = new Map([
 ]);
 
 const ROLE_MAP = new Map([
+  ["top", "top"],
   ["TOP", "top"],
   ["Top", "top"],
+  ["jungle", "jungle"],
   ["JUG", "jungle"],
   ["JUNGLE", "jungle"],
   ["Jungle", "jungle"],
   ["Jungler", "jungle"],
+  ["mid", "mid"],
   ["MID", "mid"],
   ["Mid", "mid"],
+  ["bot", "bot"],
   ["ADC", "bot"],
   ["BOT", "bot"],
   ["Bot", "bot"],
+  ["support", "support"],
   ["SUP", "support"],
   ["SUPPORT", "support"],
   ["Support", "support"],
+  ["coach", "coach"],
   ["HEAD COACH", "coach"],
   ["LCS Head Coach", "coach"],
   ["Head Coach", "coach"],
@@ -108,8 +114,17 @@ export function slugifyId(value) {
     .replace(/^_+|_+$/g, "");
 }
 
+export function foldSearchText(value) {
+  return value
+    .normalize("NFKD")
+    .replace(/\p{Diacritic}/gu, "");
+}
+
 export function normalizeName(value) {
-  return value.trim().toLowerCase().replace(/[^a-z0-9]+/g, "");
+  return foldSearchText(value)
+    .trim()
+    .toLowerCase()
+    .replace(/[\s\p{P}\p{S}]+/gu, "");
 }
 
 export function normalizeRole(value) {
@@ -268,6 +283,15 @@ export function findGcdRecord(parsed, name) {
   return matches[0];
 }
 
+export function maybeFindGcdRecord(parsed, name) {
+  const matches = parsed.records.filter((row) => row["Official Summoner Name"] === name);
+  if (matches.length === 0) return null;
+  if (matches.length !== 1) {
+    throw new Error(`GCD_ROW_NOT_FOUND_OR_AMBIGUOUS:${name}:${matches.length}`);
+  }
+  return matches[0];
+}
+
 export function decodeHtml(value) {
   return value
     .replace(/&nbsp;/g, " ")
@@ -322,7 +346,8 @@ export function parseLeaguepediaOverview(wikitext) {
   const country = extractInfoboxField(wikitext, "country");
   const role = extractInfoboxField(wikitext, "role");
   const team = normalizePageTeam(extractInfoboxField(wikitext, "team"));
-  const retired = /^yes$/i.test(extractInfoboxField(wikitext, "isretired"));
+  const retired = /^yes$/i.test(extractInfoboxField(wikitext, "isretired"))
+    || /^yes$/i.test(extractInfoboxField(wikitext, "isretiredplayer"));
   return {
     birthDate,
     country,
@@ -398,13 +423,20 @@ export function validateCanonicalPlayers(players, todayIsoDate, maxAgeDays = 14)
       "nationality",
       "geoRegion",
       "status",
-      "currentTeam",
       "verifiedAt"
     ];
     for (const field of requiredFields) {
       if (player[field] === undefined || player[field] === null || player[field] === "") {
         issues.push({ code: "MISSING_FIELD", playerId: player.id, field });
       }
+    }
+    if (
+      player.status !== "retired"
+      && player.status !== "free_agent"
+      && player.status !== "coach"
+      && (player.currentTeam === undefined || player.currentTeam === null || player.currentTeam === "")
+    ) {
+      issues.push({ code: "MISSING_FIELD", playerId: player.id, field: "currentTeam" });
     }
     if (!ALLOWED_STATUSES.has(player.status)) {
       issues.push({ code: "INVALID_STATUS", playerId: player.id, status: player.status });
@@ -507,4 +539,18 @@ export function diffPlayers(previousPlayers, nextPlayers) {
   }
 
   return { added, removed, changed };
+}
+
+export function summarizeTargetSize(players, minimumRequired = 80, easyMinimumRequired = 40) {
+  const easyCount = players.filter((player) => player.difficulties.includes("easy")).length;
+  const normalCount = players.filter((player) => player.difficulties.includes("normal")).length;
+  return {
+    minimumRequired,
+    easyMinimumRequired,
+    actual: players.length,
+    easyCount,
+    normalCount,
+    meetsMinimum: players.length >= minimumRequired,
+    meetsEasyMinimum: easyCount >= easyMinimumRequired
+  };
 }

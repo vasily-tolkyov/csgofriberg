@@ -4,7 +4,7 @@ export const GAME_TTL_SECONDS = 30 * 60;
 export const DIFFICULTIES = ['easy', 'normal'] as const;
 export type Difficulty = typeof DIFFICULTIES[number];
 
-export const PLAYER_ROLES = ['top', 'jungle', 'mid', 'bot', 'support'] as const;
+export const PLAYER_ROLES = ['top', 'jungle', 'mid', 'bot', 'support', 'coach'] as const;
 export type PlayerRole = typeof PLAYER_ROLES[number];
 
 export const PLAYER_STATUSES = ['active', 'retired', 'coach', 'free_agent', 'demoted'] as const;

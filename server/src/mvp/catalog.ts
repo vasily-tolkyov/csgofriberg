@@ -22,7 +22,7 @@ const roleMap: Record<string, PlayerRole> = {
   adc: 'bot',
   bot: 'bot',
   carry: 'bot',
-  coach: 'support',
+  coach: 'coach',
   igl: 'jungle',
   jungle: 'jungle',
   lurker: 'bot',
@@ -83,7 +83,72 @@ function normalizeText(value: string): string {
 }
 
 function normalizeLookup(value: string): string {
-  return value.trim().toLocaleLowerCase();
+  return value
+    .normalize('NFKD')
+    .replace(/\p{M}/gu, '')
+    .toLocaleLowerCase()
+    .replace(/[\s\p{P}\p{S}]+/gu, '');
+}
+
+function isOrderedSubsequence(query: string, candidate: string): boolean {
+  let queryIndex = 0;
+  for (const character of candidate) {
+    if (character === query[queryIndex]) queryIndex += 1;
+    if (queryIndex === query.length) return true;
+  }
+  return false;
+}
+
+function levenshteinDistance(left: string, right: string, limit: number): number {
+  if (Math.abs(left.length - right.length) > limit) return limit + 1;
+  let previous = Array.from({ length: right.length + 1 }, (_, index) => index);
+  for (let leftIndex = 1; leftIndex <= left.length; leftIndex += 1) {
+    const current = [leftIndex];
+    let rowMinimum = current[0];
+    for (let rightIndex = 1; rightIndex <= right.length; rightIndex += 1) {
+      const substitutionCost = left[leftIndex - 1] === right[rightIndex - 1] ? 0 : 1;
+      const value = Math.min(
+        current[rightIndex - 1] + 1,
+        previous[rightIndex] + 1,
+        previous[rightIndex - 1] + substitutionCost
+      );
+      current.push(value);
+      rowMinimum = Math.min(rowMinimum, value);
+    }
+    if (rowMinimum > limit) return limit + 1;
+    previous = current;
+  }
+  return previous[right.length];
+}
+
+function fuzzyTermScore(query: string, term: string): number | null {
+  if (!query || !term) return null;
+  if (term === query) return 0;
+  if (term.startsWith(query)) return 10 + (term.length - query.length) / 100;
+  const substringIndex = term.indexOf(query);
+  if (substringIndex >= 0) return 20 + substringIndex / 100;
+
+  if (
+    query.length >= 3
+    && query.length / term.length >= 0.5
+    && isOrderedSubsequence(query, term)
+  ) {
+    return 30 + (term.length - query.length) / 100;
+  }
+
+  const editLimit = query.length >= 7 ? 2 : query.length >= 3 ? 1 : 0;
+  if (editLimit === 0) return null;
+  const distance = levenshteinDistance(query, term, editLimit);
+  return distance <= editLimit ? 40 + distance + Math.abs(term.length - query.length) / 100 : null;
+}
+
+function playerSearchScore(player: PlayerRecord, query: string): number | null {
+  let best: number | null = null;
+  for (const rawTerm of [player.nickname, ...player.aliases]) {
+    const score = fuzzyTermScore(query, normalizeLookup(rawTerm));
+    if (score !== null && (best === null || score < best)) best = score;
+  }
+  return best;
 }
 
 function stableIdFromNickname(nickname: string): string {
@@ -386,10 +451,17 @@ export function searchPlayers(
   limit = 25
 ): PublicPlayerProfile[] {
   const normalized = normalizeLookup(query);
-  const matches = normalized
-    ? catalog.players.filter((player) => player.searchText.includes(normalized))
-    : catalog.players;
-  return matches.slice(0, limit).map(toPublicProfile);
+  if (!normalized) return [];
+
+  return catalog.players
+    .map((player) => ({ player, score: playerSearchScore(player, normalized) }))
+    .filter((entry): entry is { player: PlayerRecord; score: number } => entry.score !== null)
+    .sort((left, right) => (
+      left.score - right.score
+      || left.player.nickname.localeCompare(right.player.nickname, 'en-US')
+    ))
+    .slice(0, limit)
+    .map(({ player }) => toPublicProfile(player));
 }
 
 export function resolvePlayerGuess(

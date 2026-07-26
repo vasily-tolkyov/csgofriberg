@@ -8,7 +8,11 @@
       "gcdRegion": "KR",
       "gcdName": "Faker",
       "aliases": [
-        "Hide on bush"
+        "Hide on bush",
+        "李相赫",
+        "李哥",
+        "大魔王",
+        "大飞老师"
       ],
       "difficulties": [
         "normal",
@@ -43,7 +47,9 @@
       "pageTitle": "Chovy",
       "gcdRegion": "KR",
       "gcdName": "Chovy",
-      "aliases": [],
+      "aliases": [
+        "超威"
+      ],
       "difficulties": [
         "normal",
         "easy"
@@ -55,7 +61,9 @@
       "pageTitle": "Canyon",
       "gcdRegion": "KR",
       "gcdName": "Canyon",
-      "aliases": [],
+      "aliases": [
+        "三叔"
+      ],
       "difficulties": [
         "normal",
         "easy"
@@ -67,7 +75,9 @@
       "pageTitle": "ShowMaker",
       "gcdRegion": "KR",
       "gcdName": "ShowMaker",
-      "aliases": [],
+      "aliases": [
+        "许秀"
+      ],
       "difficulties": [
         "normal",
         "easy"
@@ -102,7 +112,9 @@
       "pageTitle": "Kanavi",
       "gcdRegion": "KR",
       "gcdName": "Kanavi",
-      "aliases": [],
+      "aliases": [
+        "看片哥"
+      ],
       "difficulties": [
         "normal"
       ]
@@ -113,7 +125,9 @@
       "pageTitle": "Gumayusi",
       "gcdRegion": "KR",
       "gcdName": "Gumayusi",
-      "aliases": [],
+      "aliases": [
+        "小吕布"
+      ],
       "difficulties": [
         "normal"
       ]
@@ -124,7 +138,9 @@
       "pageTitle": "Caps",
       "gcdRegion": "EMEA",
       "gcdName": "Caps",
-      "aliases": [],
+      "aliases": [
+        "帽皇"
+      ],
       "difficulties": [
         "normal",
         "easy"
@@ -136,7 +152,9 @@
       "pageTitle": "BrokenBlade",
       "gcdRegion": "EMEA",
       "gcdName": "BrokenBlade",
-      "aliases": [],
+      "aliases": [
+        "BB"
+      ],
       "difficulties": [
         "normal",
         "easy"
@@ -172,7 +190,9 @@
       "gcdRegion": "CN",
       "gcdName": "JackeyLove",
       "aliases": [
-        "JKL"
+        "JKL",
+        "喻文波",
+        "阿水"
       ],
       "difficulties": [
         "normal",
@@ -185,7 +205,10 @@
       "pageTitle": "Meiko",
       "gcdRegion": "CN",
       "gcdName": "Meiko",
-      "aliases": [],
+      "aliases": [
+        "田野",
+        "妹扣"
+      ],
       "difficulties": [
         "normal",
         "easy"
@@ -197,7 +220,10 @@
       "pageTitle": "Knight (Zhuo Ding)",
       "gcdRegion": "CN",
       "gcdName": "knight",
-      "aliases": [],
+      "aliases": [
+        "左手",
+        "黄金左手"
+      ],
       "difficulties": [
         "normal"
       ]
@@ -208,7 +234,10 @@
       "pageTitle": "Bin (Chen Ze-Bin)",
       "gcdRegion": "CN",
       "gcdName": "Bin",
-      "aliases": [],
+      "aliases": [
+        "阿Bin",
+        "阿宾"
+      ],
       "difficulties": [
         "normal",
         "easy"
@@ -232,6 +261,726 @@
       "pageTitle": "Vulcan (Philippe Laflamme)",
       "gcdRegion": "AME",
       "gcdName": "Vulcan",
+      "aliases": [],
+      "difficulties": [
+        "normal"
+      ]
+    },
+    {
+      "id": "doran",
+      "nickname": "Doran",
+      "pageTitle": "Doran (Choi Hyeon-joon)",
+      "gcdRegion": "KR",
+      "gcdName": "Doran",
+      "aliases": [],
+      "difficulties": [
+        "normal",
+        "easy"
+      ]
+    },
+    {
+      "id": "peyz",
+      "nickname": "Peyz",
+      "pageTitle": "Peyz",
+      "gcdRegion": "KR",
+      "gcdName": "Peyz",
+      "aliases": [],
+      "difficulties": [
+        "normal",
+        "easy"
+      ]
+    },
+    {
+      "id": "kiin",
+      "nickname": "Kiin",
+      "pageTitle": "Kiin",
+      "gcdRegion": "KR",
+      "gcdName": "Kiin",
+      "aliases": [],
+      "difficulties": [
+        "normal",
+        "easy"
+      ]
+    },
+    {
+      "id": "ruler",
+      "nickname": "Ruler",
+      "pageTitle": "Ruler",
+      "gcdRegion": "KR",
+      "gcdName": "Ruler",
+      "aliases": [
+        "朴载赫",
+        "尺帝"
+      ],
+      "difficulties": [
+        "normal",
+        "easy"
+      ]
+    },
+    {
+      "id": "duro",
+      "nickname": "Duro",
+      "pageTitle": "Duro",
+      "gcdRegion": "KR",
+      "gcdName": "Duro",
+      "aliases": [],
+      "difficulties": [
+        "normal"
+      ]
+    },
+    {
+      "id": "delight",
+      "nickname": "Delight",
+      "pageTitle": "Delight",
+      "gcdRegion": "KR",
+      "gcdName": "Delight",
+      "aliases": [],
+      "difficulties": [
+        "normal"
+      ]
+    },
+    {
+      "id": "lucid",
+      "nickname": "Lucid",
+      "pageTitle": "Lucid (Choi Yong-hyeok)",
+      "gcdRegion": "KR",
+      "gcdName": "Lucid",
+      "aliases": [],
+      "difficulties": [
+        "normal"
+      ]
+    },
+    {
+      "id": "siwoo",
+      "nickname": "Siwoo",
+      "pageTitle": "Siwoo",
+      "gcdRegion": "KR",
+      "gcdName": "Siwoo",
+      "aliases": [],
+      "difficulties": [
+        "normal"
+      ]
+    },
+    {
+      "id": "smash",
+      "nickname": "Smash",
+      "pageTitle": "Smash (Shin Geum-jae)",
+      "gcdRegion": "KR",
+      "gcdName": "Smash",
+      "aliases": [],
+      "difficulties": [
+        "normal"
+      ]
+    },
+    {
+      "id": "xun",
+      "nickname": "Xun",
+      "pageTitle": "Xun",
+      "gcdRegion": "CN",
+      "gcdName": "Xun",
+      "aliases": [],
+      "difficulties": [
+        "normal",
+        "easy"
+      ]
+    },
+    {
+      "id": "on",
+      "nickname": "ON",
+      "pageTitle": "ON",
+      "gcdRegion": "CN",
+      "gcdName": "ON",
+      "aliases": [],
+      "difficulties": [
+        "normal",
+        "easy"
+      ]
+    },
+    {
+      "id": "viper",
+      "nickname": "Viper",
+      "pageTitle": "Viper (Park Do-hyeon)",
+      "gcdRegion": "CN",
+      "gcdName": "Viper",
+      "aliases": [],
+      "difficulties": [
+        "normal",
+        "easy"
+      ]
+    },
+    {
+      "id": "369",
+      "nickname": "369",
+      "pageTitle": "369",
+      "gcdRegion": "CN",
+      "gcdName": "369",
+      "aliases": [],
+      "difficulties": [
+        "normal",
+        "easy"
+      ]
+    },
+    {
+      "id": "tian",
+      "nickname": "Tian",
+      "pageTitle": "Tian",
+      "gcdRegion": "CN",
+      "gcdName": "Tian",
+      "aliases": [
+        "小天"
+      ],
+      "difficulties": [
+        "normal",
+        "easy"
+      ]
+    },
+    {
+      "id": "creme",
+      "nickname": "Creme",
+      "pageTitle": "Creme",
+      "gcdRegion": "CN",
+      "gcdName": "Creme",
+      "aliases": [],
+      "difficulties": [
+        "normal"
+      ]
+    },
+    {
+      "id": "rookie",
+      "nickname": "Rookie",
+      "pageTitle": "Rookie",
+      "gcdRegion": "CN",
+      "gcdName": "Rookie",
+      "aliases": [
+        "宋义进",
+        "肉鸡"
+      ],
+      "difficulties": [
+        "normal",
+        "easy"
+      ]
+    },
+    {
+      "id": "wei",
+      "nickname": "Wei",
+      "pageTitle": "Wei (Yan Yang-Wei)",
+      "gcdRegion": "CN",
+      "gcdName": "Wei",
+      "aliases": [],
+      "difficulties": [
+        "normal"
+      ]
+    },
+    {
+      "id": "photic",
+      "nickname": "Photic",
+      "pageTitle": "Photic",
+      "gcdRegion": "CN",
+      "gcdName": "Photic",
+      "aliases": [],
+      "difficulties": [
+        "normal"
+      ]
+    },
+    {
+      "id": "tarzan",
+      "nickname": "Tarzan",
+      "pageTitle": "Tarzan (Lee Seung-yong)",
+      "gcdRegion": "CN",
+      "gcdName": "Tarzan",
+      "aliases": [],
+      "difficulties": [
+        "normal",
+        "easy"
+      ]
+    },
+    {
+      "id": "flandre",
+      "nickname": "Flandre",
+      "pageTitle": "Flandre",
+      "gcdRegion": "CN",
+      "gcdName": "Flandre",
+      "aliases": [],
+      "difficulties": [
+        "normal"
+      ]
+    },
+    {
+      "id": "shanks",
+      "nickname": "Shanks",
+      "pageTitle": "Shanks",
+      "gcdRegion": "CN",
+      "gcdName": "Shanks",
+      "aliases": [],
+      "difficulties": [
+        "normal"
+      ]
+    },
+    {
+      "id": "hope",
+      "nickname": "Hope",
+      "pageTitle": "Hope (Wang Jie)",
+      "gcdRegion": "CN",
+      "gcdName": "Hope",
+      "aliases": [],
+      "difficulties": [
+        "normal"
+      ]
+    },
+    {
+      "id": "kael",
+      "nickname": "Kael",
+      "pageTitle": "Kael (Kim Jin-hong)",
+      "gcdRegion": "CN",
+      "gcdName": "Kael",
+      "aliases": [],
+      "difficulties": [
+        "normal"
+      ]
+    },
+    {
+      "id": "xiaohu",
+      "nickname": "Xiaohu",
+      "pageTitle": "Xiaohu",
+      "gcdRegion": "CN",
+      "gcdName": "Xiaohu",
+      "aliases": [
+        "李元浩",
+        "小虎"
+      ],
+      "difficulties": [
+        "normal",
+        "easy"
+      ]
+    },
+    {
+      "id": "elk",
+      "nickname": "Elk",
+      "pageTitle": "Elk",
+      "gcdRegion": "CN",
+      "gcdName": "Elk",
+      "aliases": [
+        "Jiumeng",
+        "旧梦"
+      ],
+      "difficulties": [
+        "normal",
+        "easy"
+      ]
+    },
+    {
+      "id": "jiejie",
+      "nickname": "jiejie",
+      "pageTitle": "Jiejie",
+      "gcdRegion": "CN",
+      "gcdName": "jiejie",
+      "aliases": [],
+      "difficulties": [
+        "normal"
+      ]
+    },
+    {
+      "id": "scout",
+      "nickname": "Scout",
+      "pageTitle": "Scout",
+      "gcdRegion": "KR",
+      "gcdName": "Scout",
+      "aliases": [
+        "李汭燦",
+        "学弟"
+      ],
+      "difficulties": [
+        "normal",
+        "easy"
+      ]
+    },
+    {
+      "id": "missing",
+      "nickname": "MISSING",
+      "pageTitle": "MISSING",
+      "gcdRegion": "CN",
+      "gcdName": "MISSING",
+      "aliases": [],
+      "difficulties": [
+        "normal"
+      ]
+    },
+    {
+      "id": "razork",
+      "nickname": "Razork",
+      "pageTitle": "Razork",
+      "gcdRegion": "EMEA",
+      "gcdName": "Razork",
+      "aliases": [],
+      "difficulties": [
+        "normal",
+        "easy"
+      ]
+    },
+    {
+      "id": "upset",
+      "nickname": "Upset",
+      "pageTitle": "Upset",
+      "gcdRegion": "EMEA",
+      "gcdName": "Upset",
+      "aliases": [],
+      "difficulties": [
+        "normal",
+        "easy"
+      ]
+    },
+    {
+      "id": "vladi",
+      "nickname": "Vladi",
+      "pageTitle": "Vladi",
+      "gcdRegion": "EMEA",
+      "gcdName": "Vladi",
+      "aliases": [],
+      "difficulties": [
+        "normal"
+      ]
+    },
+    {
+      "id": "skewmond",
+      "nickname": "SkewMond",
+      "pageTitle": "SkewMond",
+      "gcdRegion": "EMEA",
+      "gcdName": "SkewMond",
+      "aliases": [],
+      "difficulties": [
+        "normal"
+      ]
+    },
+    {
+      "id": "labrov",
+      "nickname": "Labrov",
+      "pageTitle": "Labrov",
+      "gcdRegion": "EMEA",
+      "gcdName": "Labrov",
+      "aliases": [],
+      "difficulties": [
+        "normal"
+      ]
+    },
+    {
+      "id": "canna",
+      "nickname": "Canna",
+      "pageTitle": "Canna",
+      "gcdRegion": "EMEA",
+      "gcdName": "Canna",
+      "aliases": [],
+      "difficulties": [
+        "normal"
+      ]
+    },
+    {
+      "id": "yike",
+      "nickname": "Yike",
+      "pageTitle": "Yike",
+      "gcdRegion": "EMEA",
+      "gcdName": "Yike",
+      "aliases": [],
+      "difficulties": [
+        "normal",
+        "easy"
+      ]
+    },
+    {
+      "id": "caliste",
+      "nickname": "Caliste",
+      "pageTitle": "Caliste",
+      "gcdRegion": "EMEA",
+      "gcdName": "Caliste",
+      "aliases": [],
+      "difficulties": [
+        "normal"
+      ]
+    },
+    {
+      "id": "busio",
+      "nickname": "Busio",
+      "pageTitle": "Busio",
+      "gcdRegion": "EMEA",
+      "gcdName": "Busio",
+      "aliases": [],
+      "difficulties": [
+        "normal"
+      ]
+    },
+    {
+      "id": "elyoya",
+      "nickname": "Elyoya",
+      "pageTitle": "Elyoya",
+      "gcdRegion": "EMEA",
+      "gcdName": "Elyoya",
+      "aliases": [],
+      "difficulties": [
+        "normal",
+        "easy"
+      ]
+    },
+    {
+      "id": "jojopyun",
+      "nickname": "Jojopyun",
+      "pageTitle": "Jojopyun",
+      "gcdRegion": "EMEA",
+      "gcdName": "Jojopyun",
+      "aliases": [],
+      "difficulties": [
+        "normal",
+        "easy"
+      ]
+    },
+    {
+      "id": "supa",
+      "nickname": "Supa",
+      "pageTitle": "Supa",
+      "gcdRegion": "EMEA",
+      "gcdName": "Supa",
+      "aliases": [],
+      "difficulties": [
+        "normal"
+      ]
+    },
+    {
+      "id": "alvaro",
+      "nickname": "Alvaro",
+      "pageTitle": "Alvaro (Álvaro Fernández)",
+      "gcdRegion": "EMEA",
+      "gcdName": "Alvaro",
+      "aliases": [],
+      "difficulties": [
+        "normal"
+      ]
+    },
+    {
+      "id": "perkz",
+      "nickname": "Perkz",
+      "pageTitle": "Perkz",
+      "gcdRegion": "EMEA",
+      "gcdName": "Perkz",
+      "aliases": [
+        "阿P"
+      ],
+      "difficulties": [
+        "normal",
+        "easy"
+      ]
+    },
+    {
+      "id": "reapered",
+      "nickname": "Reapered",
+      "pageTitle": "Reapered",
+      "gcdRegion": "EMEA",
+      "gcdName": "Reapered",
+      "aliases": [],
+      "difficulties": [
+        "normal"
+      ]
+    },
+    {
+      "id": "thanatos",
+      "nickname": "Thanatos",
+      "pageTitle": "Thanatos (Park Seung-gyu)",
+      "gcdRegion": "AME",
+      "gcdName": "Thanatos",
+      "aliases": [],
+      "difficulties": [
+        "normal"
+      ]
+    },
+    {
+      "id": "apa",
+      "nickname": "APA",
+      "pageTitle": "APA (Eain Stearns)",
+      "gcdRegion": "AME",
+      "gcdName": "APA",
+      "aliases": [],
+      "difficulties": [
+        "normal"
+      ]
+    },
+    {
+      "id": "quad",
+      "nickname": "Quad",
+      "pageTitle": "Quad",
+      "gcdRegion": "AME",
+      "gcdName": "Quad",
+      "aliases": [],
+      "difficulties": [
+        "normal"
+      ]
+    },
+    {
+      "id": "massu",
+      "nickname": "Massu",
+      "pageTitle": "Massu",
+      "gcdRegion": "AME",
+      "gcdName": "Massu",
+      "aliases": [],
+      "difficulties": [
+        "normal",
+        "easy"
+      ]
+    },
+    {
+      "id": "corejj",
+      "nickname": "CoreJJ",
+      "pageTitle": "CoreJJ",
+      "gcdRegion": "AME",
+      "gcdName": "CoreJJ",
+      "aliases": [],
+      "difficulties": [
+        "normal",
+        "easy"
+      ]
+    },
+    {
+      "id": "yeon",
+      "nickname": "Yeon",
+      "pageTitle": "Yeon (Sean Sung)",
+      "gcdRegion": "AME",
+      "gcdName": "Yeon",
+      "aliases": [],
+      "difficulties": [
+        "normal"
+      ]
+    },
+    {
+      "id": "impact",
+      "nickname": "Impact",
+      "pageTitle": "Impact",
+      "gcdRegion": "AME",
+      "gcdName": "Impact",
+      "aliases": [],
+      "difficulties": [
+        "normal",
+        "easy"
+      ]
+    },
+    {
+      "id": "doublelift",
+      "nickname": "Doublelift",
+      "pageTitle": "Doublelift",
+      "gcdRegion": "AME",
+      "gcdName": "Doublelift",
+      "aliases": [
+        "DL"
+      ],
+      "difficulties": [
+        "normal",
+        "easy"
+      ]
+    },
+    {
+      "id": "bjergsen",
+      "nickname": "Bjergsen",
+      "pageTitle": "Bjergsen",
+      "gcdRegion": "AME",
+      "gcdName": "Bjergsen",
+      "aliases": [
+        "Bjerg"
+      ],
+      "difficulties": [
+        "normal",
+        "easy"
+      ]
+    },
+    {
+      "id": "uzi",
+      "nickname": "Uzi",
+      "pageTitle": "Uzi (Jian Zi-Hao)",
+      "gcdRegion": "CN",
+      "gcdName": "Uzi",
+      "aliases": [
+        "简自豪",
+        "乌兹",
+        "狂小狗"
+      ],
+      "difficulties": [
+        "normal",
+        "easy"
+      ]
+    },
+    {
+      "id": "clearlove",
+      "nickname": "Clearlove",
+      "pageTitle": "Clearlove",
+      "gcdRegion": "CN",
+      "gcdName": "Clearlove",
+      "aliases": [
+        "Clearlove7",
+        "明凯",
+        "厂长"
+      ],
+      "difficulties": [
+        "normal",
+        "easy"
+      ]
+    },
+    {
+      "id": "zz1tai",
+      "nickname": "Zz1tai",
+      "pageTitle": "Zz1tai",
+      "gcdRegion": "CN",
+      "gcdName": "Zz1tai",
+      "aliases": [],
+      "difficulties": [
+        "normal"
+      ]
+    },
+    {
+      "id": "kkoma",
+      "nickname": "kkOma",
+      "pageTitle": "KkOma",
+      "gcdRegion": "KR",
+      "gcdName": "kkOma",
+      "aliases": [],
+      "difficulties": [
+        "normal",
+        "easy"
+      ]
+    },
+    {
+      "id": "mata",
+      "nickname": "Mata",
+      "pageTitle": "Mata",
+      "gcdRegion": "KR",
+      "gcdName": "Mata",
+      "aliases": [],
+      "difficulties": [
+        "normal",
+        "easy"
+      ]
+    },
+    {
+      "id": "homme",
+      "nickname": "Homme",
+      "pageTitle": "Homme",
+      "gcdRegion": "KR",
+      "gcdName": "Homme",
+      "aliases": [],
+      "difficulties": [
+        "normal"
+      ]
+    },
+    {
+      "id": "bengi",
+      "nickname": "Bengi",
+      "pageTitle": "Bengi",
+      "gcdRegion": "KR",
+      "gcdName": "Bengi",
+      "aliases": [],
+      "difficulties": [
+        "normal"
+      ]
+    },
+    {
+      "id": "madlife",
+      "nickname": "MadLife",
+      "pageTitle": "MadLife",
+      "gcdRegion": "KR",
+      "gcdName": "MadLife",
       "aliases": [],
       "difficulties": [
         "normal"

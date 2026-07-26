@@ -2,7 +2,13 @@ import fs from 'fs/promises';
 import os from 'os';
 import path from 'path';
 import { afterEach, describe, expect, it } from 'vitest';
-import { FilePlayerCatalogProvider, getIdentityValue, resolvePlayerGuess, serializePlayer } from './catalog';
+import {
+  FilePlayerCatalogProvider,
+  getIdentityValue,
+  resolvePlayerGuess,
+  searchPlayers,
+  serializePlayer,
+} from './catalog';
 import { buildGuessFeedback } from './gameService';
 
 const tempDirs: string[] = [];
@@ -14,7 +20,7 @@ async function createFixtureProvider() {
     {
       id: 'faker',
       nickname: 'Faker',
-      aliases: ['Hide on bush'],
+      aliases: ['Hide on bush', '大飞老师'],
       birthDate: '1996-05-07',
       role: 'mid',
       nationality: 'Korea',
@@ -70,7 +76,7 @@ async function createFixtureProvider() {
       nickname: 'kkOma',
       aliases: ['Kim Jeong-gyun'],
       birthDate: '1985-12-23',
-      role: 'support',
+      role: 'coach',
       nationality: 'Korea',
       geoRegion: 'LCK',
       status: 'coach',
@@ -140,11 +146,25 @@ describe('catalog compatibility and feedback', () => {
     const catalog = await provider.getCatalog();
 
     expect(resolvePlayerGuess(catalog, { nickname: 'hide on bush' })?.id).toBe('faker');
+    expect(resolvePlayerGuess(catalog, { nickname: 'hide-on-bush' })?.id).toBe('faker');
+    expect(resolvePlayerGuess(catalog, { nickname: '大飞老师' })?.id).toBe('faker');
+    expect(catalog.byId.get('kkoma')?.role).toBe('coach');
     expect(getIdentityValue('active', 'T1')).toBe('T1');
     expect(getIdentityValue('retired', '')).toBe('退役');
     expect(getIdentityValue('coach', 'T1')).toBe('教练');
     expect(getIdentityValue('free_agent', '')).toBe('自由人');
     expect(getIdentityValue('demoted', '')).toBe('已下放');
+  });
+
+  it('ranks partial, punctuation-insensitive, and typo-tolerant nickname or alias searches', async () => {
+    const provider = await createFixtureProvider();
+    const catalog = await provider.getCatalog();
+
+    expect(searchPlayers(catalog, 'fakr')[0]?.id).toBe('faker');
+    expect(searchPlayers(catalog, 'hide-bush')[0]?.id).toBe('faker');
+    expect(searchPlayers(catalog, '大飞')[0]?.id).toBe('faker');
+    expect(searchPlayers(catalog, 'babyfakr')[0]?.id).toBe('caps');
+    expect(searchPlayers(catalog, '   ')).toEqual([]);
   });
 
   it('marks same-region nationality as yellow and numeric hints toward the answer', async () => {

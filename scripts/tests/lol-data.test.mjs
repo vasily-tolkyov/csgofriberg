@@ -7,6 +7,7 @@ import {
   parseGcdFile,
   parseLeaguepediaOverview,
   parseLooseDate,
+  summarizeTargetSize,
   summarizeTournamentResults,
   validateCanonicalPlayers
 } from "../lol-data-lib.mjs";
@@ -112,6 +113,50 @@ test("validateCanonicalPlayers catches alias conflicts and easy subset mistakes"
   assert.ok(report.issues.some((issue) => issue.code === "STALE_VERIFICATION"));
 });
 
+test("validateCanonicalPlayers folds accents and punctuation when checking search collisions", () => {
+  const report = validateCanonicalPlayers([
+    {
+      id: "eloyoya",
+      nickname: "Eloyóya",
+      aliases: ["Ely-oya"],
+      birthDate: "2000-01-01",
+      role: "jungle",
+      nationality: "Spain",
+      geoRegion: "EMEA",
+      status: "active",
+      currentTeam: "Example",
+      msiTitles: 0,
+      msiAppearances: 0,
+      worldsTitles: 0,
+      worldsAppearances: 0,
+      difficulties: ["normal"],
+      sources: [{ url: "https://example.com/eloyoya", label: "source" }],
+      verifiedAt: "2026-07-26"
+    },
+    {
+      id: "elyoya",
+      nickname: "Elyoya",
+      aliases: [],
+      birthDate: "2000-01-01",
+      role: "jungle",
+      nationality: "Spain",
+      geoRegion: "EMEA",
+      status: "active",
+      currentTeam: "Example",
+      msiTitles: 0,
+      msiAppearances: 0,
+      worldsTitles: 0,
+      worldsAppearances: 0,
+      difficulties: ["normal"],
+      sources: [{ url: "https://example.com/elyoya", label: "source" }],
+      verifiedAt: "2026-07-26"
+    }
+  ], "2026-07-26", 14);
+
+  assert.equal(report.ok, false);
+  assert.ok(report.issues.some((issue) => issue.code === "NICKNAME_CONFLICTS_WITH_ALIAS"));
+});
+
 test("missing GCD rows cannot silently become free agents", () => {
   function determineStatus(override, record, overview, role, targetId) {
     if (override?.status) return override.status;
@@ -155,4 +200,24 @@ test("parseCsv keeps quoted commas intact", () => {
     ["a", "b,c", "d"],
     ["1", "2", "3"]
   ]);
+});
+
+test("summarizeTargetSize enforces 80 total and 40 easy minimums", () => {
+  const players = Array.from({ length: 80 }, (_, index) => ({
+    difficulties: index < 40 ? ["normal", "easy"] : ["normal"]
+  }));
+  assert.deepEqual(summarizeTargetSize(players), {
+    minimumRequired: 80,
+    easyMinimumRequired: 40,
+    actual: 80,
+    easyCount: 40,
+    normalCount: 80,
+    meetsMinimum: true,
+    meetsEasyMinimum: true
+  });
+  assert.equal(summarizeTargetSize(players.slice(0, 79)).meetsMinimum, false);
+  assert.equal(
+    summarizeTargetSize(players.map((player, index) => (index === 39 ? { difficulties: ["normal"] } : player))).meetsEasyMinimum,
+    false
+  );
 });

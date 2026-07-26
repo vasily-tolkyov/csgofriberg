@@ -70,19 +70,10 @@
   font-size: 0.72rem;
   line-height: 1.2;
 }
-.guess-tone {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 2px 7px;
-  border-radius: 999px;
-  font-weight: 700;
-  background: rgba(255, 255, 255, 0.18);
-}
-.guess-tone-wrong { background: rgba(17, 24, 39, 0.18); }
 .guess-hint {
   font-weight: 800;
-  font-size: 0.9rem;
+  font-size: 0.98rem;
+  line-height: 1;
 }
 .guess-board-mobile { display: none; }
 @media (prefers-reduced-motion: no-preference) {
@@ -220,6 +211,14 @@
 .autocomplete-name { display: block; font-weight: 700; }
 .autocomplete-aliases { display: block; margin-top: 2px; font-size: 0.76rem; color: var(--text-light); }
 .autocomplete-list li:hover, .autocomplete-list li.active { background: var(--primary-soft); color: var(--primary-hover); }
+
+.guess-mobile-correct-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.22);
+}
 
 /* ===== Overlays ===== */
 .overlay {

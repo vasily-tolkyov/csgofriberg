@@ -11,35 +11,43 @@ const guesses: GuessRow[] = [
     correct: false,
     attributes: {
       teamIdentity: { value: 'T1', level: 'correct' },
-      nationalityRegion: { value: '韩国', level: 'correct' },
+      nationalityRegion: { value: '韩国 / 韩国赛区', level: 'correct' },
       age: { value: 29, level: 'close', hint: 'lower' },
       role: { value: '中单', level: 'correct' },
       msiTitles: { value: 2, level: 'close', hint: 'higher' },
       msiAppearances: { value: 7, level: 'wrong' },
-      worldsTitles: { value: 4, level: 'correct' },
-      worldsAppearances: { value: 9, level: 'close', hint: 'higher' },
+      worldsTitles: { value: 6, level: 'correct' },
+      worldsAppearances: { value: 10, level: 'close', hint: 'higher' },
     },
   },
 ];
 
 describe('GuessBoard', () => {
-  it('renders the 9-field desktop table with text feedback labels', () => {
+  it('renders the 9-field desktop table without visible feedback copy', () => {
     renderWithProviders(<GuessBoard guesses={guesses} />);
 
-    expect(screen.getByRole('table')).toBeInTheDocument();
+    const table = screen.getByRole('table');
+    expect(table).toBeInTheDocument();
     expect(screen.getByRole('columnheader', { name: '昵称' })).toBeInTheDocument();
     expect(screen.getByRole('columnheader', { name: 'MSI冠军' })).toBeInTheDocument();
     expect(screen.getByRole('columnheader', { name: 'S赛参赛' })).toBeInTheDocument();
-    expect(screen.getAllByText('完全正确').length).toBeGreaterThan(0);
-    expect(screen.getByLabelText('年龄：29，接近答案，目标更低')).toBeInTheDocument();
+    expect(screen.queryByText('完全正确')).not.toBeInTheDocument();
+    expect(screen.queryByText('接近答案')).not.toBeInTheDocument();
+    expect(screen.queryByText('继续缩小范围')).not.toBeInTheDocument();
+    expect(screen.getAllByLabelText('年龄：29，接近答案，目标更低')).toHaveLength(2);
+    expect(within(table).getAllByText('↓')).toHaveLength(1);
+    expect(within(table).getAllByText('↑')).toHaveLength(2);
   });
 
-  it('renders mobile card content with labeled fields for accessibility', () => {
+  it('renders mobile cards with labels and arrow-only visible hints', () => {
     renderWithProviders(<GuessBoard guesses={guesses} />);
 
     const mobileBoard = screen.getByLabelText('移动端猜测记录');
     expect(mobileBoard).toBeInTheDocument();
     expect(within(mobileBoard).getByText('队伍/身份')).toBeInTheDocument();
-    expect(within(mobileBoard).getByText('继续缩小范围')).toBeInTheDocument();
+    expect(within(mobileBoard).queryByText('接近答案')).not.toBeInTheDocument();
+    expect(within(mobileBoard).getByLabelText('年龄：29，接近答案，目标更低')).toBeInTheDocument();
+    expect(within(mobileBoard).getAllByText('↓')).toHaveLength(1);
+    expect(within(mobileBoard).getAllByText('↑')).toHaveLength(2);
   });
 });

@@ -19,3 +19,8 @@
 - 运行时只读取同步到 `server/src/db/seeds/` 的规范化结构化事实，不直接向网站返回来源页面正文。
 
 完整项目署名和公开上线门槛见仓库根目录的 `ATTRIBUTION.md` 与 `LEGAL_AND_LAUNCH_GATES.md`。
+## Current dataset gates
+
+- Published target floor: at least 80 total players.
+- Easy-pool floor: at least 40 players that remain a subset of the normal pool.
+- Community aliases are manually curated and must pass normalized collision validation before release.

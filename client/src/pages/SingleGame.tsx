@@ -300,10 +300,10 @@ export default function SingleGame() {
             {difficulty === 'easy' ? t('game.easyHint') : t('game.normalHint')}
           </p>
           <div className="guess-legend" aria-label={t('rules.feedbackLabel')}>
-            <span><i className="legend-correct" />{t('rules.greenTitle')}</span>
-            <span><i className="legend-close" />{t('rules.yellowTitle')}</span>
-            <span><i className="legend-wrong" />{t('rules.grayTitle')}</span>
-            <span><i className="legend-arrow">↑</i>{t('rules.arrowTitle')}</span>
+            <span aria-label={t('rules.greenTitle')}><i className="legend-correct" aria-hidden="true" /></span>
+            <span aria-label={t('rules.yellowTitle')}><i className="legend-close" aria-hidden="true" /></span>
+            <span aria-label={t('rules.grayTitle')}><i className="legend-wrong" aria-hidden="true" /></span>
+            <span aria-label={t('rules.arrowTitle')}><i className="legend-arrow" aria-hidden="true">↑↓</i></span>
           </div>
         </div>
       )}

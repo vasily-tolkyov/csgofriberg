@@ -10,12 +10,13 @@ const rows = parseCsv(fs.readFileSync(oracleFile, "utf8"));
 const headers = rows[0];
 const oracleRows = rows.slice(1).map((row) => Object.fromEntries(headers.map((header, index) => [header, row[index] || ""])));
 const oracleById = new Map(oracleRows.map((row) => [row.id, row]));
+const datasetById = new Map(dataset.map((player) => [player.id, player]));
 
 const mismatches = [];
-for (const player of dataset) {
-  const oracle = oracleById.get(player.id);
-  if (!oracle) {
-    mismatches.push({ id: player.id, code: "ORACLE_ROW_MISSING" });
+for (const oracle of oracleRows) {
+  const player = datasetById.get(oracle.id);
+  if (!player) {
+    mismatches.push({ id: oracle.id, code: "DATASET_ROW_MISSING" });
     continue;
   }
   const checks = [
@@ -39,7 +40,7 @@ for (const player of dataset) {
 
 const report = {
   oracleFile: path.relative(DATA_ROOT, oracleFile).replaceAll("\\", "/"),
-  checkedPlayers: dataset.length,
+  checkedPlayers: oracleRows.length,
   mismatches,
   ok: mismatches.length === 0
 };

@@ -3,5 +3,27 @@
     "Apply explicit status or currentTeam overrides here when Riot GCD and Leaguepedia disagree.",
     "A missing GCD row must not be treated as proof of retirement."
   ],
-  "players": {}
+  "players": {
+    "bengi": {},
+    "bjergsen": {
+      "currentTeam": "Team SoloMid"
+    },
+    "clearlove": {
+      "currentTeam": "Weibo Gaming"
+    },
+    "doublelift": {
+      "currentTeam": "Team Liquid",
+      "role": "bot"
+    },
+    "madlife": {
+      "currentTeam": "CJ Entus",
+      "role": "support"
+    },
+    "uzi": {
+      "currentTeam": "Royal Never Give Up"
+    },
+    "zz1tai": {
+      "currentTeam": "Royal Never Give Up"
+    }
+  }
 }

@@ -1,7 +1,9 @@
 {
-  "minimumRequired": 20,
-  "actual": 20,
-  "easyCount": 12,
-  "normalCount": 20,
-  "meetsMinimum": true
+  "minimumRequired": 80,
+  "easyMinimumRequired": 40,
+  "actual": 80,
+  "easyCount": 41,
+  "normalCount": 80,
+  "meetsMinimum": true,
+  "meetsEasyMinimum": true
 }

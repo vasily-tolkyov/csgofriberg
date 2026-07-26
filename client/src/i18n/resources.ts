@@ -124,7 +124,7 @@ export const resources = {
         guesses: '猜测次数 {{current}} / {{max}}',
         congratulations: '恭喜，猜对了',
         ended: '本局结束',
-        hint: '颜色、文字与上下箭头共同提示目标方向',
+        hint: '颜色与上下箭头共同提示目标方向',
         again: '再来一把',
         back: '返回菜单',
         startHint: '在下方输入选手昵称或别名开始猜测',

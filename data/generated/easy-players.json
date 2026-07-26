@@ -1,8 +1,45 @@
 [
   {
+    "id": "369",
+    "nickname": "369",
+    "aliases": [],
+    "birthDate": "2001-07-12",
+    "role": "top",
+    "nationality": "China",
+    "geoRegion": "China",
+    "status": "active",
+    "currentTeam": "TOP ESPORTS",
+    "msiTitles": 1,
+    "msiAppearances": 2,
+    "worldsTitles": 0,
+    "worldsAppearances": 5,
+    "difficulties": [
+      "normal",
+      "easy"
+    ],
+    "sources": [
+      {
+        "url": "https://docs.google.com/spreadsheets/d/1Y7k5kQ2AegbuyiGwEPsa62e883FYVtHqr6UVut9RC4o/pub?output=csv&gid=594163931",
+        "label": "Riot GCD CN"
+      },
+      {
+        "url": "https://lol.fandom.com/wiki/369",
+        "label": "Leaguepedia player page"
+      },
+      {
+        "url": "https://lol.fandom.com/wiki/369/Tournament_Results",
+        "label": "Leaguepedia tournament results"
+      }
+    ],
+    "verifiedAt": "2026-07-26"
+  },
+  {
     "id": "bin",
     "nickname": "Bin",
-    "aliases": [],
+    "aliases": [
+      "阿Bin",
+      "阿宾"
+    ],
     "birthDate": "2003-09-28",
     "role": "top",
     "nationality": "China",
@@ -28,6 +65,42 @@
       },
       {
         "url": "https://lol.fandom.com/wiki/Bin_(Chen_Ze-Bin)/Tournament_Results",
+        "label": "Leaguepedia tournament results"
+      }
+    ],
+    "verifiedAt": "2026-07-26"
+  },
+  {
+    "id": "bjergsen",
+    "nickname": "Bjergsen",
+    "aliases": [
+      "Bjerg"
+    ],
+    "birthDate": "1996-02-21",
+    "role": "mid",
+    "nationality": "Denmark",
+    "geoRegion": "EMEA",
+    "status": "retired",
+    "currentTeam": "Team SoloMid",
+    "msiTitles": 0,
+    "msiAppearances": 2,
+    "worldsTitles": 0,
+    "worldsAppearances": 5,
+    "difficulties": [
+      "normal",
+      "easy"
+    ],
+    "sources": [
+      {
+        "url": "https://docs.google.com/spreadsheets/d/1Y7k5kQ2AegbuyiGwEPsa62e883FYVtHqr6UVut9RC4o/pub?output=csv&gid=0",
+        "label": "Riot GCD AME"
+      },
+      {
+        "url": "https://lol.fandom.com/wiki/Bjergsen",
+        "label": "Leaguepedia player page"
+      },
+      {
+        "url": "https://lol.fandom.com/wiki/Bjergsen/Tournament_Results",
         "label": "Leaguepedia tournament results"
       }
     ],
@@ -70,7 +143,9 @@
   {
     "id": "brokenblade",
     "nickname": "BrokenBlade",
-    "aliases": [],
+    "aliases": [
+      "BB"
+    ],
     "birthDate": "2000-01-19",
     "role": "top",
     "nationality": "Germany",
@@ -104,7 +179,9 @@
   {
     "id": "canyon",
     "nickname": "Canyon",
-    "aliases": [],
+    "aliases": [
+      "三叔"
+    ],
     "birthDate": "2001-06-18",
     "role": "jungle",
     "nationality": "South Korea",
@@ -138,7 +215,9 @@
   {
     "id": "caps",
     "nickname": "Caps",
-    "aliases": [],
+    "aliases": [
+      "帽皇"
+    ],
     "birthDate": "1999-11-17",
     "role": "mid",
     "nationality": "Denmark",
@@ -172,7 +251,9 @@
   {
     "id": "chovy",
     "nickname": "Chovy",
-    "aliases": [],
+    "aliases": [
+      "超威"
+    ],
     "birthDate": "2001-03-03",
     "role": "mid",
     "nationality": "South Korea",
@@ -204,10 +285,227 @@
     "verifiedAt": "2026-07-26"
   },
   {
+    "id": "clearlove",
+    "nickname": "Clearlove",
+    "aliases": [
+      "Clearlove7",
+      "明凯",
+      "厂长"
+    ],
+    "birthDate": "1993-07-25",
+    "role": "coach",
+    "nationality": "China",
+    "geoRegion": "China",
+    "status": "coach",
+    "currentTeam": "Weibo Gaming",
+    "msiTitles": 1,
+    "msiAppearances": 1,
+    "worldsTitles": 0,
+    "worldsAppearances": 6,
+    "difficulties": [
+      "normal",
+      "easy"
+    ],
+    "sources": [
+      {
+        "url": "https://docs.google.com/spreadsheets/d/1Y7k5kQ2AegbuyiGwEPsa62e883FYVtHqr6UVut9RC4o/pub?output=csv&gid=594163931",
+        "label": "Riot GCD CN"
+      },
+      {
+        "url": "https://lol.fandom.com/wiki/Clearlove",
+        "label": "Leaguepedia player page"
+      },
+      {
+        "url": "https://lol.fandom.com/wiki/Clearlove/Tournament_Results",
+        "label": "Leaguepedia tournament results"
+      }
+    ],
+    "verifiedAt": "2026-07-26"
+  },
+  {
+    "id": "corejj",
+    "nickname": "CoreJJ",
+    "aliases": [],
+    "birthDate": "1994-06-22",
+    "role": "support",
+    "nationality": "South Korea",
+    "geoRegion": "Korea",
+    "status": "active",
+    "currentTeam": "Team Liquid",
+    "msiTitles": 0,
+    "msiAppearances": 3,
+    "worldsTitles": 1,
+    "worldsAppearances": 8,
+    "difficulties": [
+      "normal",
+      "easy"
+    ],
+    "sources": [
+      {
+        "url": "https://docs.google.com/spreadsheets/d/1Y7k5kQ2AegbuyiGwEPsa62e883FYVtHqr6UVut9RC4o/pub?output=csv&gid=0",
+        "label": "Riot GCD AME"
+      },
+      {
+        "url": "https://lol.fandom.com/wiki/CoreJJ",
+        "label": "Leaguepedia player page"
+      },
+      {
+        "url": "https://lol.fandom.com/wiki/CoreJJ/Tournament_Results",
+        "label": "Leaguepedia tournament results"
+      }
+    ],
+    "verifiedAt": "2026-07-26"
+  },
+  {
+    "id": "doran",
+    "nickname": "Doran",
+    "aliases": [],
+    "birthDate": "2000-07-22",
+    "role": "top",
+    "nationality": "South Korea",
+    "geoRegion": "Korea",
+    "status": "active",
+    "currentTeam": "T1",
+    "msiTitles": 0,
+    "msiAppearances": 3,
+    "worldsTitles": 1,
+    "worldsAppearances": 5,
+    "difficulties": [
+      "normal",
+      "easy"
+    ],
+    "sources": [
+      {
+        "url": "https://docs.google.com/spreadsheets/d/1Y7k5kQ2AegbuyiGwEPsa62e883FYVtHqr6UVut9RC4o/pub?output=csv&gid=905624073",
+        "label": "Riot GCD KR"
+      },
+      {
+        "url": "https://lol.fandom.com/wiki/Doran_(Choi_Hyeon-joon)",
+        "label": "Leaguepedia player page"
+      },
+      {
+        "url": "https://lol.fandom.com/wiki/Doran_(Choi_Hyeon-joon)/Tournament_Results",
+        "label": "Leaguepedia tournament results"
+      }
+    ],
+    "verifiedAt": "2026-07-26"
+  },
+  {
+    "id": "doublelift",
+    "nickname": "Doublelift",
+    "aliases": [
+      "DL"
+    ],
+    "birthDate": "1993-07-19",
+    "role": "bot",
+    "nationality": "United States",
+    "geoRegion": "Americas",
+    "status": "retired",
+    "currentTeam": "Team Liquid",
+    "msiTitles": 1,
+    "msiAppearances": 3,
+    "worldsTitles": 0,
+    "worldsAppearances": 9,
+    "difficulties": [
+      "normal",
+      "easy"
+    ],
+    "sources": [
+      {
+        "url": "https://docs.google.com/spreadsheets/d/1Y7k5kQ2AegbuyiGwEPsa62e883FYVtHqr6UVut9RC4o/pub?output=csv&gid=0",
+        "label": "Riot GCD AME"
+      },
+      {
+        "url": "https://lol.fandom.com/wiki/Doublelift",
+        "label": "Leaguepedia player page"
+      },
+      {
+        "url": "https://lol.fandom.com/wiki/Doublelift/Tournament_Results",
+        "label": "Leaguepedia tournament results"
+      }
+    ],
+    "verifiedAt": "2026-07-26"
+  },
+  {
+    "id": "elk",
+    "nickname": "Elk",
+    "aliases": [
+      "Jiumeng",
+      "旧梦"
+    ],
+    "birthDate": "2001-09-29",
+    "role": "bot",
+    "nationality": "China",
+    "geoRegion": "China",
+    "status": "active",
+    "currentTeam": "WeiboGaming",
+    "msiTitles": 0,
+    "msiAppearances": 3,
+    "worldsTitles": 0,
+    "worldsAppearances": 3,
+    "difficulties": [
+      "normal",
+      "easy"
+    ],
+    "sources": [
+      {
+        "url": "https://docs.google.com/spreadsheets/d/1Y7k5kQ2AegbuyiGwEPsa62e883FYVtHqr6UVut9RC4o/pub?output=csv&gid=594163931",
+        "label": "Riot GCD CN"
+      },
+      {
+        "url": "https://lol.fandom.com/wiki/Elk",
+        "label": "Leaguepedia player page"
+      },
+      {
+        "url": "https://lol.fandom.com/wiki/Elk/Tournament_Results",
+        "label": "Leaguepedia tournament results"
+      }
+    ],
+    "verifiedAt": "2026-07-26"
+  },
+  {
+    "id": "elyoya",
+    "nickname": "Elyoya",
+    "aliases": [],
+    "birthDate": "2000-03-13",
+    "role": "jungle",
+    "nationality": "Spain",
+    "geoRegion": "EMEA",
+    "status": "active",
+    "currentTeam": "Movistar KOI",
+    "msiTitles": 0,
+    "msiAppearances": 3,
+    "worldsTitles": 0,
+    "worldsAppearances": 5,
+    "difficulties": [
+      "normal",
+      "easy"
+    ],
+    "sources": [
+      {
+        "url": "https://docs.google.com/spreadsheets/d/1Y7k5kQ2AegbuyiGwEPsa62e883FYVtHqr6UVut9RC4o/pub?output=csv&gid=148326031",
+        "label": "Riot GCD EMEA"
+      },
+      {
+        "url": "https://lol.fandom.com/wiki/Elyoya",
+        "label": "Leaguepedia player page"
+      },
+      {
+        "url": "https://lol.fandom.com/wiki/Elyoya/Tournament_Results",
+        "label": "Leaguepedia tournament results"
+      }
+    ],
+    "verifiedAt": "2026-07-26"
+  },
+  {
     "id": "faker",
     "nickname": "Faker",
     "aliases": [
-      "Hide on bush"
+      "Hide on bush",
+      "李相赫",
+      "李哥",
+      "大魔王",
+      "大飞老师"
     ],
     "birthDate": "1996-05-07",
     "role": "mid",
@@ -274,10 +572,46 @@
     "verifiedAt": "2026-07-26"
   },
   {
+    "id": "impact",
+    "nickname": "Impact",
+    "aliases": [],
+    "birthDate": "1995-03-07",
+    "role": "top",
+    "nationality": "South Korea",
+    "geoRegion": "Korea",
+    "status": "active",
+    "currentTeam": "Sentinels",
+    "msiTitles": 0,
+    "msiAppearances": 4,
+    "worldsTitles": 1,
+    "worldsAppearances": 8,
+    "difficulties": [
+      "normal",
+      "easy"
+    ],
+    "sources": [
+      {
+        "url": "https://docs.google.com/spreadsheets/d/1Y7k5kQ2AegbuyiGwEPsa62e883FYVtHqr6UVut9RC4o/pub?output=csv&gid=0",
+        "label": "Riot GCD AME"
+      },
+      {
+        "url": "https://lol.fandom.com/wiki/Impact",
+        "label": "Leaguepedia player page"
+      },
+      {
+        "url": "https://lol.fandom.com/wiki/Impact/Tournament_Results",
+        "label": "Leaguepedia tournament results"
+      }
+    ],
+    "verifiedAt": "2026-07-26"
+  },
+  {
     "id": "jackeylove",
     "nickname": "JackeyLove",
     "aliases": [
-      "JKL"
+      "JKL",
+      "喻文波",
+      "阿水"
     ],
     "birthDate": "2000-11-18",
     "role": "bot",
@@ -310,9 +644,182 @@
     "verifiedAt": "2026-07-26"
   },
   {
+    "id": "jojopyun",
+    "nickname": "Jojopyun",
+    "aliases": [],
+    "birthDate": "2004-10-01",
+    "role": "mid",
+    "nationality": "Canada",
+    "geoRegion": "Americas",
+    "status": "active",
+    "currentTeam": "Movistar KOI",
+    "msiTitles": 0,
+    "msiAppearances": 2,
+    "worldsTitles": 0,
+    "worldsAppearances": 2,
+    "difficulties": [
+      "normal",
+      "easy"
+    ],
+    "sources": [
+      {
+        "url": "https://docs.google.com/spreadsheets/d/1Y7k5kQ2AegbuyiGwEPsa62e883FYVtHqr6UVut9RC4o/pub?output=csv&gid=148326031",
+        "label": "Riot GCD EMEA"
+      },
+      {
+        "url": "https://lol.fandom.com/wiki/Jojopyun",
+        "label": "Leaguepedia player page"
+      },
+      {
+        "url": "https://lol.fandom.com/wiki/Jojopyun/Tournament_Results",
+        "label": "Leaguepedia tournament results"
+      }
+    ],
+    "verifiedAt": "2026-07-26"
+  },
+  {
+    "id": "kiin",
+    "nickname": "Kiin",
+    "aliases": [],
+    "birthDate": "1999-05-28",
+    "role": "top",
+    "nationality": "South Korea",
+    "geoRegion": "Korea",
+    "status": "active",
+    "currentTeam": "Gen.G",
+    "msiTitles": 2,
+    "msiAppearances": 2,
+    "worldsTitles": 0,
+    "worldsAppearances": 4,
+    "difficulties": [
+      "normal",
+      "easy"
+    ],
+    "sources": [
+      {
+        "url": "https://docs.google.com/spreadsheets/d/1Y7k5kQ2AegbuyiGwEPsa62e883FYVtHqr6UVut9RC4o/pub?output=csv&gid=905624073",
+        "label": "Riot GCD KR"
+      },
+      {
+        "url": "https://lol.fandom.com/wiki/Kiin",
+        "label": "Leaguepedia player page"
+      },
+      {
+        "url": "https://lol.fandom.com/wiki/Kiin/Tournament_Results",
+        "label": "Leaguepedia tournament results"
+      }
+    ],
+    "verifiedAt": "2026-07-26"
+  },
+  {
+    "id": "kkoma",
+    "nickname": "kkOma",
+    "aliases": [],
+    "birthDate": "1985-12-23",
+    "role": "coach",
+    "nationality": "South Korea",
+    "geoRegion": "Korea",
+    "status": "coach",
+    "currentTeam": "T1",
+    "msiTitles": 2,
+    "msiAppearances": 6,
+    "worldsTitles": 5,
+    "worldsAppearances": 7,
+    "difficulties": [
+      "normal",
+      "easy"
+    ],
+    "sources": [
+      {
+        "url": "https://docs.google.com/spreadsheets/d/1Y7k5kQ2AegbuyiGwEPsa62e883FYVtHqr6UVut9RC4o/pub?output=csv&gid=905624073",
+        "label": "Riot GCD KR"
+      },
+      {
+        "url": "https://lol.fandom.com/wiki/KkOma",
+        "label": "Leaguepedia player page"
+      },
+      {
+        "url": "https://lol.fandom.com/wiki/KkOma/Tournament_Results",
+        "label": "Leaguepedia tournament results"
+      }
+    ],
+    "verifiedAt": "2026-07-26"
+  },
+  {
+    "id": "massu",
+    "nickname": "Massu",
+    "aliases": [],
+    "birthDate": "2004-11-28",
+    "role": "bot",
+    "nationality": "Iraq",
+    "geoRegion": "International",
+    "status": "active",
+    "currentTeam": "FlyQuest",
+    "msiTitles": 0,
+    "msiAppearances": 2,
+    "worldsTitles": 0,
+    "worldsAppearances": 2,
+    "difficulties": [
+      "normal",
+      "easy"
+    ],
+    "sources": [
+      {
+        "url": "https://docs.google.com/spreadsheets/d/1Y7k5kQ2AegbuyiGwEPsa62e883FYVtHqr6UVut9RC4o/pub?output=csv&gid=0",
+        "label": "Riot GCD AME"
+      },
+      {
+        "url": "https://lol.fandom.com/wiki/Massu",
+        "label": "Leaguepedia player page"
+      },
+      {
+        "url": "https://lol.fandom.com/wiki/Massu/Tournament_Results",
+        "label": "Leaguepedia tournament results"
+      }
+    ],
+    "verifiedAt": "2026-07-26"
+  },
+  {
+    "id": "mata",
+    "nickname": "Mata",
+    "aliases": [],
+    "birthDate": "1994-02-27",
+    "role": "coach",
+    "nationality": "South Korea",
+    "geoRegion": "Korea",
+    "status": "coach",
+    "currentTeam": "T1",
+    "msiTitles": 0,
+    "msiAppearances": 4,
+    "worldsTitles": 2,
+    "worldsAppearances": 6,
+    "difficulties": [
+      "normal",
+      "easy"
+    ],
+    "sources": [
+      {
+        "url": "https://docs.google.com/spreadsheets/d/1Y7k5kQ2AegbuyiGwEPsa62e883FYVtHqr6UVut9RC4o/pub?output=csv&gid=905624073",
+        "label": "Riot GCD KR"
+      },
+      {
+        "url": "https://lol.fandom.com/wiki/Mata",
+        "label": "Leaguepedia player page"
+      },
+      {
+        "url": "https://lol.fandom.com/wiki/Mata/Tournament_Results",
+        "label": "Leaguepedia tournament results"
+      }
+    ],
+    "verifiedAt": "2026-07-26"
+  },
+  {
     "id": "meiko",
     "nickname": "Meiko",
-    "aliases": [],
+    "aliases": [
+      "田野",
+      "妹扣"
+    ],
     "birthDate": "1998-06-06",
     "role": "support",
     "nationality": "China",
@@ -344,9 +851,260 @@
     "verifiedAt": "2026-07-26"
   },
   {
+    "id": "on",
+    "nickname": "ON",
+    "aliases": [],
+    "birthDate": "2003-05-12",
+    "role": "support",
+    "nationality": "China",
+    "geoRegion": "China",
+    "status": "active",
+    "currentTeam": "BILIBILI GAMING",
+    "msiTitles": 0,
+    "msiAppearances": 4,
+    "worldsTitles": 0,
+    "worldsAppearances": 3,
+    "difficulties": [
+      "normal",
+      "easy"
+    ],
+    "sources": [
+      {
+        "url": "https://docs.google.com/spreadsheets/d/1Y7k5kQ2AegbuyiGwEPsa62e883FYVtHqr6UVut9RC4o/pub?output=csv&gid=594163931",
+        "label": "Riot GCD CN"
+      },
+      {
+        "url": "https://lol.fandom.com/wiki/ON",
+        "label": "Leaguepedia player page"
+      },
+      {
+        "url": "https://lol.fandom.com/wiki/ON/Tournament_Results",
+        "label": "Leaguepedia tournament results"
+      }
+    ],
+    "verifiedAt": "2026-07-26"
+  },
+  {
+    "id": "perkz",
+    "nickname": "Perkz",
+    "aliases": [
+      "阿P"
+    ],
+    "birthDate": "1998-09-30",
+    "role": "coach",
+    "nationality": "Croatia",
+    "geoRegion": "EMEA",
+    "status": "coach",
+    "currentTeam": "G2 Esports",
+    "msiTitles": 1,
+    "msiAppearances": 4,
+    "worldsTitles": 0,
+    "worldsAppearances": 6,
+    "difficulties": [
+      "normal",
+      "easy"
+    ],
+    "sources": [
+      {
+        "url": "https://docs.google.com/spreadsheets/d/1Y7k5kQ2AegbuyiGwEPsa62e883FYVtHqr6UVut9RC4o/pub?output=csv&gid=148326031",
+        "label": "Riot GCD EMEA"
+      },
+      {
+        "url": "https://lol.fandom.com/wiki/Perkz",
+        "label": "Leaguepedia player page"
+      },
+      {
+        "url": "https://lol.fandom.com/wiki/Perkz/Tournament_Results",
+        "label": "Leaguepedia tournament results"
+      }
+    ],
+    "verifiedAt": "2026-07-26"
+  },
+  {
+    "id": "peyz",
+    "nickname": "Peyz",
+    "aliases": [],
+    "birthDate": "2005-12-05",
+    "role": "bot",
+    "nationality": "South Korea",
+    "geoRegion": "Korea",
+    "status": "active",
+    "currentTeam": "T1",
+    "msiTitles": 1,
+    "msiAppearances": 3,
+    "worldsTitles": 0,
+    "worldsAppearances": 2,
+    "difficulties": [
+      "normal",
+      "easy"
+    ],
+    "sources": [
+      {
+        "url": "https://docs.google.com/spreadsheets/d/1Y7k5kQ2AegbuyiGwEPsa62e883FYVtHqr6UVut9RC4o/pub?output=csv&gid=905624073",
+        "label": "Riot GCD KR"
+      },
+      {
+        "url": "https://lol.fandom.com/wiki/Peyz",
+        "label": "Leaguepedia player page"
+      },
+      {
+        "url": "https://lol.fandom.com/wiki/Peyz/Tournament_Results",
+        "label": "Leaguepedia tournament results"
+      }
+    ],
+    "verifiedAt": "2026-07-26"
+  },
+  {
+    "id": "razork",
+    "nickname": "Razork",
+    "aliases": [],
+    "birthDate": "2000-10-07",
+    "role": "jungle",
+    "nationality": "Spain",
+    "geoRegion": "EMEA",
+    "status": "active",
+    "currentTeam": "Fnatic",
+    "msiTitles": 0,
+    "msiAppearances": 1,
+    "worldsTitles": 0,
+    "worldsAppearances": 4,
+    "difficulties": [
+      "normal",
+      "easy"
+    ],
+    "sources": [
+      {
+        "url": "https://docs.google.com/spreadsheets/d/1Y7k5kQ2AegbuyiGwEPsa62e883FYVtHqr6UVut9RC4o/pub?output=csv&gid=148326031",
+        "label": "Riot GCD EMEA"
+      },
+      {
+        "url": "https://lol.fandom.com/wiki/Razork",
+        "label": "Leaguepedia player page"
+      },
+      {
+        "url": "https://lol.fandom.com/wiki/Razork/Tournament_Results",
+        "label": "Leaguepedia tournament results"
+      }
+    ],
+    "verifiedAt": "2026-07-26"
+  },
+  {
+    "id": "rookie",
+    "nickname": "Rookie",
+    "aliases": [
+      "宋义进",
+      "肉鸡"
+    ],
+    "birthDate": "1997-03-11",
+    "role": "mid",
+    "nationality": "South Korea",
+    "geoRegion": "Korea",
+    "status": "active",
+    "currentTeam": "Invictus Gaming",
+    "msiTitles": 0,
+    "msiAppearances": 1,
+    "worldsTitles": 1,
+    "worldsAppearances": 4,
+    "difficulties": [
+      "normal",
+      "easy"
+    ],
+    "sources": [
+      {
+        "url": "https://docs.google.com/spreadsheets/d/1Y7k5kQ2AegbuyiGwEPsa62e883FYVtHqr6UVut9RC4o/pub?output=csv&gid=594163931",
+        "label": "Riot GCD CN"
+      },
+      {
+        "url": "https://lol.fandom.com/wiki/Rookie",
+        "label": "Leaguepedia player page"
+      },
+      {
+        "url": "https://lol.fandom.com/wiki/Rookie/Tournament_Results",
+        "label": "Leaguepedia tournament results"
+      }
+    ],
+    "verifiedAt": "2026-07-26"
+  },
+  {
+    "id": "ruler",
+    "nickname": "Ruler",
+    "aliases": [
+      "朴载赫",
+      "尺帝"
+    ],
+    "birthDate": "1998-12-29",
+    "role": "bot",
+    "nationality": "South Korea",
+    "geoRegion": "Korea",
+    "status": "active",
+    "currentTeam": "Gen.G",
+    "msiTitles": 2,
+    "msiAppearances": 2,
+    "worldsTitles": 1,
+    "worldsAppearances": 8,
+    "difficulties": [
+      "normal",
+      "easy"
+    ],
+    "sources": [
+      {
+        "url": "https://docs.google.com/spreadsheets/d/1Y7k5kQ2AegbuyiGwEPsa62e883FYVtHqr6UVut9RC4o/pub?output=csv&gid=905624073",
+        "label": "Riot GCD KR"
+      },
+      {
+        "url": "https://lol.fandom.com/wiki/Ruler",
+        "label": "Leaguepedia player page"
+      },
+      {
+        "url": "https://lol.fandom.com/wiki/Ruler/Tournament_Results",
+        "label": "Leaguepedia tournament results"
+      }
+    ],
+    "verifiedAt": "2026-07-26"
+  },
+  {
+    "id": "scout",
+    "nickname": "Scout",
+    "aliases": [
+      "李汭燦",
+      "学弟"
+    ],
+    "birthDate": "1998-03-14",
+    "role": "mid",
+    "nationality": "South Korea",
+    "geoRegion": "Korea",
+    "status": "active",
+    "currentTeam": "NS REDFORCE",
+    "msiTitles": 0,
+    "msiAppearances": 0,
+    "worldsTitles": 1,
+    "worldsAppearances": 7,
+    "difficulties": [
+      "normal",
+      "easy"
+    ],
+    "sources": [
+      {
+        "url": "https://docs.google.com/spreadsheets/d/1Y7k5kQ2AegbuyiGwEPsa62e883FYVtHqr6UVut9RC4o/pub?output=csv&gid=905624073",
+        "label": "Riot GCD KR"
+      },
+      {
+        "url": "https://lol.fandom.com/wiki/Scout",
+        "label": "Leaguepedia player page"
+      },
+      {
+        "url": "https://lol.fandom.com/wiki/Scout/Tournament_Results",
+        "label": "Leaguepedia tournament results"
+      }
+    ],
+    "verifiedAt": "2026-07-26"
+  },
+  {
     "id": "showmaker",
     "nickname": "ShowMaker",
-    "aliases": [],
+    "aliases": [
+      "许秀"
+    ],
     "birthDate": "2000-07-22",
     "role": "mid",
     "nationality": "South Korea",
@@ -372,6 +1130,287 @@
       },
       {
         "url": "https://lol.fandom.com/wiki/ShowMaker/Tournament_Results",
+        "label": "Leaguepedia tournament results"
+      }
+    ],
+    "verifiedAt": "2026-07-26"
+  },
+  {
+    "id": "tarzan",
+    "nickname": "Tarzan",
+    "aliases": [],
+    "birthDate": "1999-08-23",
+    "role": "jungle",
+    "nationality": "South Korea",
+    "geoRegion": "Korea",
+    "status": "active",
+    "currentTeam": "Anyone's Legend",
+    "msiTitles": 0,
+    "msiAppearances": 1,
+    "worldsTitles": 0,
+    "worldsAppearances": 5,
+    "difficulties": [
+      "normal",
+      "easy"
+    ],
+    "sources": [
+      {
+        "url": "https://docs.google.com/spreadsheets/d/1Y7k5kQ2AegbuyiGwEPsa62e883FYVtHqr6UVut9RC4o/pub?output=csv&gid=594163931",
+        "label": "Riot GCD CN"
+      },
+      {
+        "url": "https://lol.fandom.com/wiki/Tarzan_(Lee_Seung-yong)",
+        "label": "Leaguepedia player page"
+      },
+      {
+        "url": "https://lol.fandom.com/wiki/Tarzan_(Lee_Seung-yong)/Tournament_Results",
+        "label": "Leaguepedia tournament results"
+      }
+    ],
+    "verifiedAt": "2026-07-26"
+  },
+  {
+    "id": "tian",
+    "nickname": "Tian",
+    "aliases": [
+      "小天"
+    ],
+    "birthDate": "2000-07-24",
+    "role": "jungle",
+    "nationality": "China",
+    "geoRegion": "China",
+    "status": "active",
+    "currentTeam": "TOP ESPORTS",
+    "msiTitles": 0,
+    "msiAppearances": 2,
+    "worldsTitles": 1,
+    "worldsAppearances": 4,
+    "difficulties": [
+      "normal",
+      "easy"
+    ],
+    "sources": [
+      {
+        "url": "https://docs.google.com/spreadsheets/d/1Y7k5kQ2AegbuyiGwEPsa62e883FYVtHqr6UVut9RC4o/pub?output=csv&gid=594163931",
+        "label": "Riot GCD CN"
+      },
+      {
+        "url": "https://lol.fandom.com/wiki/Tian",
+        "label": "Leaguepedia player page"
+      },
+      {
+        "url": "https://lol.fandom.com/wiki/Tian/Tournament_Results",
+        "label": "Leaguepedia tournament results"
+      }
+    ],
+    "verifiedAt": "2026-07-26"
+  },
+  {
+    "id": "upset",
+    "nickname": "Upset",
+    "aliases": [],
+    "birthDate": "1999-12-16",
+    "role": "bot",
+    "nationality": "Germany",
+    "geoRegion": "EMEA",
+    "status": "active",
+    "currentTeam": "Fnatic",
+    "msiTitles": 0,
+    "msiAppearances": 0,
+    "worldsTitles": 0,
+    "worldsAppearances": 2,
+    "difficulties": [
+      "normal",
+      "easy"
+    ],
+    "sources": [
+      {
+        "url": "https://docs.google.com/spreadsheets/d/1Y7k5kQ2AegbuyiGwEPsa62e883FYVtHqr6UVut9RC4o/pub?output=csv&gid=148326031",
+        "label": "Riot GCD EMEA"
+      },
+      {
+        "url": "https://lol.fandom.com/wiki/Upset",
+        "label": "Leaguepedia player page"
+      },
+      {
+        "url": "https://lol.fandom.com/wiki/Upset/Tournament_Results",
+        "label": "Leaguepedia tournament results"
+      }
+    ],
+    "verifiedAt": "2026-07-26"
+  },
+  {
+    "id": "uzi",
+    "nickname": "Uzi",
+    "aliases": [
+      "简自豪",
+      "乌兹",
+      "狂小狗"
+    ],
+    "birthDate": "1997-04-05",
+    "role": "bot",
+    "nationality": "China",
+    "geoRegion": "China",
+    "status": "retired",
+    "currentTeam": "Royal Never Give Up",
+    "msiTitles": 1,
+    "msiAppearances": 1,
+    "worldsTitles": 0,
+    "worldsAppearances": 6,
+    "difficulties": [
+      "normal",
+      "easy"
+    ],
+    "sources": [
+      {
+        "url": "https://docs.google.com/spreadsheets/d/1Y7k5kQ2AegbuyiGwEPsa62e883FYVtHqr6UVut9RC4o/pub?output=csv&gid=594163931",
+        "label": "Riot GCD CN"
+      },
+      {
+        "url": "https://lol.fandom.com/wiki/Uzi_(Jian_Zi-Hao)",
+        "label": "Leaguepedia player page"
+      },
+      {
+        "url": "https://lol.fandom.com/wiki/Uzi_(Jian_Zi-Hao)/Tournament_Results",
+        "label": "Leaguepedia tournament results"
+      }
+    ],
+    "verifiedAt": "2026-07-26"
+  },
+  {
+    "id": "viper",
+    "nickname": "Viper",
+    "aliases": [],
+    "birthDate": "2000-10-19",
+    "role": "bot",
+    "nationality": "South Korea",
+    "geoRegion": "Korea",
+    "status": "active",
+    "currentTeam": "BILIBILI GAMING",
+    "msiTitles": 0,
+    "msiAppearances": 1,
+    "worldsTitles": 1,
+    "worldsAppearances": 5,
+    "difficulties": [
+      "normal",
+      "easy"
+    ],
+    "sources": [
+      {
+        "url": "https://docs.google.com/spreadsheets/d/1Y7k5kQ2AegbuyiGwEPsa62e883FYVtHqr6UVut9RC4o/pub?output=csv&gid=594163931",
+        "label": "Riot GCD CN"
+      },
+      {
+        "url": "https://lol.fandom.com/wiki/Viper_(Park_Do-hyeon)",
+        "label": "Leaguepedia player page"
+      },
+      {
+        "url": "https://lol.fandom.com/wiki/Viper_(Park_Do-hyeon)/Tournament_Results",
+        "label": "Leaguepedia tournament results"
+      }
+    ],
+    "verifiedAt": "2026-07-26"
+  },
+  {
+    "id": "xiaohu",
+    "nickname": "Xiaohu",
+    "aliases": [
+      "李元浩",
+      "小虎"
+    ],
+    "birthDate": "1998-01-28",
+    "role": "mid",
+    "nationality": "China",
+    "geoRegion": "China",
+    "status": "active",
+    "currentTeam": "WeiboGaming",
+    "msiTitles": 3,
+    "msiAppearances": 4,
+    "worldsTitles": 0,
+    "worldsAppearances": 8,
+    "difficulties": [
+      "normal",
+      "easy"
+    ],
+    "sources": [
+      {
+        "url": "https://docs.google.com/spreadsheets/d/1Y7k5kQ2AegbuyiGwEPsa62e883FYVtHqr6UVut9RC4o/pub?output=csv&gid=594163931",
+        "label": "Riot GCD CN"
+      },
+      {
+        "url": "https://lol.fandom.com/wiki/Xiaohu",
+        "label": "Leaguepedia player page"
+      },
+      {
+        "url": "https://lol.fandom.com/wiki/Xiaohu/Tournament_Results",
+        "label": "Leaguepedia tournament results"
+      }
+    ],
+    "verifiedAt": "2026-07-26"
+  },
+  {
+    "id": "xun",
+    "nickname": "Xun",
+    "aliases": [],
+    "birthDate": "2002-02-05",
+    "role": "jungle",
+    "nationality": "China",
+    "geoRegion": "China",
+    "status": "active",
+    "currentTeam": "BILIBILI GAMING",
+    "msiTitles": 0,
+    "msiAppearances": 3,
+    "worldsTitles": 0,
+    "worldsAppearances": 2,
+    "difficulties": [
+      "normal",
+      "easy"
+    ],
+    "sources": [
+      {
+        "url": "https://docs.google.com/spreadsheets/d/1Y7k5kQ2AegbuyiGwEPsa62e883FYVtHqr6UVut9RC4o/pub?output=csv&gid=594163931",
+        "label": "Riot GCD CN"
+      },
+      {
+        "url": "https://lol.fandom.com/wiki/Xun",
+        "label": "Leaguepedia player page"
+      },
+      {
+        "url": "https://lol.fandom.com/wiki/Xun/Tournament_Results",
+        "label": "Leaguepedia tournament results"
+      }
+    ],
+    "verifiedAt": "2026-07-26"
+  },
+  {
+    "id": "yike",
+    "nickname": "Yike",
+    "aliases": [],
+    "birthDate": "2000-11-11",
+    "role": "jungle",
+    "nationality": "Sweden",
+    "geoRegion": "EMEA",
+    "status": "active",
+    "currentTeam": "Karmine Corp",
+    "msiTitles": 0,
+    "msiAppearances": 3,
+    "worldsTitles": 0,
+    "worldsAppearances": 2,
+    "difficulties": [
+      "normal",
+      "easy"
+    ],
+    "sources": [
+      {
+        "url": "https://docs.google.com/spreadsheets/d/1Y7k5kQ2AegbuyiGwEPsa62e883FYVtHqr6UVut9RC4o/pub?output=csv&gid=148326031",
+        "label": "Riot GCD EMEA"
+      },
+      {
+        "url": "https://lol.fandom.com/wiki/Yike",
+        "label": "Leaguepedia player page"
+      },
+      {
+        "url": "https://lol.fandom.com/wiki/Yike/Tournament_Results",
         "label": "Leaguepedia tournament results"
       }
     ],

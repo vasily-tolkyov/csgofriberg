@@ -3,11 +3,11 @@ import path from "node:path";
 import {
   DATA_ROOT,
   diffPlayers,
-  findGcdRecord,
   gcdSourceUrl,
   geoRegionForCountry,
   leaguepediaPageUrl,
   leaguepediaResultsUrl,
+  maybeFindGcdRecord,
   normalizeRole,
   parseGcdFile,
   parseLeaguepediaOverview,
@@ -33,11 +33,11 @@ const gcdByRegion = Object.fromEntries(
 );
 
 function gcdRole(record) {
-  return record["Position"] || record["Main Role"] || "";
+  return record?.["Position"] || record?.["Main Role"] || "";
 }
 
 function gcdStatus(record) {
-  return record["Status"] || record["LTR Status"] || record["Ltr Status"] || "";
+  return record?.["Status"] || record?.["LTR Status"] || record?.["Ltr Status"] || "";
 }
 
 function determineStatus(target, override, record, overview, role) {
@@ -53,11 +53,11 @@ function determineStatus(target, override, record, overview, role) {
 }
 
 function determineCurrentTeam(override, record, overview) {
-  return override?.currentTeam ?? record["Team"] ?? overview.team ?? "";
+  return override?.currentTeam ?? record?.["Team"] ?? overview.team ?? "";
 }
 
-function determineRole(record, overview) {
-  const raw = gcdRole(record) || overview.role;
+function determineRole(record, overview, override) {
+  const raw = override?.role || gcdRole(record) || overview.role;
   return normalizeRole(raw);
 }
 
@@ -80,11 +80,11 @@ function buildSources(target) {
 
 function buildPlayer(target) {
   const fixture = readJson(path.join(fixtureRoot, "leaguepedia", `${target.id}.json`));
-  const gcdRecord = findGcdRecord(gcdByRegion[target.gcdRegion], target.gcdName);
+  const gcdRecord = maybeFindGcdRecord(gcdByRegion[target.gcdRegion], target.gcdName);
   const overview = parseLeaguepediaOverview(fixture.overviewWikitext);
   const tournamentSummary = summarizeTournamentResults(fixture.tournamentHtml);
   const override = statusOverrides[target.id] || null;
-  const role = determineRole(gcdRecord, overview);
+  const role = determineRole(gcdRecord, overview, override);
   const status = determineStatus(target, override, gcdRecord, overview, role);
   return {
     id: target.id,

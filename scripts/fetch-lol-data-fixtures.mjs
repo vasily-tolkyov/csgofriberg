@@ -38,7 +38,7 @@ async function main() {
     gcdFetchedAt: fetchedAt,
     leaguepediaFetchedAt: previous.leaguepediaFetchedAt ?? previous.fetchedAt ?? null,
     gcd: {},
-    leaguepedia: previous.leaguepedia ?? {}
+    leaguepedia: {}
   };
 
   for (const [regionKey] of Object.entries(GCD_SOURCES)) {
@@ -50,7 +50,7 @@ async function main() {
 
   if (!gcdOnly) {
     for (const target of targets.players) {
-      const overviewApiUrl = `https://lol.fandom.com/api.php?action=query&prop=revisions&rvprop=content&rvslots=main&titles=${encodeURIComponent(target.pageTitle)}&format=json`;
+      const overviewApiUrl = `https://lol.fandom.com/api.php?action=query&prop=revisions&rvprop=content&rvslots=main&redirects=1&titles=${encodeURIComponent(target.pageTitle)}&format=json`;
       const tournamentApiUrl = `https://lol.fandom.com/api.php?action=parse&page=${encodeURIComponent(`${target.pageTitle}/Tournament_Results`)}&prop=text&format=json`;
       const [overviewText, tournamentText] = await Promise.all([
         fetchText(overviewApiUrl),
