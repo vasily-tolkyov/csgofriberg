@@ -1,4 +1,4 @@
-THIS SHEET WAS LAST UPDATED ON:,7/15/2026 8:13:19,,,,,,,,,,
+THIS SHEET WAS LAST UPDATED ON:,8/5/2026 2:52:36,,,,,,,,,,
 League,Team,Official Summoner Name,Main Role,Legal First Name,Legal Family Name,"Contract End (Month, Day, Year) at 23:59 UTC",IMP Residency,LTR Status,,Bi- / Tri-Code,Team Contact Information
 ,,,,,,,,,,,
 LEC,GIANTX,Jackies,MID,Adam,Jeřábek,"November 16, 2026",Resident,,,GX,David Alonso <david.alonso@giantx.gg>
@@ -31,9 +31,9 @@ LEC,,,,,,,,,,,
 LEC,G2 Esports,BrokenBlade,Top,Sergen,Celik,"November 16, 2026",Resident,,,G2,ownership-group-lec@g2esports.com
 LEC,G2 Esports,Caps,Mid,Rasmus,Borregaard Winther,"November 15, 2027",Resident,,,,
 LEC,G2 Esports,SkewMond,JUNGLE,Rudy,Semaan,"November 20, 2028",Resident,,,,
-LEC,G2 Esports,Hans Sama,ADC,Steven,Liv,"November 16, 2026",Non-Resident,,,,
+LEC,G2 Esports,Hans Sama,ADC,Steven,Liv,"November 20, 2028",Non-Resident,,,,
 LEC,G2 Esports,Labrov,SUPPORT,Labros,Papoutsakis,"November 16, 2026",Non-Resident,,,,
-LEC,G2 Esports,Dylan Falco,COACH,Dylan,Falco,Day After Worlds 2027,Non-Resident,,,,
+LEC,G2 Esports,,,,,,,,,,
 LEC,G2 Esports,Rodrigo,ASSISTANT COACH,Rodrigo,Oliveira,Day After Worlds 2027,Resident,,,,
 LEC,G2 Esports,Memento,ASSISTANT COACH,Jonas,Elmarghichi,Day After Worlds 2026,Resident,,,,
 LEC,G2 Esports,Perkz,HEAD COACH,Luka,Perkovic,Day After Worlds 2027,Resident,,,,
@@ -49,7 +49,7 @@ LEC,Movistar KOI,Melzhet,HEAD COACH,Tomas,Campelos Fernandez,Day After Worlds 20
 LEC,Movistar KOI,Alphari,ASSISTANT COACH,Barney,Morris,Day After Worlds 2026,Resident,,,,
 LEC,Movistar KOI,Independent,ASSISTANT COACH,Eric,Ruiz Bogurina,Day After Worlds 2026,Resident,,,,
 LEC,Movistar KOI,Sr Antonio,JUNGLE,Antonio,Castillo Matran,"November 16, 2026",Resident,,,,
-LEC,Movistar KOI,,,,,,,,,,
+LEC,Movistar KOI,NightSlayer,Top,Ivan,Bilous,"November 16, 2026",Non-Resident,,,,
 LEC,Movistar KOI,,,,,,,,,,
 LEC,Movistar KOI,,,,,,,,,,
 LEC,Movistar KOI,,,,,,,,,,
@@ -66,7 +66,7 @@ LEC,Natus Vincere,Parus,SUPPORT,Polat Furkan,Çiçek,"November 15, 2027",Residen
 LEC,Natus Vincere,TheRock,HEAD COACH,Vasilis,Voltis,Day After Worlds 2027,Resident,,,,
 LEC,Natus Vincere,Fredy122,HEAD COACH,Simon,Payne,Day After Worlds 2026,Resident,,,,
 LEC,Natus Vincere,GotoOne,ASSISTANT COACH,Adrien,Picard,Day After Worlds 2026,Resident,,,,
-LEC,Natus Vincere,,,,,,,,,,
+LEC,Natus Vincere,Empyros,TOP,Tantis,Panagiotis,"August 4, 2026",Resident,,,,
 ,,,,,,,,,,,
 LEC,Team Heretics,Tracyn,TOP,Sebastian,Wojtoń,"November 15, 2027",Resident,,,TH,niklas@teamheretics.com
 LEC,Team Heretics,Serin,MID,Tolga,Ölmez,"November 15, 2027",Resident,,,,
@@ -133,13 +133,13 @@ LEC,Shifters,,,,,,,,,,
 ,,,,,,,,,,,
 LEC,Team Vitality,Naak Nako,TOP,Kaan,Okan,"November 15, 2027",Resident,,,VIT,Till Werdermann: till.werdermann@vitality.gg
 LEC,Team Vitality,Lyncas,JUNGLE,Linas,Naunčikas,"November 16, 2026",Resident,,,,
-LEC,Team Vitality,Humanoid,MID,Marek,Brázda,"November 16, 2026",Resident,,,,
 LEC,Team Vitality,Carzzy,ADC,Matyáš,Orság,"November 16, 2026",Resident,,,,
 LEC,Team Vitality,Fleshy,SUPPORT,Kadir,Kemiksiz,"November 16, 2026",Resident,,,,
-LEC,Team Vitality,Lukezy,SUB,Luka,Trumbić,Day After Worlds 2027,Resident,,,,
 LEC,Team Vitality,Pad,HEAD COACH,Patrick,Suckow-Breum,"November 16, 2026",Resident,,,,
 LEC,Team Vitality,Arvindir,STRATEGIC COACH,Danusch,Fischer,Day After Worlds 2026,Resident,,,,
 LEC,Team Vitality,FIESTA,MID,Hyunseo,An,"November 16, 2026",Non-Resident,,,,
+LEC,Team Vitality,,,,,,,,,,
+LEC,Team Vitality,,,,,,,,,,
 LEC,Team Vitality,,,,,,,,,,
 LEC,Team Vitality,,,,,,,,,,
 LEC,Team Vitality,,,,,,,,,,
@@ -229,12 +229,13 @@ LFL,IJC,Manaty,Jungle,Stéphane,Dimier,"November 16, 2026",,,,,
 LFL,JL,Vertigo,Sub,Maximilian,RASSI,"November 16, 2026",,,,JL,Léo Deseuste
 LFL,JL,Shift,Jungle,Marcel,Bak,"November 16, 2026",,,,,
 LFL,JL,Kofte,Mid,Emre,Akça,"November 16, 2026",,,,,
-LFL,JL,3XA,Bot,Thomas,FOUCOU,"November 16, 2026",,,,,
+LFL,JL,,,,,,,,,,
 LFL,JL,HungryPanda,Sub,Nikos,Nikolaidis,"November 16, 2026",,,,,
 LFL,JL,Arkhe,Coach,Emre,Akpınarlı,"November 16, 2026",,,,,
 LFL,JL,Yong,Coach,Rafael,BERNARDINO,"November 16, 2026",,,,,
 LFL,JL,Mersa,Support,Mertai,Sari,"November 16, 2026",,,,,
 LFL,JL,Ragner,Top,Aslan,Onur Can,"November 16, 2026",,,,,
+LFL,JL,Koba,Bot,Ryan,Selaimia,"November 16, 2026",,,,,
 ,,,,,,,,,,,
 ,,,,,,,,,,,
 ,,,,,,,,,,,
@@ -248,8 +249,8 @@ LFL,ES,Yen,Bot,Fadi,Behnam,"November 16, 2026",,,,,
 LFL,ES,Gordinho,Support,Simão,Valente,"November 16, 2026",,,,,
 LFL,ES,Noàh,Sub,Ayoub,AIT BAALA,"November 16, 2026",,,,,
 LFL,ES,Lulas,Jungle,Luis,Azvedo,"August 31, 2026",,,,,
-v,ES,Stifler,Coach,Marcos,Ramos Vizcaino,"September 1, 2026",,,,,
-,,,,,,,,,,,
+LFL,ES,Stifler,Coach,Marcos,Ramos Vizcaino,"September 1, 2026",,,,,
+LFL,ES,Fantomisto,Mid,Thomas,Folcher,"September 30, 2026",,,,,
 ,,,,,,,,,,,
 ,,,,,,,,,,,
 ,,,,,,,,,,,
@@ -285,15 +286,14 @@ LFL,ZYB Esport,Kobs,Jungle,Rayan,Mahiddine,"November 16, 2026",,,,,
 ,,,,,,,,,,,
 ,,,,,,,,,,,
 ,,,,,,,,,,,
-LFL,,,,,,,,,,,
-LFL,,,,,,,,,,,
-LFL,,,,,,,,,,,
-LFL,,,,,,,,,,,
-LFL,,,,,,,,,,,
-LFL,,,,,,,,,,,
-,,,,,,,,,,,
-,,,,,,,,,,,
-,,,,,,,,,,,
+LFL,SC,Yeti,Top,Szymon,Wójcicki,"November 16, 2026",,,,SC,Florent Haug
+LFL,SC,Spooky,Jungle,Miroslav,Gochev,"November 16, 2026",,,,,
+LFL,SC,Nafkelah,Mid,Andrija,Kovačevic,"November 16, 2026",,,,,
+LFL,SC,Exofeng,Bot,Mario,Strugov,"November 16, 2026",,,,,
+LFL,SC,Steeelback,Support,Pierre,Medjaldi,"November 16, 2026",,,,,
+LFL,SC,Eika,Coach,Jérémy,Valdenaire,"November 16, 2026",,,,,
+LFL,SC,Hairost,Coach,Aymerick,Sergeant,"November 16, 2026",,,,,
+LFL,SC,iFreeZzy,Coach,Theotu,Pernot,"November 16, 2026",,,,,
 ,,,,,,,,,,,
 ,,,,,,,,,,,
 ,,,,,,,,,,,
@@ -309,7 +309,7 @@ PRM,Eintracht Frankfurt,Richu,Support,Richard,Anmann,"November 16, 2026",Residen
 PRM,Eintracht Frankfurt,Bleim,Coach,Jakob,Anuth,"November 16, 2026",,,,,
 PRM,Eintracht Frankfurt,Kami,Coach,Gregory,Schmit,"November 16, 2026",,,,,
 PRM,Eintracht Frankfurt,Notiko,Bot,Nick,Celombitko,"November 16, 2026",Resident,PRM-LTR,,,
-PRM,Eintracht Frankfurt,,,,,,,,,,
+PRM,Eintracht Frankfurt,Szygenda,Top,Mathias,Jensen,"November 16, 2026",Resident,Non-Representative,,,
 ,,,,,,,,,,,
 ,,,,,,,,,,,
 ,,,,,,,,,,,
@@ -323,7 +323,7 @@ PRM,Berlin International Gaming,Patrik,Bot,Patrik,Jiru,"November 16, 2026",Resid
 PRM,Berlin International Gaming,Kaiser,Support,Norman,Kaiser,"November 16, 2026",Resident,PRM-LTR,,,
 PRM,Berlin International Gaming,Don Arts,Coach,Finn-Lukas,Salomon,"November 16, 2026",,,,,
 PRM,Berlin International Gaming,Pandar,Coach,Yannick,Greff,"November 16, 2026",,,,,
-PRM,Berlin International Gaming,,,,,,,,,,
+PRM,Berlin International Gaming,113,Jungle,Doğukan,Balcı,"November 16, 2026",Resident,Non-Representative,,,
 ,,,,,,,,,,,
 ,,,,,,,,,,,
 ,,,,,,,,,,,
@@ -334,7 +334,7 @@ PRM,Berlin International Gaming,,,,,,,,,,
 PRM,Eintracht Spandau,Jenax,Top,Janik,Bartels,"November 16, 2026",Resident,PRM-LTR,,EINS,kevin.westphal@instinct3.de
 PRM,Eintracht Spandau,Xagog,Jungle,Isa Arda,Dagli,"November 16, 2026",Resident,PRM-LTR,,,
 PRM,Eintracht Spandau,PowerOfEvil,Mid,Tristan,Schrage,"November 16, 2026",Resident,PRM-LTR,,,
-PRM,Eintracht Spandau,Keduii,Bot,Tim,Willers,"November 16, 2026",Resident,PRM-LTR,,,
+PRM,,,,,,,,,,,
 PRM,Eintracht Spandau,Seaz,Support,Daniel,Binderhofer,"November 16, 2026",Resident,PRM-LTR,,,
 PRM,Eintracht Spandau,x4NTY,Coach,Titus,Kippe,"November 16, 2026",,,,,
 PRM,Eintracht Spandau,FUN k3y,Bot,Johannes,Werner,"November 16, 2026",Resident,PRM-LTR,,,
@@ -370,7 +370,7 @@ PRM,Rossmann Centaurs,,,,,,,,,,
 PRM,Rossmann Centaurs,storm,Sub,Leander,Füger,"November 16, 2026",Resident,PRM-LTR,,,
 PRM,Rossmann Centaurs,Hazel,Bot,Costin,Pestrițu,"November 16, 2026",Resident,Non-Representative,,,
 PRM,Rossmann Centaurs,Leks,Top,Aleksan,Zaruki,"November 16, 2026",Resident,Non-Representative,,,
-PRM,Rossmann Centaurs,jokaa,Jungle,Jordan,Ochs,"November 16, 2026",Resident,PRM-LTR,,,
+PRM,Rossmann Centaurs,,,,,,,,,,
 ,,,,,,,,,,,
 ,,,,,,,,,,,
 ,,,,,,,,,,,
@@ -443,7 +443,7 @@ PRM,VfB Stuttgart,Tazaku,Bot,Adrian,Steiner,"November 16, 2026",Resident,PRM-LTR
 PRM,VfB Stuttgart,Jakobobbi,Support,Jakob,Waich,"November 16, 2026",Resident,PRM-LTR,,,
 PRM,VfB Stuttgart,MaxSchallah,Coach,Maximiliam,Schaller,"November 16, 2026",,,,,
 PRM,VfB Stuttgart,GreenThor,Coach,Throge,Berg,"November 16, 2026",,,,,
-PRM,VfB Stuttgart,,,,,,,,,,
+PRM,VfB Stuttgart,Dizl,Bot,Timothy,Warscher,"November 16, 2026",Resident,PRM-LTR,,,
 ,,,,,,,,,,,
 ,,,,,,,,,,,
 ,,,,,,,,,,,
@@ -601,6 +601,12 @@ SL,,,,,,,,,,,
 ,,,,,,,,,,,
 ,,,,,,,,,,,
 ,,,,,,,,,,,
+TCL,Shark Attack,Twenty7,Coach,Efe,Seytin,"November 16, 2026",Resident,TCL-LTR,,SA,japone993@gmail.com
+TCL,Shark Attack,Sangrod,Top,Kerem,Güzel,"November 16, 2026",Resident,TCL-LTR,,SA,japone993@gmail.com
+TCL,Shark Attack,NightyNN,Jungle,Ömercan,Üçtaş,"November 16, 2026",Resident,TCL-LTR,,SA,japone993@gmail.com
+TCL,Shark Attack,Hades,Mid,Volkan,Dinçer,"November 16, 2026",Resident,TCL-LTR,,SA,japone993@gmail.com
+TCL,Shark Attack,Stansfield,Bot,Mert,Tezgür,"November 16, 2026",Resident,TCL-LTR,,SA,japone993@gmail.com
+TCL,Shark Attack,Revanche,Support,Hakan,İşlek,"November 16, 2026",Resident,TCL-LTR,,SA,japone993@gmail.com
 ,,,,,,,,,,,
 ,,,,,,,,,,,
 ,,,,,,,,,,,
@@ -610,18 +616,13 @@ SL,,,,,,,,,,,
 ,,,,,,,,,,,
 ,,,,,,,,,,,
 ,,,,,,,,,,,
-,,,,,,,,,,,
-,,,,,,,,,,,
-,,,,,,,,,,,
-,,,,,,,,,,,
-,,,,,,,,,,,
-,,,,,,,,,,,
-,,,,,,,,,,PCF,altanfirtina@pcific.com
-,,,,,,,,,,PCF,altanfirtina@pcific.com
-,,,,,,,,,,PCF,altanfirtina@pcific.com
-,,,,,,,,,,PCF,altanfirtina@pcific.com
-,,,,,,,,,,PCF,altanfirtina@pcific.com
-,,,,,,,,,,PCF,altanfirtina@pcific.com
+TCL,PCIFIC Esports,Chonocleas,Coach,Berkay,Özata,"November 16, 2026",Resident,TCL-LTR,,PCF,altanfirtina@pcific.com
+TCL,PCIFIC Esports,Zeus,Coach,Zeus Mora,Corredera,"November 16, 2026",Resident,Non-Representative,,PCF,altanfirtina@pcific.com
+TCL,PCIFIC Esports,Bayonetta,Top,Samet,Turak,"November 16, 2026",Resident,TCL-LTR,,PCF,altanfirtina@pcific.com
+TCL,PCIFIC Esports,stalken,Jungle,İbrahim Batu,Gölcü,"November 16, 2026",Resident,TCL-LTR,,PCF,altanfirtina@pcific.com
+TCL,PCIFIC Esports,FireAscept,Mid,Resul,Polat,"November 16, 2026",Resident,TCL-LTR,,PCF,altanfirtina@pcific.com
+TCL,PCIFIC Esports,Scorth,Bot,Yakup Sergen,Eke,"November 16, 2026",Resident,TCL-LTR,,PCF,altanfirtina@pcific.com
+TCL,PCIFIC Esports,monkaS,Support,Mehmet Kaan,Sönmez,"November 16, 2026",Resident,TCL-LTR,,,
 ,,,,,,,,,,,
 ,,,,,,,,,,,
 ,,,,,,,,,,,
@@ -630,58 +631,42 @@ SL,,,,,,,,,,,
 ,,,,,,,,,,,
 ,,,,,,,,,,,
 ,,,,,,,,,,,
-,,,,,,,,,,,
-,,,,,,,,,,PHX,yakup@teamphoenix.com.tr
-,,,,,,,,,,PHX,yakup@teamphoenix.com.tr
-,,,,,,,,,,PHX,yakup@teamphoenix.com.tr
-,,,,,,,,,,PHX,yakup@teamphoenix.com.tr
-,,,,,,,,,,PHX,yakup@teamphoenix.com.tr
-,,,,,,,,,,PHX,yakup@teamphoenix.com.tr
-,,,,,,,,,,PHX,yakup@teamphoenix.com.tr
-,,,,,,,,,,PHX,yakup@teamphoenix.com.tr
-,,,,,,,,,,PHX,yakup@teamphoenix.com.tr
-,,,,,,,,,,,
-,,,,,,,,,,,
-,,,,,,,,,,,
-,,,,,,,,,,,
-,,,,,,,,,,,
-,,,,,,,,,,,
-,,,,,,,,,,SU,bahadirpolat@windowslive.com
-,,,,,,,,,,SU,bahadirpolat@windowslive.com
-,,,,,,,,,,SU,bahadirpolat@windowslive.com
-,,,,,,,,,,SU,bahadirpolat@windowslive.com
-,,,,,,,,,,SU,bahadirpolat@windowslive.com
-,,,,,,,,,,SU,bahadirpolat@windowslive.com
-,,,,,,,,,,SU,bahadirpolat@windowslive.com
-,,,,,,,,,,SU,bahadirpolat@windowslive.com
+TCL,Team Phoenix,Shiguro,Coach,Furkan,Yürük,"November 16, 2026",Resident,TCL-LTR,,PHX,kaangr1967@gmail.com 
+TCL,Team Phoenix,Çayır,Coach,Batuhan,Çayır,"November 16, 2026",Resident,TCL-LTR,,PHX,kaangr1967@gmail.com 
+TCL,Team Phoenix,Ersin,Top,Ersin,Altıparmak,"November 16, 2026",Resident,TCL-LTR,,PHX,kaangr1967@gmail.com 
+TCL,Team Phoenix,Ruinez,Jungle,Mert Efe,Altun,"November 16, 2026",Resident,TCL-LTR,,PHX,kaangr1967@gmail.com 
+TCL,Team Phoenix,Creal,Mid,Bora,Oruç,"November 16, 2026",Resident,TCL-LTR,,PHX,kaangr1967@gmail.com 
+TCL,Team Phoenix,Raen1,Bot,Eren,Parlak,"November 16, 2026",Resident,TCL-LTR,,PHX,kaangr1967@gmail.com 
+TCL,Team Phoenix,Varin,Support,Kerem,Kararlı,"November 16, 2026",Resident,TCL-LTR,,PHX,kaangr1967@gmail.com 
+TCL,Team Phoenix,f0rzent,Jungle,Serkan,TANFER,"November 16, 2026",Resident,TCL-LTR,,PHX,kaangr1967@gmail.com 
+TCL,Team Phoenix,f0rzent,Jungle,Serkan,TANFER,"November 16, 2026",Resident,TCL-LTR,,PHX,kaangr1967@gmail.com 
 ,,,,,,,,,,,
 ,,,,,,,,,,,
 ,,,,,,,,,,,
 ,,,,,,,,,,,
 ,,,,,,,,,,,
 ,,,,,,,,,,,
-,,,,,,,,,,,
-,,,,,,,,,,BGT,talhareceparslan@gmail.com
-,,,,,,,,,,BGT,talhareceparslan@gmail.com
-,,,,,,,,,,BGT,talhareceparslan@gmail.com
-,,,,,,,,,,BGT,talhareceparslan@gmail.com
-,,,,,,,,,,BGT,talhareceparslan@gmail.com
-,,,,,,,,,,BGT,talhareceparslan@gmail.com
-,,,,,,,,,,BGT,talhareceparslan@gmail.com
-,,,,,,,,,Mexico,BGT,talhareceparslan@gmail.com
-,,,,,,,,,Turkish,BGT,talhareceparslan@gmail.com
+TCL,SU Esports,RAMES,Jungle,Mustafa,Korkmaz,"November 16, 2026",Resident,TCL-LTR,,SU,bahadirpolat@windowslive.com
+TCL,SU Esports,IlllIma,Top,Ma,Taeseok,"November 16, 2026",Non-Resident,Non-Representative,,SU,bahadirpolat@windowslive.com
+TCL,SU Esports,Vetheo,Mid,Vincent,Berrié,"November 16, 2026",Resident,Non-Representative,,SU,bahadirpolat@windowslive.com
+TCL,SU Esports,Kakarot,Sub,Muhammet Yusuf,Karakaş,"November 16, 2026",Resident,TCL-LTR,,SU,bahadirpolat@windowslive.com
+TCL,SU Esports,Patch,Support,HAN,SEUNGMIN,"November 16, 2026",Non-Resident,Non-Representative,,SU,bahadirpolat@windowslive.com
+TCL,SU Esports,Basei,Coach,Ömer,ONAY,"November 16, 2026",Resident,TCL-LTR,,SU,bahadirpolat@windowslive.com
+TCL,SU Esports,Nako,Bot,Okan ,Öztopaç,"November 16, 2026",Resident,TCL-LTR,,,
+TCL,SU Esports,Kaboom,Sub,Osman Onur,Korkmaz,"November 16, 2026",Resident,TCL-LTR,,,
 ,,,,,,,,,,,
 ,,,,,,,,,,,
 ,,,,,,,,,,,
 ,,,,,,,,,,,
 ,,,,,,,,,,,
 ,,,,,,,,,,,
-,,,,,,,,,,DP,ertug@dp-gaming.com
-,,,,,,,,,,DP,ertug@dp-gaming.com
-,,,,,,,,,,DP,ertug@dp-gaming.com
-,,,,,,,,,,DP,ertug@dp-gaming.com
-,,,,,,,,,,DP,ertug@dp-gaming.com
-,,,,,,,,,,DP,ertug@dp-gaming.com
+,,,,,,,,,,,
+TCL,Boostgate Esports,DooMBuLL,Coach,Serhan,Ata,"November 16, 2026",Resident,TCL-LTR,,BGT,talhareceparslan@gmail.com
+TCL,Boostgate Esports,Madly,Top,Ferhat Can,Atma,"November 16, 2026",Resident,TCL-LTR,,BGT,talhareceparslan@gmail.com
+TCL,Boostgate Esports,Kireas,Jungle,Tunahan,Kevioglu,"November 16, 2026",Resident,TCL-LTR,,BGT,talhareceparslan@gmail.com
+TCL,Boostgate Esports,Kachanava,Mid,Emre,Çelik,"November 16, 2026",Resident,TCL-LTR,,BGT,talhareceparslan@gmail.com
+TCL,Boostgate Esports,Neramin,Bot,Hasan,Samarsın,"November 16, 2026",Resident,TCL-LTR,,BGT,talhareceparslan@gmail.com
+TCL,Boostgate Esports,Berebo,Support,Yarkın,Dağ,"November 16, 2026",Resident,TCL-LTR,,BGT,talhareceparslan@gmail.com
 ,,,,,,,,,,,
 ,,,,,,,,,,,
 ,,,,,,,,,,,
@@ -691,24 +676,39 @@ SL,,,,,,,,,,,
 ,,,,,,,,,,,
 ,,,,,,,,,,,
 ,,,,,,,,,,,
+TCL,Dark Passage,Real Homie,Coach,Emre ,Çolak,"November 16, 2026",Resident,TCL-LTR,,DP,ertug@dp-gaming.com
+TCL,Dark Passage,fabFabulous,Top,Asım Cihad,Karakaya,"November 16, 2026",Resident,TCL-LTR,,DP,ertug@dp-gaming.com
+TCL,Dark Passage,Typhoon,Jungle,Tayfun,Gümüş,"November 16, 2026",Resident,TCL-LTR,,DP,ertug@dp-gaming.com
+TCL,Dark Passage,LynxCerezz,Mid,Furkan,Arıkovan,"November 16, 2026",Resident,TCL-LTR,,DP,ertug@dp-gaming.com
+TCL,Dark Passage,GRRave,Bot,Demir,Demirsoy,"November 16, 2026",Resident,TCL-LTR,,DP,ertug@dp-gaming.com
+TCL,Dark Passage,BEPLUSH,Support,Cenk Batuhan,Cıbır,"November 16, 2026",Resident,TCL-LTR,,DP,ertug@dp-gaming.com
+TCL,Dark Passage,Crystal,Sub,Atakan,Aydın,"November 16, 2026",Resident,TCL-LTR,,DP,ertug@dp-gaming.com
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+TCL,Bushido Wildcats,Warner,Mid,Eren,Yücel,"November 16, 2026",Resident,TCL-LTR,,BW,holyphoenix@hotmail.com.tr 
+TCL,Bushido Wildcats,Ruep,Bot,İlker,Bilen,"November 16, 2026",Resident,TCL-LTR,,BW,holyphoenix@hotmail.com.tr 
+TCL,Bushido Wildcats,Astro,Coach,Aydın Efe,Çalışkan,"November 16, 2026",Resident,TCL-LTR,,BW,holyphoenix@hotmail.com.tr 
+TCL,Bushido Wildcats,Camana,Mid,Burak Erdem,Uçar,"November 16, 2026",Resident,TCL-LTR,,BW,holyphoenix@hotmail.com.tr 
+TCL,Bushido Wildcats,Aytekn,Top,Aytekin,Tekin,"November 16, 2026",Resident,TCL-LTR,,BW,holyphoenix@hotmail.com.tr 
+TCL,Bushido Wildcats,Carry,Support,Mustafa Selim,Yılmaz,"November 16, 2026",Resident,TCL-LTR,,BW,holyphoenix@hotmail.com.tr 
+TCL,Bushido Wildcats,Osman123,Jungle,Osman Meriç,Çince,"November 16, 2026",Resident,TCL-LTR,,BW,holyphoenix@hotmail.com.tr 
+TCL,Bushido Wildcats,Pades,Coach,Serdar,Padeş,"November 16, 2026",Resident,TCL-LTR,,BW,holyphoenix@hotmail.com.tr 
 ,,,,,,,,,,BW,holyphoenix@hotmail.com.tr 
-,,,,,,,,,,BW,holyphoenix@hotmail.com.tr 
-,,,,,,,,,,BW,holyphoenix@hotmail.com.tr 
-,,,,,,,,,,BW,holyphoenix@hotmail.com.tr 
-,,,,,,,,,,BW,holyphoenix@hotmail.com.tr 
-TCL,Bushido Wildcats,HolyPhoenix,Sub,Anıl ,Işık,"November 16, 2026",Resident,TCL-LTR,,BW,holyphoenix@hotmail.com.tr 
-,,,,,,,,,,BW,holyphoenix@hotmail.com.tr 
-,,,,,,,,,,BW,holyphoenix@hotmail.com.tr 
-,,,,,,,,,,BW,holyphoenix@hotmail.com.tr 
 ,,,,,,,,,,,
 ,,,,,,,,,,,
 ,,,,,,,,,,,
 ,,,,,,,,,,,
 ,,,,,,,,,,,
 ,,,,,,,,,,,
-,,,,,,,,,,OZO,bariscolakbusinessgmail.com
-,,,,,,,,,,OZO,bariscolakbusinessgmail.com
-,,,,,,,,,,OZO,bariscolakbusinessgmail.com
-,,,,,,,,,,OZO,bariscolakbusinessgmail.com
-,,,,,,,,,,OZO,bariscolakbusinessgmail.com
-,,,,,,,,,,OZO,bariscolakbusinessgmail.com
+TCL,DIA Ozarox Esports,Jeyrus,Bot,Tunahan,Durmaz,"November 16, 2026",Resident,TCL-LTR,,DIA,bariscolakbusinessgmail.com
+TCL,DIA Ozarox Esports,Carve,Support,Tayfun,Şentürk,"November 16, 2026",Resident,TCL-LTR,,DIA,bariscolakbusinessgmail.com
+TCL,DIA Ozarox Esports,Hamsi,Top,Ali,Dıravacı,"November 16, 2026",Resident,TCL-LTR,,DIA,bariscolakbusinessgmail.com
+TCL,DIA Ozarox Esports,Aspect,Jungle,Erdem,Darama,"November 16, 2026",Resident,TCL-LTR,,DIA,bariscolakbusinessgmail.com
+TCL,DIA Ozarox Esports,Yuros,Mid,Alp Kağan,Ercan,"November 16, 2026",Resident,TCL-LTR,,DIA,bariscolakbusinessgmail.com
+TCL,DIA Ozarox Esports,Wuju,Coach,Mert Ali,Kutbay,"November 16, 2026",Resident,TCL-LTR,,DIA,bariscolakbusinessgmail.com

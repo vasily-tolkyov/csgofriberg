@@ -1,4 +1,4 @@
-LAST UPDATE:,"Jul 24, 2026 13:54:53 PT",5,Blue - Reserve Roster and Not Eligible,Yellow - Inactive Roster and Not Eligible,,Orange - Two-way Players,,,,
+LAST UPDATE:,"Sep 2, 2026 13:42:42 PT",5,Blue - Reserve Roster and Not Eligible,Yellow - Inactive Roster and Not Eligible,,Orange - Two-way Players,,,,
 League,Team,Official Summoner Name,Position,Legal Given Name,Legal Family Name,"End Date (Month, Day, Year)",Residency,Status,QuadCode,Team Contact
 LCS TEAMS,,,,,,,,,,
 LCS,Cloud9,Thanatos,Top,Seung-gyu,Park,"November 20, 2028",Non-Resident,Active,C9,Tiffany Truong <tiffany.truong@cloud9.gg>
@@ -10,9 +10,10 @@ LCS,Cloud9,Tactical,Bot,Edward ,Ra,"November 20, 2028",NA Resident,Active,,
 LCS,Cloud9,Vulcan,Support,Philippe,Laflamme,"November 15, 2027",NA Resident,Active,,
 LCS,Cloud9,IWDominate,LCS Head Coach,Christian ,Rivera,Day After Worlds 2028,NA Resident,Active,,
 LCS,Cloud9,Arrow,LCS Strategic Coach,DongHyeon ,Noh,Day After Worlds 2028,NA Resident,Active,,
+LCS,Cloud9,YamatoCannon,LCS Strategic Coach,Jakob ,Mebdi,Day After Worlds 2029,Non-Resident,Active,,
 ,,,,,,,,,,
-LCS,Dignitas,Photon,Top,Gyutae,Kyeong,"November 16, 2026",Non-Resident,Active,DIG,Jonathon McDaniel <jonathon@dignitas.gg>
 LCS,Dignitas,Denathor,Top,Noah,Erikson,"November 15, 2027",NA Resident,Active ,,
+LCS,Dignitas,Dardoch,Jungle,Joshua,Hartnett,"November 14, 2026",NA Resident,Active ,,
 LCS,Dignitas,eXyu,Jungle,Lawrence,Xu,"November 15, 2027",NA Resident,Active,,
 LCS,Dignitas,Palafox,Mid,Cristian,Palafox,"November 15, 2027",NA Resident,Active,,
 LCS,Dignitas,FBI,Bot,Ian ,Huang,"November 15, 2027",NA Resident ,Active,,
@@ -40,7 +41,7 @@ LCS,LYON,Inspired,Jungle,Kacper,Sloma,"November 15, 2027",NA Resident,Active,,
 LCS,LYON,Saint,Mid,Sung In,Kang,"November 17, 2026",Non-Resident,Active,,
 LCS,LYON,Berserker,Bot,Minchul ,Kim,"November 16, 2026",NA Resident,Active,,
 LCS,LYON,Isles,Support,Jonah,Rosario,"November 15, 2027",NA Resident,Active,,
-LCS,LYON,Armao,Jungle,Jonathan,Armao,"August 2, 2026",NA Resident,Active,,
+LCS,LYON,Armao,Jungle,Jonathan,Armao,"August 16, 2026",NA Resident,Active,,
 LCS,LYON,Reignover,LCS Head Coach,Yeujin ,Kim,Day After Worlds 2026,NA Resident,Active,,
 LCS,LYON,Rigby,LCS Strategic Coach,Earl ,Han,Day After Worlds 2026,Non-Resident,Active,,
 ,,,,,,,,,,
@@ -52,7 +53,7 @@ LCS,Sentinels,Huhi,Support,Jaehyun ,Choi,"November 15, 2027",NA Resident,Active,
 LCS,Sentinels,Goldenglue,LCS Head Coach,Greyson ,Gilmer,Day After Worlds 2028,NA Resident,Active,,
 LCS,Sentinels,Dayos,LCS Strategic Coach,Mervin ,Lachica,Day After Worlds 2026,NA Resident,Active,,
 ,,,,,,,,,,
-LCS,Shopify Rebellion,Fudge,Top,Ibrahim,Allami,"November 17, 2026",NA Resident,Active,SR,Dario Wünsch <dario.wuensch@shopify.com>
+LCS,Shopify Rebellion,Fudge,Top,Ibrahim,Allami,"November 17, 2026",NA Resident,Active,SR,David Han<david.han@shopify.com>
 LCS,Shopify Rebellion,Contractz,Jungle,Juan,Garcia,"November 17, 2026",NA Resident,Active,,
 LCS,Shopify Rebellion,Zinie,Mid,Baekjin,Yu,"November 17, 2026",Non-Resident,Active,,
 LCS,Shopify Rebellion,Bvoy,Bot,Younghoon,Joo,"November 17, 2026",Non-Resident,Active,,
@@ -60,7 +61,7 @@ LCS,Shopify Rebellion,Zeyzal,Support,Tristan ,Stidam,"November 14, 2026",NA Resi
 LCS,Shopify Rebellion,Reven,LCS Head Coach,Sang-hyeon,Seong,Day After Worlds 2026,Non-Resident,Active,,
 LCS,Shopify Rebellion,Damonte,LCS Strategic Coach,Tanner,Damonte,Day After Worlds 2026,NA Resident,Active,,
 ,,,,,,,,,,
-LCS,Team Liquid,Morgan,Top,Ruhan ,Park,"November 17, 2026",Non-Resident,Active,TLAW,Jun Kang <dodo@teamliquid.com>
+LCS,Team Liquid,Morgan,Top,Ruhan ,Park,"November 20, 2028",Non-Resident,Active,TLAW,Jun Kang <dodo@teamliquid.com>
 LCS,Team Liquid,Josedeodo,Jungle,Brandon ,Villegas,"November 15, 2027",NA Resident,Active,,
 LCS,Team Liquid,Quid,Mid,Hyunseung,Lim,"November 15, 2027",Non-Resident,Active,,
 LCS,Team Liquid,Yeon,Bot,Sean,Sung,"November 17, 2026",NA Resident,Active,,
@@ -83,7 +84,8 @@ NACL,NRG,Spica,Support,Mingyi,Lu,"November 16, 2026",NA Resident,Active,,
 NACL,NRG,Phymini,Mid,Kolby,Ashby,"November 16, 2026",NA Resident ,Active,,
 ,,,,,,,,,,
 CBLOL TEAMS,,,,,,,,,,
-CBLOL,Fluxo W7M,curty,Top,Pedro,Curty,"November 16, 2026",Resident,Active,FX,Alex Watanabe <alex@fluxo.gg>
+CBLOL,Fluxo W7M,Zothve,Top,Cristóbal,Parra,"November 16, 2026",Resident,Active,FX,Alex Watanabe <alex@fluxo.gg>
+CBLOL,Fluxo W7M,curty,Top,Pedro,Curty,"November 16, 2026",Resident,Active,,
 CBLOL,Fluxo W7M,Peach,Jungle,Mingyu,Lee,"November 16, 2026",Non-Resident,Active,,
 CBLOL,Fluxo W7M,hauz,Mid,Bruno Augusto,Felberge,"November 16, 2026",Resident,Active,,
 CBLOL,Fluxo W7M,cody,Mid,Cristian,Yampara,"November 16, 2026",Resident,Active,,
@@ -106,10 +108,9 @@ CBLOL,FURIA,Lanterninho,CBLOL Assistant Coach,Caio,Cavaglieri,Day After Worlds 2
 CBLOL,LEVIATÁN,Devost,Top,Julián,Orozco,"November 16, 2026",Resident,Active,LEV,Guido Gernetti <guido@leviatan.gg>
 CBLOL,LEVIATÁN,Booki,Jungle,Piero,Herrera,"November 16, 2026",Resident,Active,,Eloy Santos <tostado@leviatan.gg>
 CBLOL,LEVIATÁN,Enga,Mid,Eneas,Tomas Protti,"November 16, 2026",Resident,Active,,
-CBLOL,LEVIATÁN,Snaker,Bot,Brian,Distefano,"November 16, 2026",Resident,Active,,
-CBLOL,LEVIATÁN,TopLop,Support,Nicolás,Greco,"November 16, 2026",Resident,Active,,
+CBLOL,LEVIATÁN,Strensh,Bot,Cristopher,Plaza,"November 16, 2026",Resident,Active,,
+CBLOL,LEVIATÁN,Shiku,Support,Carlo,Zapata,"November 16, 2026",Resident,Active,,
 CBLOL,LEVIATÁN,Kouke,CBLOL Head Coach,Jorge,Gonzalez,Day After Worlds 2026,Resident,Active,,
-CBLOL,LEVIATÁN,NewCosmo,CBLOL Assistant Coach,Gabriel,Emanuel Arias,Day After Worlds 2026,Resident,Active,,
 CBLOL,LEVIATÁN,LautaLoval,CBLOL Assistant Coach,Lautaro,Lo Valvo,Day After Worlds 2026,Resident,Active,,
 ,,,,,,,,,,
 CBLOL,LOS,Zest,Top,Kim,Dongmin,"November 16, 2026",Non-Resident,Active,LOS,Alexandre Peres <alexandre@teamoneesports.com.br>
@@ -130,8 +131,7 @@ CBLOL,LOUD,uZent,Support,Matheus,Ferreira,"November 15, 2027",Resident,Active,,
 CBLOL,LOUD,Raise,CBLOL Head Coach,Jihwan,Oh,Day After Worlds 2026,Non-Resident,Active,,
 CBLOL,LOUD,Sephis,CBLOL Assistant Coach,Diego,Alencar,Day After Worlds 2026,Resident,Active,,
 ,,,,,,,,,,
-CBLOL,paiN Gaming,Robo,Top,Leonardo,Souza,"November 15, 2027",Resident,Active,PAIN,Arthur Zarzur <arthur.curiati@pain.gg>
-CBLOL,paiN Gaming,Boal,Top,Felipe,Boal,"November 15, 2027",Resident,,,
+CBLOL,paiN Gaming,Boal,Top,Felipe,Boal,"November 15, 2027",Resident,,PAIN,Arthur Zarzur <arthur.curiati@pain.gg>
 CBLOL,paiN Gaming,CarioK,Jungle,Marcos,Oliveira,"November 16, 2026",Resident,Two-Way,,
 CBLOL,paiN Gaming,Samkz,Jungle,Samuel,Rosa,"November 15, 2027",Resident,Two-Way,,
 CBLOL,paiN Gaming,Keine,Mid,Kim,Cheol,"November 16, 2026",Non-Resident,Two-Way,,
@@ -139,10 +139,8 @@ CBLOL,paiN Gaming,Namiru,Mid,Daniel,Tonelli,"November 15, 2027",Resident,Two-Way
 CBLOL,paiN Gaming,Trigger,Bot,Uiju,Kim,"November 16, 2026",Non-Resident,Active,,
 CBLOL,paiN Gaming,Marvin,Bot,Vinicius,Marvin,"November 16, 2026",Resident,Active,,
 CBLOL,paiN Gaming,Kuri,Support,Wonyoung,Choi,"November 16, 2026",Resident,Active,,
-CBLOL,paiN Gaming,Sarkis,CBLOL Head Coach,Matheus,Sarquis,Day After Worlds 2026,Resident,Active,,
-CBLOL,paiN Gaming,Xero,CBLOL Assistant Coach,Hyuk,Shin,Day After Worlds 2027,Non-Resident,Active,,
-CBLOL,paiN Gaming,Von,CBLOL Assistant Coach,Gabriel,Leite,Day After Worlds 2026,Resident,Active,,
-,,,,,,,,,,
+CBLOL,paiN Gaming,Von,CBLOL Head Coach,Gabriel,Leite,Day After Worlds 2026,Resident,Active,,
+CBLOL,paiN Gaming,Sarkis,CBLOL Assistant Coach,Matheus,Sarquis,Day After Worlds 2026,Non-Resident,Active,,
 ,,,,,,,,,,
 CBLOL,RED Canids Kalunga,zynts,Top,Matheus,Silva,"November 16, 2026",Resident,Active,RED,Felippe Corradini <felippe@redcanids.com.br>
 CBLOL,RED Canids Kalunga,STEPZ,Jungle,Eloy,Gonzalez,"November 15, 2027",Resident,Active,,
@@ -214,7 +212,6 @@ Circuito Desafiante,KaBuM! Esports,Medina,CD Head Coach,Rodrigo,Medina,Day After
 Circuito Desafiante,KaBuM! Esports,Alocs,CD Assistant Coach,Leonardo,Carvalho,Day After Worlds 2026,Resident,Active,,
 ,,,,,,,,,,
 Circuito Desafiante,paiN Gaming Academy,Zoen,Top,Enzo,Ganino,"November 15, 2027",Non-Resident,Active,PAIN,Arthur Zarzur <arthur.curiati@pain.gg>
-Circuito Desafiante,paiN Gaming Academy,Levi,Jungle,Levi,Pedutti,"November 16, 2026",Resident,Active,,
 Circuito Desafiante,paiN Gaming Academy,Gatovisck,Support,Vitor,Souza,"November 20, 2028",Resident,Active,,
 Circuito Desafiante,paiN Gaming Academy,Paivaa,CD Head Coach,Vitor,Paiva,Day After Worlds 2028,Resident,Active,,
 ,,,,,,,,,,
@@ -228,6 +225,7 @@ Circuito Desafiante,RMD Gaming,Celo,Bot,Marcelo,Leite,"November 10, 2026",Reside
 Circuito Desafiante,RMD Gaming,murilao,Support,Murilo,Cocco Lopes,"October 8, 2026",Resident,Active,,
 Circuito Desafiante,RMD Gaming,CAPIVARA,CD Head Coach,Gabriel,Vieira,Day After Worlds 2026,Resident,Active,,
 Circuito Desafiante,RMD Gaming,Scartie,CD Assistant Coach,Carlos,Magalhães,Day After Worlds 2027,Resident,Active,,
+Circuito Desafiante,RMD Gaming,Gilo,CD Assistant Coach,Gilberto,Neto,Day After Worlds 2026,Resident,Active,,
 ,,,,,,,,,,
 Circuito Desafiante,Team Solid,Tyrin,Top,William,Portugal,"November 16, 2026",Resident,Active,TSS,Marcos Guerra <marcos.guerra@teamsolid.com.br>
 Circuito Desafiante,Team Solid,Aegis,Jungle,Gabriel,Lemos,"November 16, 2026",Resident,Active,,
